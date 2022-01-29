@@ -21,5 +21,5 @@ urlpatterns = [
 ]
 
 
-admin.site.site_title = 'Администрирование'
-admin.site.site_header = 'Администрирование'
+admin.site.site_title = 'Администрирование: CLINIC'
+admin.site.site_header = 'Администрирование: CLINIC'
