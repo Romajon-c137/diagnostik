@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block head %}
+    {% include 'components/head.html' %}
+{% endblock %}
+
+{% block index %}
+
+    Hello {{ name }}
+{% for story in list %}
+
+    {{ story.id}}
+    <h2>
+        {{ story.title|upper }}
+    </h2>
+    <p>{{ story.done }}</p>
+
+{% endfor %}
+
+{% endblock %}
+
+    
+{% block scripts %}
+{% endblock %}
+    
+{% block styles %}
+{% endblock %}
+    
+{% block footer %}
+{% include 'components/footer.html' %}
+{% endblock %}

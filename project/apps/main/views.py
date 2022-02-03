@@ -1,6 +1,13 @@
-from json.tool import main
 from django.shortcuts import render
 
-# Create your views here.
+
 def main(request):
-    return render(request, 'main/main.html')
+    # to do list
+    todolist = [
+        {'id': 1, 'title': 'Задача 1', 'done': False},
+        {'id': 2, 'title': 'Задача 2', 'done': True},
+        {'id': 3, 'title': 'Задача 3', 'done': False},
+        {'id': 4, 'title': 'Задача 4', 'done': True},
+        {'id': 5, 'title': 'Задача 5', 'done': False},
+    ]
+    return render(request, 'main/index.html', {'name': 'World', 'list': todolist})
