@@ -1,0 +1,136 @@
+{% extends 'main/index.html' %}
+{% load static i18n %}
+{% block content %}
+<section id="banner-services">
+
+    <div class="banner-serv">
+         <div class="banner-inner">
+              <h2 class="banner-title">Об услугах</h2>
+              <p class="banner-text-one">Aenean in est. Et vel dapibus luctus molestie hac ut. Molestie adipiscing
+                   sit molestie dui sit nunc mollis in eleifend mauris nisi arcu dictumst. Non urna sodales nunc
+                   augue vitae sed mattis ornare sapien velit nulla sed imperdiet vestibulum cursus hac ut. Morbi
+                   tortor, et ultricies. Imperdiet est. Accumsan hac arcu justo justo venenatis dapibus quis,
+                   tortor, dolor nulla dictu.</p>
+              <p class="banner-text-two">Ornare ex. Luctus vestibulum vel in molestie velit sit in in imperdiet
+                   quis, morbi integer eleifend venenatis nulla lorem ve.</p>
+         </div>
+    </div>
+
+</section>
+<section id="our-work">
+    <div class="categories">
+         <div id="all-serv">Все</div>
+         <div id="first-serv">Категория 1</div>
+         <div id="second-serv">Категория 2</div>
+         <div id="third-serv">Категория 3</div>
+         <div id="fourth-serv">Категория 4</div>
+    </div>
+    <div class="serv-cards">
+         <div class="serv-card">
+              <div class="serv-heading"> Услуга 1 </div>
+              <div class="serv-tx">
+                   Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum nec vestibulum
+                   elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi elit. Leo,
+                   ultricies amet...
+              </div>
+              <button class="serv-btn">
+                   Подробнее
+              </button>
+         </div>
+         <div class="serv-card">
+              <div class="serv-heading"> Услуга 1 </div>
+              <div class="serv-tx">
+                   Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum nec vestibulum
+                   elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi elit. Leo,
+                   ultricies amet...
+              </div>
+              <button class="serv-btn">
+                   Подробнее
+              </button>
+         </div>
+         <div class="serv-card">
+              <div class="serv-heading"> Услуга 1 </div>
+              <div class="serv-tx">
+                   Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum nec vestibulum
+                   elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi elit. Leo,
+                   ultricies amet...
+              </div>
+              <button class="serv-btn">
+                   Подробнее
+              </button>
+         </div>
+         <div class="serv-card">
+              <div class="serv-heading"> Услуга 1 </div>
+              <div class="serv-tx">
+                   Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum nec vestibulum
+                   elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi elit. Leo,
+                   ultricies amet...
+              </div>
+              <button class="serv-btn">
+                   Подробнее
+              </button>
+         </div>
+         <div class="serv-card">
+              <div class="serv-heading"> Услуга 1 </div>
+              <div class="serv-tx">
+                   Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum nec vestibulum
+                   elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi elit. Leo,
+                   ultricies amet...
+              </div>
+              <button class="serv-btn">
+                   Подробнее
+              </button>
+         </div>
+         <div class="serv-card">
+              <div class="serv-heading"> Услуга 1 </div>
+              <div class="serv-tx">
+                   Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum nec vestibulum
+                   elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi elit. Leo,
+                   ultricies amet...
+              </div>
+              <button class="serv-btn">
+                   Подробнее
+              </button>
+         </div>
+    </div>
+</section>
+<section id="forms-section">
+    <h1 class="form-heading">
+         Форма обратной связи
+    </h1>
+    <div class="form-main">
+         <form action="https://www.youtube.com/watch?v=A1CFoLNL3f4">
+              <div class="form-box-info">
+                   <div class="form-name">
+                        <label class="form-style" for="fname">Ведите ваше имя</label> <br>
+                        <input type="text" id="fname" name="firstname" placeholder="Ведите ваше имя">
+
+                   </div>
+                   <div class="form-mail">
+                        <label class="form-style" for="form-mail">Ваш Email</label> <br>
+                        <input type="mail" id="form-mail" name="lastname"
+                             placeholder="Ведите ваший почтовый адресс">
+                   </div> <br>
+              </div>
+              <div class="form-texr-area">
+                   <label class="form-style" for="message">Ваше сообщения</label> <br>
+
+                   <textarea id="message" name="form-message" rows="4" cols="50">
+
+         </textarea>
+              </div>
+              <div class="form-select">
+                   <select id="choose-serv" name="serv">
+                        <option class="styled">Услуга 1</option>
+                        <option class="styled">Услуга 2</option>
+                        <option class="styled">Услуга 3</option>
+                   </select>
+              </div>
+              <div class="form-btn">
+                   <input class="form-submit" type="submit" value="Отправить">
+         </form>
+    </div>
+    </div>
+
+</section>
+{% endblock %}

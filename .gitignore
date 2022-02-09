@@ -130,3 +130,6 @@ dmypy.json
 /migrations
 migrations/
 project/images
+project/assets/assests
+project/assets/images
+.DS_Store

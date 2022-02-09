@@ -1,32 +1,736 @@
 {% extends 'base.html' %}
 {% load static i18n %}
 
-{% block head %}
-    {% include 'components/head.html' %}
-{% endblock %}
+
 
 {% block index %}
+    {% block header %}
+        {% include 'components/header.html' %}
+    {% endblock %}
+    {% block content %}
+
+        <!-- HOME -->
+        <section id="home" class="slider" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="owl-one owl-carousel owl-theme">
+                            <div class="item item-first">
+                                    <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                            <div class="slider-box">
+                                                <h1>Et vel dapibus luctus molestie hac ut.</h1>
+                                                <p class="slider-text">Sed interdum amet, sapien mattis id nec ex.
+                                                        Faucibus. Nisi mattis adipiscing non lectus quam, vestibulum quis,
+                                                        vestibulum leo, efficitur cras non elit. Sit vulputate mattis platea
+                                                        libero, amet quis, odio. Sodales dictum. Sodales tempus non nunc non
+                                                        ornare faucibus.</p>
+
+                                                <a href="#team"
+                                                        class="section-btn btn btn-default smoothScroll">Записатся</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <div class="item item-second">
+                                    <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                            <div class="slider-box">
+                                                <h1>Et vel dapibus luctus molestie hac ut.</h1>
+                                                <p class="slider-text">Sed interdum amet, sapien mattis id nec ex.
+                                                        Faucibus. Nisi mattis adipiscing non lectus quam, vestibulum quis,
+                                                        vestibulum leo, efficitur cras non elit. Sit vulputate mattis platea
+                                                        libero, amet quis, odio. Sodales dictum. Sodales tempus non nunc non
+                                                        ornare faucibus.</p>
+
+                                                <a href="#team"
+                                                        class="section-btn btn btn-default smoothScroll">Записатся</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <div class="item item-third">
+                                    <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                            <div class="slider-box">
+                                                <h1>Et vel dapibus luctus molestie hac ut.</h1>
+                                                <p class="slider-text">Sed interdum amet, sapien mattis id nec ex.
+                                                        Faucibus. Nisi mattis adipiscing non lectus quam, vestibulum quis,
+                                                        vestibulum leo, efficitur cras non elit. Sit vulputate mattis platea
+                                                        libero, amet quis, odio. Sodales dictum. Sodales tempus non nunc non
+                                                        ornare faucibus.</p>
+
+                                                <a href="#team"
+                                                        class="section-btn btn btn-default smoothScroll">Записатся</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+        <!-- Cards -->
+
+        <div class="about-cards">
+
+                <div class="card media-card">
+                    <h2 class="count">24</h1>
+                        <p class="description">Отделения</p>
+                </div>
+
+
+                <div class="card">
+                    <h2 class="count">37</h1>
+                        <p class="description">Видов исследований</p>
+                </div>
+
+
+                <div class="card">
+                    <h2 class="count">86</h1>
+                        <p class="description">Специалиста</p>
+                </div>
+
+
+                <div class="card">
+                    <h2 class="count">63</h1>
+                        <p class="description">Видов исследований</p>
+                </div>
+
+
+                <div class="card">
+                    <h2 class="count">11</h1>
+                        <p class="description">Видов исследований</p>
+                </div>
+
+
+        </div>
+
+        <!-- ABOUT -->
+
+        <section id="about">
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-md-6 col-sm-6">
+                                    <div class="about-info-1">
+                                        <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to Your <i
+                                                class="fa fa-h-square"></i>ealth Center</h2>
+                                        <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                            <p>Aenean luctus lobortis tellus, vel ornare enim molestie condimentum.
+                                                Curabitur
+                                                lacinia nisi vitae velit volutpat venenatis.</p>
+                                            <p>Sed a dignissim lacus. Quisque fermentum est non orci commodo, a luctus urna
+                                                mattis. Ut placerat, diam a tempus vehicula.</p>
+                                        </div>
+                                        <figure class="profile wow fadeInUp" data-wow-delay="1s">
+                                            <img src="images/author-image.jpg" class="img-responsive" alt="">
+                                            <figcaption>
+                                                <h3>Dr. Neil Jackson</h3>
+                                                <p>General Principal</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <div class="container-2">
+                <div class="row">
+                    <div class="big-cards ">
+                        <div class="flex-box">
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="big-card ">
+                                        <img src="./assests/images/Prototype/Home-page/Prototype/Home-page/Desktop/cardiogram 1.png"
+                                            alt="">
+                                        <h2>Современное оборудование</h2>
+                                        <p>Vulputate faucibus. Cursus nec efficitur accumsan accumsan molestie ut. Malesuada
+                                            non vitae odio.
+                                            Elit. Non interdum dolor sit sit arcu justo ipsum efficitur mattis est. Dolor
+                                            vestibulum nulla
+                                            faucibus. Nun.</p>
+                                    </div>
+                            </div>
+
+
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="big-card">
+                                        <img src="./assests/images/Prototype/Home-page/Prototype/Home-page/Desktop/stretcher (1) 1.png"
+                                            alt="">
+                                        <h2>Современное оборудование</h2>
+                                        <p>Vulputate faucibus. Cursus nec efficitur accumsan accumsan molestie ut. Malesuada
+                                            non vitae odio.
+                                            Elit. Non interdum dolor sit sit arcu justo ipsum efficitur mattis est. Dolor
+                                            vestibulum nulla
+                                            faucibus. Nun.</p>
+                                    </div>
+
+                            </div>
+                        </div>
+                        <div class="flex-box">
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="big-card">
+                                        <img src="./assests/images/Prototype/Home-page/Prototype/Home-page/Desktop/hospital 1.png"
+                                            alt="">
+                                        <h2>Современное оборудование</h2>
+                                        <p>Vulputate faucibus. Cursus nec efficitur accumsan accumsan molestie ut. Malesuada
+                                            non vitae odio.
+                                            Elit. Non interdum dolor sit sit arcu justo ipsum efficitur mattis est. Dolor
+                                            vestibulum nulla
+                                            faucibus. Nun.</p>
+                                    </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="big-card">
+                                        <img src="./assests/images/Prototype/Home-page/Prototype/Home-page/Desktop/surgeon 1.png"
+                                            alt="">
+                                        <h2>Современное оборудование</h2>
+                                        <p>Vulputate faucibus. Cursus nec efficitur accumsan accumsan molestie ut. Malesuada
+                                            non vitae odio.
+                                            Elit. Non interdum dolor sit sit arcu justo ipsum efficitur mattis est. Dolor
+                                            vestibulum nulla
+                                            faucibus. Nun.</p>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="flex-box">
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="big-card">
+                                        <img src="./assests/images/Prototype/Home-page/Prototype/Home-page/Desktop/operating 1.png"
+                                            alt="">
+                                        <h2>Современное оборудование</h2>
+                                        <p>Vulputate faucibus. Cursus nec efficitur accumsan accumsan molestie ut. Malesuada
+                                            non vitae odio.
+                                            Elit. Non interdum dolor sit sit arcu justo ipsum efficitur mattis est. Dolor
+                                            vestibulum nulla
+                                            faucibus. Nun.</p>
+                                    </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="big-card">
+                                        <img src="./assests/images/Prototype/Home-page/Prototype/Home-page/Desktop/policeman 1.png"
+                                            alt="">
+                                        <h2>Современное оборудование</h2>
+                                        <p>Vulputate faucibus. Cursus nec efficitur accumsan accumsan molestie ut. Malesuada
+                                            non vitae odio.
+                                            Elit. Non interdum dolor sit sit arcu justo ipsum efficitur mattis est. Dolor
+                                            vestibulum nulla
+                                            faucibus. Nun.</p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+
+        <!-- TEAM -->
+        <section id="team" data-stellar-background-ratio="1">
+                <div class="team-text">
+                    <h2>Наши врачи</h2>
+                    <p>Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum nec vestibulum elit.
+                        Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi elit. Leo, ultricies.
+                        Lacinia amet, amet, molestie ipsum imperdiet in imperdiet mattis cra.</p>
+                </div>
+                <div class="owl-two owl-carousel owl-theme worker-slider">
+                    <div class="col-md-offset-1 col-md-12">
+                        <div class="worker">
+                            <div class="worker-img">
+                                    <img src="./assests/images/Prototype/Home-page/Prototype/Home-page/Desktop/Rectangle 10.png"
+                                        alt="">
+                            </div>
+                            <div class="worker-info">
+                                    <h4>Иван Иванов Иванович</h4>
+                                    <p>Malesuada lectus</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-12">
+                        <div class="worker">
+                            <div class="worker-img">
+                                    <img src="./assests/images/Prototype/Home-page/Prototype/Home-page/Desktop/Rectangle 9.png"
+                                        alt="">
+                            </div>
+                            <div class="worker-info">
+                                    <h4>Иван Иванов Иванович</h4>
+                                    <p>Malesuada lectus</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-12">
+                        <div class="worker">
+                            <div class="worker-img">
+                                    <img src="./assests/images/Prototype/Home-page/Prototype/Home-page/Desktop/Rectangle 8.png"
+                                        alt="">
+                            </div>
+                            <div class="worker-info">
+                                    <h4>Иван Иванов Иванович</h4>
+                                    <p>Malesuada lectus</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-12">
+                        <div class="worker">
+                            <div class="worker-img">
+                                    <img src="./assests/images/Prototype/Home-page/Prototype/Home-page/Desktop/Rectangle 9.png"
+                                        alt="">
+                            </div>
+                            <div class="worker-info">
+                                    <h4>Иван Иванов Иванович</h4>
+                                    <p>Malesuada lectus</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-12">
+                        <div class="worker">
+                            <div class="worker-img">
+                                    <img src="./assests/images/Prototype/Home-page/Prototype/Home-page/Desktop/Rectangle 8.png"
+                                        alt="">
+                            </div>
+                            <div class="worker-info">
+                                    <h4>Иван Иванов Иванович</h4>
+                                    <p>Malesuada lectus</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-12">
+                        <div class="worker">
+                            <div class="worker-img">
+                                    <img src="./assests/images/Prototype/Home-page/Prototype/Home-page/Desktop/Rectangle 8.png"
+                                        alt="">
+                            </div>
+                            <div class="worker-info">
+                                    <h4>Иван Иванов Иванович</h4>
+                                    <p>Malesuada lectus</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-12">
+                        <div class="worker">
+                            <div class="worker-img">
+                                    <img src="./assests/images/Prototype/Home-page/Prototype/Home-page/Desktop/Rectangle 8.png"
+                                        alt="">
+                            </div>
+                            <div class="worker-info">
+                                    <h4>Иван Иванов Иванович</h4>
+                                    <p>Malesuada lectus</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-12">
+                        <div class="worker">
+                            <div class="worker-img">
+                                    <img src="./assests/images/Prototype/Home-page/Prototype/Home-page/Desktop/Rectangle 9.png"
+                                        alt="">
+                            </div>
+                            <div class="worker-info">
+                                    <h4>Иван Иванов Иванович</h4>
+                                    <p>Malesuada lectus</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- <button class="all-doctors">Все врачи</button> -->
+        </section>
+
+
+        <section class="feedbacks">
+                <h2 class="feedback-header">Отзывы</h2>
+                <div class="feedback-cards">
+                    <div class="feedback-card">
+                        <h5 class="before-header">Кардиолог</h5>
+                        <h3 class="person-name">Иван Иванов Иванович</h3>
+                        <h5 class="after-header">Иван Иванов Иванович</h5>
+                        <p class="feedback">Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum
+                            nec vestibulum elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi
+                            elit. Leo, ultricies amet...</p>
+                        <p class="feedback-date">00.00.0000</p>
+                        <button class="read-more">Читать полностью</button>
+                    </div>
+                    <div class="feedback-card">
+                        <h5 class="before-header">Кардиолог</h5>
+                        <h3 class="person-name">Иван Иванов Иванович</h3>
+                        <h5 class="after-header">Иван Иванов Иванович</h5>
+                        <p class="feedback">Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum
+                            nec vestibulum elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi
+                            elit. Leo, ultricies amet...</p>
+                        <p class="feedback-date">00.00.0000</p>
+                        <button class="read-more">Читать полностью</button>
+                    </div>
+                    <div class="feedback-card ">
+                        <h5 class="before-header">Кардиолог</h5>
+                        <h3 class="person-name">Иван Иванов Иванович</h3>
+                        <h5 class="after-header">Иван Иванов Иванович</h5>
+                        <p class="feedback">Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum
+                            nec vestibulum elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi
+                            elit. Leo, ultricies amet...</p>
+                        <p class="feedback-date">00.00.0000</p>
+                        <button class="read-more">Читать полностью</button>
+                    </div>
+                    <!-- header part -->
+                    <div id="hidden" class="feedback-card ">
+                        <h5 class="before-header">Кардиолог</h5>
+                        <h3 class="person-name">Иван Иванов Иванович</h3>
+                        <h5 class="after-header">Иван Иванов Иванович</h5>
+                        <p class="feedback">Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum
+                            nec vestibulum elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi
+                            elit. Leo, ultricies amet...</p>
+                        <p class="feedback-date">00.00.0000</p>
+                        <button class="read-more">Читать полностью</button>
+                    </div>
+                    <div id="hidden" class="feedback-card ">
+                        <h5 class="before-header">Кардиолог</h5>
+                        <h3 class="person-name">Иван Иванов Иванович</h3>
+                        <h5 class="after-header">Иван Иванов Иванович</h5>
+                        <p class="feedback">Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum
+                            nec vestibulum elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi
+                            elit. Leo, ultricies amet...</p>
+                        <p class="feedback-date">00.00.0000</p>
+                        <button class="read-more">Читать полностью</button>
+                    </div>
+                    <div id="hidden" class="feedback-card ">
+                        <h5 class="before-header">Кардиолог</h5>
+                        <h3 class="person-name">Иван Иванов Иванович</h3>
+                        <h5 class="after-header">Иван Иванов Иванович</h5>
+                        <p class="feedback">Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum
+                            nec vestibulum elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi
+                            elit. Leo, ultricies amet...</p>
+                        <p class="feedback-date">00.00.0000</p>
+                        <button class="read-more">Читать полностью</button>
+                    </div>
+
+
+                </div>
+                <div class="btns">
+                    <button id="btn-load-more"> Смотреть все отзывы </button>
+                    <button class="not-active" id="btn-close"> Закрыть
+                    </button>
+                </div>
+        </section>
+        <div class="loc-wrapper">
+                <h2>Адреса клиник</h1>
+                    <div class="batken-loc">
+                        Batken
+                    </div>
+        </div>
+        <section id="clinic-location">
+
+                <div class="location">
+                    <div class="located">
+                        <div class="pre-location">Бишкек</div>
+                        <div class="street">ул. Энтузиастов, 30</div>
+                    </div>
+
+                    <div class="table">
+                        <div class="working-hours">
+                            <div class="pre-time">
+                                    Время работы
+                            </div>
+                            <div class="time">
+                                    ПН - ПТ 09:00 - 20:00
+                                    СБ - ВС 10:00 - 19:00
+                            </div>
+                        </div>
+                        <div class="phone-contact">
+                            <div class="pre-phone"> Телефон</div>
+                            <div class="phones">
+                                    +0 (000) 000-00-00
+                                    +0 (000) 000-00-00
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="location">
+                    <div class="located">
+                        <div class="pre-location">Бишкек</div>
+                        <div class="street">ул. Энтузиастов, 30</div>
+                    </div>
+
+                    <div class="table">
+                        <div class="working-hours">
+                            <div class="pre-time">
+                                    Время работы
+                            </div>
+                            <div class="time">
+                                    ПН - ПТ 09:00 - 20:00
+                                    СБ - ВС 10:00 - 19:00
+                            </div>
+                        </div>
+                        <div class="phone-contact">
+                            <div class="pre-phone"> Телефон</div>
+                            <div class="phones">
+                                    +0 (000) 000-00-00
+                                    +0 (000) 000-00-00
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="location">
+                    <div class="located">
+                        <div class="pre-location">Бишкек</div>
+                        <div class="street">ул. Энтузиастов, 30</div>
+                    </div>
+
+                    <div class="table">
+                        <div class="working-hours">
+                            <div class="pre-time">
+                                    Время работы
+                            </div>
+                            <div class="time">
+                                    ПН - ПТ 09:00 - 20:00
+                                    СБ - ВС 10:00 - 19:00
+                            </div>
+                        </div>
+                        <div class="phone-contact">
+                            <div class="pre-phone"> Телефон</div>
+                            <div class="phones">
+                                    +0 (000) 000-00-00
+                                    +0 (000) 000-00-00
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="location">
+                    <div class="located">
+                        <div class="pre-location">Бишкек</div>
+                        <div class="street">ул. Энтузиастов, 30</div>
+                    </div>
+
+                    <div class="table">
+                        <div class="working-hours">
+                            <div class="pre-time">
+                                    Время работы
+                            </div>
+                            <div class="time">
+                                    ПН - ПТ 09:00 - 20:00
+                                    СБ - ВС 10:00 - 19:00
+                            </div>
+                        </div>
+                        <div class="phone-contact">
+                            <div class="pre-phone"> Телефон</div>
+                            <div class="phones">
+                                    +0 (000) 000-00-00
+                                    +0 (000) 000-00-00
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="location">
+                    <div class="located">
+                        <div class="pre-location">Бишкек</div>
+                        <div class="street">ул. Энтузиастов, 30</div>
+                    </div>
+
+                    <div class="table">
+                        <div class="working-hours">
+                            <div class="pre-time">
+                                    Время работы
+                            </div>
+                            <div class="time">
+                                    ПН - ПТ 09:00 - 20:00
+                                    СБ - ВС 10:00 - 19:00
+                            </div>
+                        </div>
+                        <div class="phone-contact">
+                            <div class="pre-phone"> Телефон</div>
+                            <div class="phones">
+                                    +0 (000) 000-00-00
+                                    +0 (000) 000-00-00
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+        </section>
+
+        <!-- NEWS -->
+        <section id="news" data-stellar-background-ratio="2.5">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-12 col-sm-12">
+                            <!-- SECTION TITLE -->
+                            <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                                    <h2>Latest News</h2>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <!-- NEWS THUMB -->
+                            <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                                    <a href="news-detail.html">
+                                        <img src="images/news-image1.jpg" class="img-responsive" alt="">
+                                    </a>
+                                    <div class="news-info">
+                                        <span>March 08, 2018</span>
+                                        <h3><a href="news-detail.html">About Amazing Technology</a></h3>
+                                        <p>Maecenas risus neque, placerat volutpat tempor ut, vehicula et felis.</p>
+                                        <div class="author">
+                                            <img src="images/author-image.jpg" class="img-responsive" alt="">
+                                            <div class="author-info">
+                                                <h5>Jeremie Carlson</h5>
+                                                <p>CEO / Founder</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <!-- NEWS THUMB -->
+                            <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+                                    <a href="news-detail.html">
+                                        <img src="images/news-image2.jpg" class="img-responsive" alt="">
+                                    </a>
+                                    <div class="news-info">
+                                        <span>February 20, 2018</span>
+                                        <h3><a href="news-detail.html">Introducing a new healing process</a></h3>
+                                        <p>Fusce vel sem finibus, rhoncus massa non, aliquam velit. Nam et est ligula.</p>
+                                        <div class="author">
+                                            <img src="images/author-image.jpg" class="img-responsive" alt="">
+                                            <div class="author-info">
+                                                <h5>Jason Stewart</h5>
+                                                <p>General Director</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <!-- NEWS THUMB -->
+                            <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                                    <a href="news-detail.html">
+                                        <img src="images/news-image3.jpg" class="img-responsive" alt="">
+                                    </a>
+                                    <div class="news-info">
+                                        <span>January 27, 2018</span>
+                                        <h3><a href="news-detail.html">Review Annual Medical Research</a></h3>
+                                        <p>Vivamus non nulla semper diam cursus maximus. Pellentesque dignissim.</p>
+                                        <div class="author">
+                                            <img src="images/author-image.jpg" class="img-responsive" alt="">
+                                            <div class="author-info">
+                                                <h5>Andrio Abero</h5>
+                                                <p>Online Advertising</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+
+        <!-- MAKE AN APPOINTMENT -->
+        <section id="appointment" data-stellar-background-ratio="3">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-6 col-sm-6">
+                            <img src="images/appointment-image.jpg" class="img-responsive" alt="">
+                        </div>
+
+                        <div class="col-md-6 col-sm-6">
+                            <!-- CONTACT FORM HERE -->
+                            <form id="appointment-form" role="form" method="post" action="#">
+
+                                    <!-- SECTION TITLE -->
+                                    <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                                        <h2>Make an appointment</h2>
+                                    </div>
+
+                                    <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                        <div class="col-md-6 col-sm-6">
+                                            <label for="name">Name</label>
+                                            <input type="text" class="form-control" id="name" name="name"
+                                                placeholder="Full Name">
+                                        </div>
+
+                                        <div class="col-md-6 col-sm-6">
+                                            <label for="email">Email</label>
+                                            <input type="email" class="form-control" id="email" name="email"
+                                                placeholder="Your Email">
+                                        </div>
+
+                                        <div class="col-md-6 col-sm-6">
+                                            <label for="date">Select Date</label>
+                                            <input type="date" name="date" value="" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-6 col-sm-6">
+                                            <label for="select">Select Department</label>
+                                            <select class="form-control">
+                                                <option>General Health</option>
+                                                <option>Cardiology</option>
+                                                <option>Dental</option>
+                                                <option>Medical Research</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-12 col-sm-12">
+                                            <label for="telephone">Phone Number</label>
+                                            <input type="tel" class="form-control" id="phone" name="phone"
+                                                placeholder="Phone">
+                                            <label for="Message">Additional Message</label>
+                                            <textarea class="form-control" rows="5" id="message" name="message"
+                                                placeholder="Message"></textarea>
+                                            <button type="submit" class="form-control" id="cf-submit" name="submit">Submit
+                                                Button</button>
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+
+
+        <!-- GOOGLE MAP -->
+        <section id="google-map">
+
+                <div class="loc-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21212.88408164272!2d70.81018600611347!3d40.05884826874741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ba40173d13590b%3A0xa35d68d6d18e8885!2z0JHQsNGC0LrQtdC9!5e0!3m2!1sru!2skg!4v1644064080428!5m2!1sru!2skg"
+                        width="100%" height="491" style="border: 1px solid #F84B4C; border-radius: 32px; margin: 7% 0;"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+        </section>
+
+   {% endblock %}
 
     Hello {{ name }}
-{% for story in list %}
+    {% for story in list %}
 
-    {{ story.id}}
-    <h2>
-        {{ story.title|upper }}
-    </h2>
-    <p>{{ story.done }}</p>
+        {{ story.id}}
+        <h2>
+            {{ story.title|upper }}
+        </h2>
+        <p>{{ story.done }}</p>
 
-{% endfor %}
+    {% endfor %}
 
-{% endblock %}
 
-    
-{% block scripts %}
-{% endblock %}
-    
-{% block styles %}
-{% endblock %}
-    
-{% block footer %}
-{% include 'components/footer.html' %}
+    {% block footer %}
+    {% include 'components/footer.html' %}
+    {% endblock %}
+
 {% endblock %}

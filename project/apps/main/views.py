@@ -11,3 +11,8 @@ def main(request):
         {'id': 5, 'title': 'Задача 5', 'done': False},
     ]
     return render(request, 'main/index.html', {'name': 'World', 'list': todolist})
+
+
+
+def services(request):
+    return render(request, 'services/index.html')
