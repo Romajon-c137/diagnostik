@@ -1,0 +1,170 @@
+.wrapper {
+  background-color: #ccc;
+}
+.information-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 25px;
+  margin: 0% auto;
+}
+.info-box {
+  width: 398px;
+  height: 398px;
+  background-color: #ffff;
+  border-radius: 32px;
+  border: 1px solid #f84b4c;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.info-box img {
+  display: flex;
+  align-items: center;
+  margin: 3% auto;
+}
+.info-box h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.info-box p {
+  text-align: center;
+  color: #806d6d;
+}
+
+.banenr-img {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.3) 100%,
+      rgba(177, 177, 177, 0.5) 100%
+    ),
+    url(../images/healthcare-and-medical-concept-medicine-doctor-with-stethoscope-in-hand-and-patients-come\ 1.png)
+      center center no-repeat;
+
+  border-radius: 32px;
+
+  height: 650px;
+}
+.banner-caption {
+  height: 650px !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background: linear-gradient(
+    10deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  height: 100%;
+  color: #fff;
+}
+.banner-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 54%;
+  padding: 150px;
+}
+.banner-title {
+  text-align: left;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 120%;
+
+  color: #220f0f;
+}
+.banner-text {
+  text-align: left;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  color: #806d6d;
+  margin-top: 20px;
+}
+.appointment-btn {
+  width: 210px;
+  height: 46px;
+  border-radius: 16px;
+  border: 1px solid #f84b4c;
+  background-color: #f84b4c;
+  color: #ffffff;
+  margin-top: 100px;
+}
+
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 3% auto;
+  padding-bottom: 40px;
+}
+.card {
+  width: 262px;
+  height: 145px;
+  border: 1px solid #f84b4c;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.count {
+  color: #aba6a6;
+  padding: 0;
+  font-size: 48px;
+  font-family: "Poppins";
+}
+
+.description {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Poppins";
+}
+.banner-img-2 {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.2) 100%,
+      rgba(177, 177, 177, 0.5) 100%
+    ),
+    url("../images/Home-page/Desktop/About-us/Rectangle-8.png") center center
+      no-repeat;
+  border-radius: 32px;
+  background-size: cover;
+  height: 600px;
+}
+.banner-title-2 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  text-decoration-line: underline;
+  color: #220f0f;
+  margin-bottom: 25px;
+}
+.banner-info-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 46%;
+  padding: 150px;
+}
+.banner-text-2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  color: #806d6d;
+}

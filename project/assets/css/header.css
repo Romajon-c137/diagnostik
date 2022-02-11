@@ -1,0 +1,54 @@
+header {
+  background-color: #f9f9f9;
+}
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #f9f9f9;
+  min-height: 100px;
+}
+.left-side {
+  display: flex;
+}
+.menu-logo img {
+  width: 60px;
+  height: 60px;
+}
+.menu-list {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  margin-left: 61px;
+  width: 100%;
+}
+.right-side {
+  display: flex;
+  justify-content: space-between;
+}
+.phone-menu {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 15px;
+}
+.result-btn {
+  width: 210px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #f84b4c;
+  border: none;
+  outline: none;
+  border-radius: 32px;
+}
+.hamburger {
+  width: 24px;
+  height: 16px;
+  display: none;
+  background: url(../svg/burger.svg);
+}

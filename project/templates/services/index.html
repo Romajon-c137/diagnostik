@@ -1,5 +1,13 @@
 {% extends 'main/index.html' %}
 {% load static i18n %}
+
+{% block styles %}
+
+    <!--  services  -->
+    <link href="{% static 'css/services.css' %}" rel="stylesheet"/>
+
+{% endblock %}
+
 {% block content %}
 <section id="banner-services">
 
@@ -134,3 +142,4 @@
 
 </section>
 {% endblock %}
+
