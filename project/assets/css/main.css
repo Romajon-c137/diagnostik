@@ -1,6 +1,7 @@
 .wrapper {
   background-color: #ccc;
 }
+
 .information-boxes {
   display: flex;
   flex-wrap: wrap;
@@ -8,7 +9,9 @@
   justify-content: space-between;
   row-gap: 25px;
   margin: 0% auto;
+  padding: 30px 0;
 }
+
 .info-box {
   width: 398px;
   height: 398px;
@@ -21,11 +24,13 @@
   justify-content: center;
   flex-direction: column;
 }
+
 .info-box img {
   display: flex;
   align-items: center;
   margin: 3% auto;
 }
+
 .info-box h2 {
   font-size: 24px;
   text-align: center;
@@ -38,38 +43,42 @@
 }
 
 .banenr-img {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.3) 100%,
-      rgba(177, 177, 177, 0.5) 100%
-    ),
-    url(../images/healthcare-and-medical-concept-medicine-doctor-with-stethoscope-in-hand-and-patients-come\ 1.png)
-      center center no-repeat;
-
+  background: linear-gradient(rgba(255, 255, 255, 0.3) 100%,
+        rgba(177, 177, 177, 0.5) 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 32px;
 
-  height: 650px;
+  height: calc(100vh - 287px);
 }
+
 .banner-caption {
   height: 650px !important;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-direction: column;
   text-align: center;
-  background: linear-gradient(
-    10deg,
-    rgba(255, 255, 255, 0.5) 0%,
-    rgba(255, 255, 255, 0.5) 100%
-  );
+  background: linear-gradient(10deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.5) 100%);
   height: 100%;
   color: #fff;
 }
+
+.banner-description{
+  height: 23%;
+}
+
 .banner-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 54%;
-  padding: 150px;
+  justify-content: space-between;
+  height: 55%;
+  padding: 100px;
+  max-width: 60%;
 }
+
 .banner-title {
   text-align: left;
   font-style: normal;
@@ -79,6 +88,7 @@
 
   color: #220f0f;
 }
+
 .banner-text {
   text-align: left;
   font-style: normal;
@@ -88,6 +98,11 @@
   color: #806d6d;
   margin-top: 20px;
 }
+.appointment-lnk{
+  width: 210px;
+  margin-top: 100px;
+}
+
 .appointment-btn {
   width: 210px;
   height: 46px;
@@ -95,9 +110,14 @@
   border: 1px solid #f84b4c;
   background-color: #f84b4c;
   color: #ffffff;
-  margin-top: 100px;
+  cursor: pointer;
 }
-
+.appointment-btn:hover{
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid #F84B4C;
+  color: #F84B4C;
+}
 .about-cards {
   display: flex;
   flex-wrap: wrap;
@@ -105,6 +125,7 @@
   margin: 3% auto;
   padding-bottom: 40px;
 }
+
 .card {
   width: 262px;
   height: 145px;
@@ -115,11 +136,38 @@
   justify-content: center;
   flex-direction: column;
 }
+
 .count {
   color: #aba6a6;
   padding: 0;
   font-size: 48px;
   font-family: "Poppins";
+}
+
+
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 3% auto;
+}
+
+.card {
+  width: 262px;
+  height: 145px;
+  border: 1px solid #F84B4C;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.count {
+  color: #ABA6A6;
+  padding: 0;
+  font-size: 48px;
+  font-family: 'Poppins';
 }
 
 .description {
@@ -128,17 +176,16 @@
   font-weight: bold;
   font-family: "Poppins";
 }
+
 .banner-img-2 {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.2) 100%,
-      rgba(177, 177, 177, 0.5) 100%
-    ),
-    url("../images/Home-page/Desktop/About-us/Rectangle-8.png") center center
-      no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.2) 100%,
+        rgba(177, 177, 177, 0.5) 100%),
+     url("../images/Home-page/Desktop/About-us/Rectangle-8.png") center center no-repeat;
   border-radius: 32px;
   background-size: cover;
   height: 600px;
 }
+
 .banner-title-2 {
   font-family: Poppins;
   font-style: normal;
@@ -151,6 +198,7 @@
   color: #220f0f;
   margin-bottom: 25px;
 }
+
 .banner-info-2 {
   display: flex;
   flex-direction: column;
@@ -158,6 +206,7 @@
   height: 46%;
   padding: 150px;
 }
+
 .banner-text-2 {
   font-style: normal;
   font-weight: normal;
@@ -167,4 +216,272 @@
   display: flex;
   align-items: center;
   color: #806d6d;
+}
+
+.doctors-slider {
+  margin: 5% 0;
+  padding-bottom: 8%;
+  height: 550px;
+}
+
+.swiper1 {
+  height: 710px;
+}
+.swiper2 {
+  height: 680px;
+}
+
+.swiper-button-next {
+  position: absolute !important;
+  top: 45% !important;
+  color: #f84b4c !important;
+  /* right: 2% !important; */
+  
+}
+
+.swiper-button-prev {
+  position: absolute !important;
+  top: 45% !important;
+  color: #f84b4c !important;
+  /* left: 2% !important; */
+  
+}
+.swiper-pagination1{
+  position: absolute !important;
+  top: 65% !important;
+}
+.feedback-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1% 0 2% 0;
+  gap: 50px;
+}
+
+.feedback-card {
+  width: 370px;
+  height: 431px;
+  border-radius: 16px;
+  border: 1px solid #F84B4C;
+  padding: 30px;
+
+}
+
+.before-header {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  color: #BFB6B6;
+  text-align: right;
+}
+
+.person-name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  color: #220F0F;
+  padding: 25px 0;
+}
+
+.after-header {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: left;
+  color: #BFB6B6;
+
+}
+
+.feedback {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  color: #806D6D;
+  text-align: left;
+  padding-bottom: 25px;
+
+}
+
+.feedback-date {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  color: #BFB6B6;
+  text-align: right;
+}
+
+.read-more {
+  width: 210px;
+  height: 46px;
+  border-radius: 16px;
+  background-color: transparent;
+  border: 1px solid #F84B4C;
+  color: #F84B4C;
+  margin: 20% auto;
+  font-weight: 500;
+}
+
+.read-more:hover {
+  background-color: #F84B4C;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+}
+
+.feedback-header {
+  margin-left: 11%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #220F0F;
+  margin-bottom: 30px;
+}
+
+#btn-load-more {
+  width: 272px;
+  height: 46px;
+  border-radius: 16px;
+  border: 1px solid #F84B4C;
+  color: #F84B4C;
+  font-weight: bold;
+  text-align: center;
+  background-color: transparent;
+
+}
+
+#btn-load-more:hover {
+  background-color: #F84B4C;
+  cursor: pointer;
+  color: white;
+
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+}
+
+#btn-close {
+  width: 272px;
+  height: 46px;
+  border-radius: 16px;
+  border: 1px solid #F84B4C;
+  color: #F84B4C;
+  font-weight: bold;
+  text-align: center;
+  background-color: transparent;
+
+
+}
+
+#btn-close:hover {
+  background-color: #F84B4C;
+  cursor: pointer;
+  color: white;
+
+}
+
+#hidden {
+  display: none;
+}
+
+.not-active {
+  display: none;
+}
+
+.batken-loc {
+  width: 120px;
+  height: 30px;
+  background-color: #F84B4C;
+  color: #fff;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  cursor: pointer;
+}
+.batken-loc:hover{
+   background-color: #ffff;
+   color: #F84B4C;
+   border: 1px solid #F84B4C;
+   cursor: pointer;
+}
+
+.loc-wrapper {
+  padding: 4% 10%;
+  width: 170px;
+}
+
+.location {
+  width: 431px;
+  height: 180px;
+  border: 1px solid #F84B4C;
+  border-radius: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 1%;
+}
+.clinic-header {
+   padding: 20px 0;
+}
+.working-hours,
+.phone-contact {
+  width: 160px;
+  height: 60px;
+  padding: 5% 1%;
+  margin-left: 7.5%;
+  line-height: 140%;
+}
+
+.pre-location,
+.pre-time,
+.pre-phone {
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: left;
+  color: #ABA6A6;
+
+}
+
+.time,
+.phones {
+  font-weight: bold;
+  text-align: left;
+}
+
+.table {
+  display: flex;
+
+}
+
+.located {
+  margin: 7% 0 0 9%;
+}
+
+.street {
+  font-weight: bold;
+  text-align: left;
+}
+
+#clinic-location {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 60px;
 }

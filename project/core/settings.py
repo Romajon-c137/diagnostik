@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'apps.reviews',
     'apps.services',
     'apps.specialists',
+    'apps.slide',
 
     'ckeditor'
 ]
@@ -150,3 +151,6 @@ STATIC_ROOT = BASE_DIR / 'static'
 STATICFILES_DIRS = (
     'assets',
 )
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = 'media'

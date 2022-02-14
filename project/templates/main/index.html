@@ -8,172 +8,433 @@
 {% include 'components/header.html' %}
 {% endblock %}
 {% block content %}
-<main>
-    <div class="background-color">
+
+<div class="background-color">
+  <main>
+      <!--  -->
+      <div class="swiper-container">
         <div class="container">
-          <div class="banner-caption">
-            <div class="banenr-img">
-              <div class="banner-info">
-                <h1 class="banner-title">
-                  Nunc et. Vel molestie molestie leo, dolor amet.
-                </h1>
-                <p class="banner-text">Lorem dictum. Nunc justo in non accumsan et ex. Dictum. Vulputate non et mattis in
-                  hac malesuada nisi venenatis molestie tortor, quis, accumsan ex. Quam, mattis nec morbi ut. Molestie
-                  velit efficitur dictum ultricies.</p>
-                <button class="appointment-btn">Записатся
-                </button>
-  
-              </div>
-  
+          <!-- Slider main container -->
+          <div class="swiper swiper1">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+
+              {% for slide in slides %}
+                <div class="swiper-slide banner-caption">
+                  <div class="banenr-img" style="background-image: url('media/{{ slide.image }}');">
+                    <div class="banner-info">
+
+                    <div class="banner-description">
+                      <h1 class="banner-title">
+                        {{ slide.title|truncatechars:50 }}
+                      </h1>
+                      <p class="banner-text">{{ slide.description|striptags|truncatechars:200 }}</p>
+                      </div>
+                      
+                      {% if slide.link %}
+                        <a class="appointment-lnk" href="{{ slide.link }}">
+                          <button class="appointment-btn">Записатся</button>
+                        </a>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+
             </div>
-  
           </div>
         </div>
-        <div class="container">
-          <div class="about-cards">
+        <!--  -->
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev swiper-button-prev1"></div>
+        <div class="swiper-button-next swiper-button-next1"></div>
+      </div>     
   
-            <div class="card">
-              <h2 class="count">24</h1>
-                <p class="description">Отделения</p>
-            </div>
-  
-  
-            <div class="card">
-              <h2 class="count">37</h1>
-                <p class="description">Видов исследований</p>
-            </div>
-  
-  
-            <div class="card">
-              <h2 class="count">86</h1>
-                <p class="description">Специалиста</p>
-            </div>
-  
-  
-            <div class="card">
-              <h2 class="count">63</h1>
-                <p class="description">Видов исследований</p>
-            </div>
-  
-  
-            <div class="card">
-              <h2 class="count">11</h1>
-                <p class="description">Видов исследований</p>
-            </div>
-  
-  
-          </div>
-        </div>
-    </div>
-    <section class="about-banner">
+
       <div class="container">
-        <div class="banner-caption">
-          <div class="banner-img-2">
-            <div class="banner-info-2">
-              <h1 class="banner-title-2">
-                О компании
-              </h1>
-              <p class="banner-text-2">Aenean in est. Et vel dapibus luctus molestie hac ut. Molestie adipiscing sit
-                molestie dui sit nunc mollis in eleifend mauris nisi arcu dictumst. Non urna sodales nunc augue vitae sed
-                mattis ornare sapien velit nulla sed imperdiet vestibulum cursus hac ut. Morbi tortor, et ultricies.
-                Imperdiet est. Accumsan hac arcu justo justo venenatis dapibus quis, tortor, dolor nulla dictu. <br>
-                <br>
-                Ornare ex. Luctus vestibulum vel in molestie velit sit in in imperdiet quis, morbi integer eleifend
-                venenatis nulla lorem ve.</p>
-  
-  
-            </div>
-  
+        <div class="about-cards">
+
+          <div class="card">
+            <h2 class="count">24</h1>
+              <p class="description">Отделения</p>
           </div>
-  
+
+
+          <div class="card">
+            <h2 class="count">37</h1>
+              <p class="description">Видов исследований</p>
+          </div>
+
+
+          <div class="card">
+            <h2 class="count">86</h1>
+              <p class="description">Специалиста</p>
+          </div>
+
+
+          <div class="card">
+            <h2 class="count">63</h1>
+              <p class="description">Видов исследований</p>
+          </div>
+
+
+          <div class="card">
+            <h2 class="count">11</h1>
+              <p class="description">Видов исследований</p>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<section class="about-banner">
+  <div class="container">
+    <div class="banner-caption">
+      <div class="banner-img-2">
+        <div class="banner-info-2">
+          <h1 class="banner-title-2">
+            О компании
+          </h1>
+          <p class="banner-text-2">Aenean in est. Et vel dapibus luctus molestie hac ut. Molestie adipiscing sit
+            molestie dui sit nunc mollis in eleifend mauris nisi arcu dictumst. Non urna sodales nunc augue vitae sed
+            mattis ornare sapien velit nulla sed imperdiet vestibulum cursus hac ut. Morbi tortor, et ultricies.
+            Imperdiet est. Accumsan hac arcu justo justo venenatis dapibus quis, tortor, dolor nulla dictu. <br>
+            <br>
+            Ornare ex. Luctus vestibulum vel in molestie velit sit in in imperdiet quis, morbi integer eleifend
+            venenatis nulla lorem ve.</p>
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<div class="background-color">
+  <section class="inform-cards worker-slider">
+
+    <div class="container">
+      <div class="information-boxes">
+
+        <div class="info-box">
+          <img src="./src/images/stretcher (1) 1.png" alt="">
+          <h2>Современное оборудование</h2>
+          <p>Vulputate faucibus. Cursus nec efficitur accumsan accumsan molestie ut. Malesuada
+            non vitae odio.
+            Elit. Non interdum dolor sit sit arcu justo ipsum efficitur mattis est. Dolor
+            vestibulum nulla
+            faucibus. Nun.</p>
+        </div>
+
+        <div class="info-box">
+          <img src="./src/images/stretcher (1) 1.png" alt="">
+          <h2>Современное оборудование</h2>
+          <p>Vulputate faucibus. Cursus nec efficitur accumsan accumsan molestie ut. Malesuada
+            non vitae odio.
+            Elit. Non interdum dolor sit sit arcu justo ipsum efficitur mattis est. Dolor
+            vestibulum nulla
+            faucibus. Nun.</p>
+        </div>
+
+        <div class="info-box">
+          <img src="./src/images/stretcher (1) 1.png" alt="">
+          <h2>Современное оборудование</h2>
+          <p>Vulputate faucibus. Cursus nec efficitur accumsan accumsan molestie ut. Malesuada
+            non vitae odio.
+            Elit. Non interdum dolor sit sit arcu justo ipsum efficitur mattis est. Dolor
+            vestibulum nulla
+            faucibus. Nun.</p>
+        </div>
+
+        <div class="info-box">
+          <img src="./src/images/stretcher (1) 1.png" alt="">
+          <h2>Современное оборудование</h2>
+          <p>Vulputate faucibus. Cursus nec efficitur accumsan accumsan molestie ut. Malesuada
+            non vitae odio.
+            Elit. Non interdum dolor sit sit arcu justo ipsum efficitur mattis est. Dolor
+            vestibulum nulla
+            faucibus. Nun.</p>
+        </div>
+
+        <div class="info-box">
+          <img src="./src/images/stretcher (1) 1.png" alt="">
+          <h2>Современное оборудование</h2>
+          <p>Vulputate faucibus. Cursus nec efficitur accumsan accumsan molestie ut. Malesuada
+            non vitae odio.
+            Elit. Non interdum dolor sit sit arcu justo ipsum efficitur mattis est. Dolor
+            vestibulum nulla
+            faucibus. Nun.</p>
+        </div>
+
+        <div class="info-box">
+          <img src="./src/images/stretcher (1) 1.png" alt="">
+          <h2>Современное оборудование</h2>
+          <p>Vulputate faucibus. Cursus nec efficitur accumsan accumsan molestie ut. Malesuada
+            non vitae odio.
+            Elit. Non interdum dolor sit sit arcu justo ipsum efficitur mattis est. Dolor
+            vestibulum nulla
+            faucibus. Nun.</p>
+        </div>
+
+      </div>
+    </div>
+    <section class="doctors-slider">
+      <div class="container">
+        <!-- Slider main container -->
+        <div class="swiper swiper2">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="./src/images/Rectangle 10.png" alt="" srcset=""></div>
+            <div class="swiper-slide"><img src="./src/images/Rectangle 9.png" alt="" srcset=""></div>
+            <div class="swiper-slide"><img src="./src/images/Rectangle 8.png" alt="" srcset=""></div>
+            <div class="swiper-slide"><img src="./src/images/Rectangle 10.png" alt="" srcset=""></div>
+            <div class="swiper-slide"><img src="./src/images/Rectangle 9.png" alt="" srcset=""></div>
+            <div class="swiper-slide"><img src="./src/images/Rectangle 8.png" alt="" srcset=""></div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination swiper-pagination2"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
         </div>
       </div>
     </section>
-    <div class="background-color">
-      <section class="inform-cards worker-slider">
-  
-        <div class="container">
-          <div class="information-boxes">
-  
-            <div class="info-box">
-              <img src="./src/images/stretcher (1) 1.png" alt="">
-              <h2>Современное оборудование</h2>
-              <p>Vulputate faucibus. Cursus nec efficitur accumsan accumsan molestie ut. Malesuada
-                non vitae odio.
-                Elit. Non interdum dolor sit sit arcu justo ipsum efficitur mattis est. Dolor
-                vestibulum nulla
-                faucibus. Nun.</p>
-            </div>
-  
-            <div class="info-box">
-              <img src="./src/images/stretcher (1) 1.png" alt="">
-              <h2>Современное оборудование</h2>
-              <p>Vulputate faucibus. Cursus nec efficitur accumsan accumsan molestie ut. Malesuada
-                non vitae odio.
-                Elit. Non interdum dolor sit sit arcu justo ipsum efficitur mattis est. Dolor
-                vestibulum nulla
-                faucibus. Nun.</p>
-            </div>
-  
-            <div class="info-box">
-              <img src="./src/images/stretcher (1) 1.png" alt="">
-              <h2>Современное оборудование</h2>
-              <p>Vulputate faucibus. Cursus nec efficitur accumsan accumsan molestie ut. Malesuada
-                non vitae odio.
-                Elit. Non interdum dolor sit sit arcu justo ipsum efficitur mattis est. Dolor
-                vestibulum nulla
-                faucibus. Nun.</p>
-            </div>
-  
-            <div class="info-box">
-              <img src="./src/images/stretcher (1) 1.png" alt="">
-              <h2>Современное оборудование</h2>
-              <p>Vulputate faucibus. Cursus nec efficitur accumsan accumsan molestie ut. Malesuada
-                non vitae odio.
-                Elit. Non interdum dolor sit sit arcu justo ipsum efficitur mattis est. Dolor
-                vestibulum nulla
-                faucibus. Nun.</p>
-            </div>
-  
-            <div class="info-box">
-              <img src="./src/images/stretcher (1) 1.png" alt="">
-              <h2>Современное оборудование</h2>
-              <p>Vulputate faucibus. Cursus nec efficitur accumsan accumsan molestie ut. Malesuada
-                non vitae odio.
-                Elit. Non interdum dolor sit sit arcu justo ipsum efficitur mattis est. Dolor
-                vestibulum nulla
-                faucibus. Nun.</p>
-            </div>
-  
-            <div class="info-box">
-              <img src="./src/images/stretcher (1) 1.png" alt="">
-              <h2>Современное оборудование</h2>
-              <p>Vulputate faucibus. Cursus nec efficitur accumsan accumsan molestie ut. Malesuada
-                non vitae odio.
-                Elit. Non interdum dolor sit sit arcu justo ipsum efficitur mattis est. Dolor
-                vestibulum nulla
-                faucibus. Nun.</p>
-            </div>
-  
-          </div>
-        </div>
-  
-      </section>
+
+</div>
+<section class="feedbacks">
+  <div class="container">
+    <h2 class="feedback-header">Отзывы</h2>
+    <div class="feedback-cards">
+      <div class="feedback-card">
+        <h5 class="before-header">Кардиолог</h5>
+        <h3 class="person-name">Иван Иванов Иванович</h3>
+        <h5 class="after-header">Иван Иванов Иванович</h5>
+        <p class="feedback">Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum
+          nec vestibulum elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi
+          elit. Leo, ultricies amet...</p>
+        <p class="feedback-date">00.00.0000</p>
+        <button class="read-more">Читать полностью</button>
+      </div>
+      <div class="feedback-card">
+        <h5 class="before-header">Кардиолог</h5>
+        <h3 class="person-name">Иван Иванов Иванович</h3>
+        <h5 class="after-header">Иван Иванов Иванович</h5>
+        <p class="feedback">Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum
+          nec vestibulum elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi
+          elit. Leo, ultricies amet...</p>
+        <p class="feedback-date">00.00.0000</p>
+        <button class="read-more">Читать полностью</button>
+      </div>
+      <div class="feedback-card media-card">
+        <h5 class="before-header">Кардиолог</h5>
+        <h3 class="person-name">Иван Иванов Иванович</h3>
+        <h5 class="after-header">Иван Иванов Иванович</h5>
+        <p class="feedback">Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum
+          nec vestibulum elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi
+          elit. Leo, ultricies amet...</p>
+        <p class="feedback-date">00.00.0000</p>
+        <button class="read-more">Читать полностью</button>
+      </div>
+      <!-- header part -->
+      <div id="hidden" class="feedback-card ">
+        <h5 class="before-header">Кардиолог</h5>
+        <h3 class="person-name">Иван Иванов Иванович</h3>
+        <h5 class="after-header">Иван Иванов Иванович</h5>
+        <p class="feedback">Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum
+          nec vestibulum elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi
+          elit. Leo, ultricies amet...</p>
+        <p class="feedback-date">00.00.0000</p>
+        <button class="read-more">Читать полностью</button>
+      </div>
+      <div id="hidden" class="feedback-card media-card ">
+        <h5 class="before-header">Кардиолог</h5>
+        <h3 class="person-name">Иван Иванов Иванович</h3>
+        <h5 class="after-header">Иван Иванов Иванович</h5>
+        <p class="feedback">Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum
+          nec vestibulum elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi
+          elit. Leo, ultricies amet...</p>
+        <p class="feedback-date">00.00.0000</p>
+        <button class="read-more">Читать полностью</button>
+      </div>
+      <div id="hidden" class="feedback-card ">
+        <h5 class="before-header">Кардиолог</h5>
+        <h3 class="person-name">Иван Иванов Иванович</h3>
+        <h5 class="after-header">Иван Иванов Иванович</h5>
+        <p class="feedback">Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum
+          nec vestibulum elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi
+          elit. Leo, ultricies amet...</p>
+        <p class="feedback-date">00.00.0000</p>
+        <button class="read-more">Читать полностью</button>
+      </div>
+
+
     </div>
-    </main>
+    <div class="btns">
+      <button id="btn-load-more"> Смотреть все отзывы </button>
+      <button class="not-active" id="btn-close"> Закрыть
+      </button>
+    </div>
+  </div>
+</section>
+<div class="background-color">
+  <div class="container">
+    <div class="loc-wrapper">
+      <h2 class="clinic-header">Адреса клиник</h1>
+        <div class="batken-loc">
+          Batken
+        </div>
+    </div>
+
+  
+    <div id="clinic-location">
+      <div class="location">
+        <div class="located">
+          <div class="pre-location">Бишкек</div>
+          <div class="street">ул. Энтузиастов, 30</div>
+        </div>
+
+        <div class="table">
+          <div class="working-hours">
+            <div class="pre-time">
+              Время работы
+            </div>
+            <div class="time">
+              ПН - ПТ 09:00 - 20:00
+              СБ - ВС 10:00 - 19:00
+            </div>
+          </div>
+          <div class="phone-contact">
+            <div class="pre-phone"> Телефон</div>
+            <div class="phones">
+              +0 (000) 000-00-00
+              +0 (000) 000-00-00
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="location">
+        <div class="located">
+          <div class="pre-location">Бишкек</div>
+          <div class="street">ул. Энтузиастов, 30</div>
+        </div>
+
+        <div class="table">
+          <div class="working-hours">
+            <div class="pre-time">
+              Время работы
+            </div>
+            <div class="time">
+              ПН - ПТ 09:00 - 20:00
+              СБ - ВС 10:00 - 19:00
+            </div>
+          </div>
+          <div class="phone-contact">
+            <div class="pre-phone"> Телефон</div>
+            <div class="phones">
+              +0 (000) 000-00-00
+              +0 (000) 000-00-00
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="location">
+        <div class="located">
+          <div class="pre-location">Бишкек</div>
+          <div class="street">ул. Энтузиастов, 30</div>
+        </div>
+
+        <div class="table">
+          <div class="working-hours">
+            <div class="pre-time">
+              Время работы
+            </div>
+            <div class="time">
+              ПН - ПТ 09:00 - 20:00
+              СБ - ВС 10:00 - 19:00
+            </div>
+          </div>
+          <div class="phone-contact">
+            <div class="pre-phone"> Телефон</div>
+            <div class="phones">
+              +0 (000) 000-00-00
+              +0 (000) 000-00-00
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="location">
+        <div class="located">
+          <div class="pre-location">Бишкек</div>
+          <div class="street">ул. Энтузиастов, 30</div>
+        </div>
+
+        <div class="table">
+          <div class="working-hours">
+            <div class="pre-time">
+              Время работы
+            </div>
+            <div class="time">
+              ПН - ПТ 09:00 - 20:00
+              СБ - ВС 10:00 - 19:00
+            </div>
+          </div>
+          <div class="phone-contact">
+            <div class="pre-phone"> Телефон</div>
+            <div class="phones">
+              +0 (000) 000-00-00
+              +0 (000) 000-00-00
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="location media-loc">
+        <div class="located l-media">
+          <div class="pre-location">Бишкек</div>
+          <div class="street">ул. Энтузиастов, 30</div>
+        </div>
+
+        <div class="table t-media">
+          <div class="working-hours">
+            <div class="pre-time">
+              Время работы
+            </div>
+            <div class="time">
+              ПН - ПТ 09:00 - 20:00
+              СБ - ВС 10:00 - 19:00
+            </div>
+          </div>
+          <div class="phone-contact">
+            <div class="pre-phone"> Телефон</div>
+            <div class="phones">
+              +0 (000) 000-00-00
+              +0 (000) 000-00-00
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="loc-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21212.88408164272!2d70.81018600611347!3d40.05884826874741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ba40173d13590b%3A0xa35d68d6d18e8885!2z0JHQsNGC0LrQtdC9!5e0!3m2!1sru!2skg!4v1644064080428!5m2!1sru!2skg"
+        width="100%" height="491" style="border: 1px solid #F84B4C; border-radius: 32px; margin: 2% 0;"
+        allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
-
-    Hello {{ name }}
-    {% for story in list %}
-
-        {{ story.id}}
-        <h2>
-            {{ story.title|upper }}
-        </h2>
-        <p>{{ story.done }}</p>
-
-    {% endfor %}
 
 
 {% block footer %}
