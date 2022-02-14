@@ -19,8 +19,8 @@ def news(request):
 def prices(request):
     return render(request, 'prices/index.html')
 
-def reviews(request):
-    return render(request, 'reviews/index.html')
+def clinic(request):
+    return render(request, 'clinic/index.html')
 
 def specialists(request):
     return render(request, 'specialists/index.html')
