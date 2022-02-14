@@ -129,8 +129,5 @@ dmypy.json
 .pyre/
 /migrations
 migrations/
-project/images
-project/assets/assests
-project/assets/images
 .DS_Store
 project/media/
