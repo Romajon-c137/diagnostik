@@ -12,6 +12,7 @@
 <div class="background-color">
   <main>
       <!--  -->
+      {% if slides.all %}
       <div class="swiper-container">
         <div class="container">
           <!-- Slider main container -->
@@ -49,7 +50,8 @@
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev swiper-button-prev1"></div>
         <div class="swiper-button-next swiper-button-next1"></div>
-      </div>     
+      </div>
+      {% endif %}
   
 
       <div class="container">

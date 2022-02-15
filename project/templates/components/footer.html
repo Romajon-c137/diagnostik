@@ -1,4 +1,4 @@
-{% load i18n static %}
+{% load static i18n %}
 <footer>
     <div class="background-color-lightRed">
       <div class="container">
@@ -39,15 +39,12 @@
           </div>
           <div class="footer-menu">
             <div class="footer-menu-title">
-              Quick-menu
+              Pages
             </div>
             <ul class="quick-menu">
-              <li>Главная</li>
-              <li>Клиника</li>
-              <li>Цены</li>
-              <li>Лабаратории</li>
-              <li>Услуги</li>
-              <li>Спецеалисты / отделение</li>
+              {% for page in footer %}
+                <li><a href="{{ page.get_absolute_url }}">{{ page.name }}</a></li>
+              {% endfor %}
             </ul>
           </div>
 
