@@ -1,17 +1,15 @@
 {% extends 'base.html' %}
 {% load static i18n %}
 
-
-
 {% block index %}
 {% block header %}
 {% include 'components/header.html' %}
 {% endblock %}
 {% block content %}
 
-<div class="background-color">
   <main>
       <!--  -->
+      {% if slides.all %}
       <div class="swiper-container">
         <div class="container">
           <!-- Slider main container -->
@@ -32,15 +30,16 @@
                       <p class="banner-text">{{ slide.description|striptags|truncatechars:200 }}</p>
                       </div>
                       
-                      {% if slide.link %}
-                        <a class="appointment-lnk" href="{{ slide.link }}">
-                          <button class="appointment-btn">Записатся</button>
+                      {% if slide.button_link %}
+                        <a class="appointment-lnk" href="{{ slide.button_link }}">
+                          <button class="appointment-btn">{{ slide.button_title }}</button>
                         </a>
                       {% endif %}
                     </div>
                   </div>
                 </div>
               {% endfor %}
+              
 
             </div>
           </div>
@@ -49,7 +48,8 @@
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev swiper-button-prev1"></div>
         <div class="swiper-button-next swiper-button-next1"></div>
-      </div>     
+      </div>
+      {% endif %}
   
 
       <div class="container">
@@ -89,7 +89,6 @@
       </div>
     </div>
   </main>
-</div>
 <section class="about-banner">
   <div class="container">
     <div class="banner-caption">
