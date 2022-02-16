@@ -1,21 +1,22 @@
-header {
-  background-color: #f9f9f9;
-}
 .main-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+
   background-color: #f9f9f9;
   min-height: 100px;
 }
+
 .left-side {
   display: flex;
 }
+
 .menu-logo img {
   width: 60px;
   height: 60px;
 }
+
 .menu-list {
   display: flex;
   align-items: center;
@@ -23,10 +24,22 @@ header {
   margin-left: 61px;
   width: 100%;
 }
+
+.menu-list li {
+  cursor: pointer;
+
+}
+
+.menu-list li:hover {
+  text-decoration: underline;
+  color: rgb(54, 54, 54);
+}
+
 .right-side {
   display: flex;
   justify-content: space-between;
 }
+
 .phone-menu {
   display: flex;
   gap: 15px;
@@ -34,6 +47,16 @@ header {
   align-items: center;
   margin-right: 15px;
 }
+
+.phone-menu li {
+  cursor: pointer;
+}
+
+.phone-menu li:hover {
+  text-decoration: underline;
+  color: rgb(54, 54, 54);
+}
+
 .result-btn {
   width: 210px;
   height: 46px;
@@ -45,10 +68,19 @@ header {
   border: none;
   outline: none;
   border-radius: 32px;
+  cursor: pointer;
 }
+
+.result-btn:hover {
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid #F84B4C;
+  color: #F84B4C;
+}
+
 .hamburger {
   width: 24px;
   height: 16px;
   display: none;
-  background: url(../svg/burger.svg);
+  background-image: url(../svg/burger.svg);
 }
