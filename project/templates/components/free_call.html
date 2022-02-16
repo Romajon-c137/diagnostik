@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block detail %}
+
+    <section class="card--news-signup txt-center stitle-home-gazette-signup c-bg-dark c-txt-white padding-sm"
+             data-moduletitle="home-gazette-signup">
+        <p class="card--news-signup__leadin wrapper wrapper--3-down">
+            {% trans 'Get the latest news delivered to your inbox.' %}
+        </p>
+
+        {% csrf_token %}
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <form class="content-area" id="newspaper_signup_form" action="{% url 'accept' %}" method="post">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                <div class="form-row display-inline-block">
+                    {{ form.full_name.errors }}
+                    <label for="{{ form.full_name.id_for_label }}" class="label-reveal">{% trans "Your name" %}:</label>
+                    {{ form.full_name }}
+                </div>
+                <div class="form-row display-inline-block">
+                    {{ form.e_mail.errors }}
+                    <label for="{{ form.e_mail.id_for_label }}" class="label-reveal">{% trans "Email" %}:</label>
+                    {{ form.e_mail }}
+                </div>
+                <div class="form-row display-inline-block">
+                    <button type="submit" class="btn btn--min-width btn--reverse" id="newspaper_signup_btn">
+                        {% trans 'Subscribe' %}
+                    </button>
+                </div>
+            </form>
+        {% endif %}
+    </section>
+
+{% endblock %}
