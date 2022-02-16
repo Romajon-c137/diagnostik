@@ -12,8 +12,8 @@ const swiper1 = new Swiper('.swiper.swiper1', {
 
    // Navigation arrows
    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next1',
+      prevEl: '.swiper-button-prev1',
    },
 
 });
@@ -30,8 +30,8 @@ const swiper2 = new Swiper('.swiper.swiper2', {
 
    // Navigation arrows
    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next2',
+      prevEl: '.swiper-button-prev2',
    },
 
 });

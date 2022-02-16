@@ -48,7 +48,7 @@ class FreeCall(models.Model):
 
     full_name = models.CharField(max_length=50, verbose_name="ФИО")
     e_mail = models.EmailField(verbose_name="Почта")
-    subject = models.ForeignKey(Service, on_delete=models.CASCADE, verbose_name="Тема")
+    subject = models.ForeignKey(Service, on_delete=models.CASCADE, verbose_name="Услуга")
     message = models.TextField(verbose_name="Сообшения", blank=True)
     phone_number = models.CharField(max_length=50, blank=True, verbose_name="Номер телефона")
     status = models.BooleanField(verbose_name="Обработана?", default=False)

@@ -30,7 +30,7 @@
                       <p class="banner-text">{{ slide.description|striptags|truncatechars:200 }}</p>
                       </div>
                       
-                      {% if slide.button_link %}
+                      {% if slide.button_link and slide.button_title%}
                         <a class="appointment-lnk" href="{{ slide.button_link }}">
                           <button class="appointment-btn">{{ slide.button_title }}</button>
                         </a>
@@ -188,19 +188,17 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide"><img src="./src/images/Rectangle 10.png" alt="" srcset=""></div>
-            <div class="swiper-slide"><img src="./src/images/Rectangle 9.png" alt="" srcset=""></div>
-            <div class="swiper-slide"><img src="./src/images/Rectangle 8.png" alt="" srcset=""></div>
-            <div class="swiper-slide"><img src="./src/images/Rectangle 10.png" alt="" srcset=""></div>
-            <div class="swiper-slide"><img src="./src/images/Rectangle 9.png" alt="" srcset=""></div>
-            <div class="swiper-slide"><img src="./src/images/Rectangle 8.png" alt="" srcset=""></div>
+
+            {% for doctor in doctors %}
+              <div class="swiper-slide"><img src="media/{{ doctor.image }}" alt="{{ doctor.name }}" srcset=""></div>
+            {% endfor %}
           </div>
           <!-- If we need pagination -->
           <div class="swiper-pagination swiper-pagination2"></div>
 
           <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev swiper-button-prev2"></div>
+          <div class="swiper-button-next swiper-button-next2"></div>
 
         </div>
       </div>

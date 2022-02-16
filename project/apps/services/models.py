@@ -7,6 +7,7 @@ from ckeditor.fields import RichTextField
 
 class Category(models.Model):
     name = models.CharField(max_length=50, verbose_name="Название")
+    is_active=models.BooleanField(default=True, verbose_name='Активна')
     description = models.TextField(verbose_name="Описание", null=True, blank=True)
     slug = models.SlugField(verbose_name="Ярлык", unique=True)
 

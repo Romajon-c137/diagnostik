@@ -1,302 +1,255 @@
-
-
 .banner-serv {
-   max-height: 580px;
-   background: url(../images/Rectangle-8.png) no-repeat;
-   margin: 45px auto;
-   background-size: 100% 100%;
-   border: 1px solid red;
-   border-radius: 32px;
- }
- 
- .banner-inner {
-   width: 45%;
-   height: 322px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   padding: 100px;
- }
- 
- .banner-title {
-   font-family: 'Proxima Nova ';
-   font-style: normal;
-   font-weight: bold;
-   font-size: 48px;
-   line-height: 120%;
-   text-decoration-line: underline;
-   color: #220F0F;
-   text-align: left;
- 
- }
- 
- .banner-text-one,
- .banner-text-two {
-   font-family: 'Proxima Nova ';
-   font-style: normal;
-   font-weight: normal;
-   font-size: 16px;
-   line-height: 140%;
-   text-align: left;
-   display: flex;
-   align-items: center;
-   color: #806D6D;
-   margin: 1% 0;
- }
- 
- .categories {
-   display: flex;
-   flex-wrap: wrap;
-   gap: 40px;
- 
- }
- 
- #all-serv {
-   width: 120px;
-   height: 30px;
-   background-color: #F84B4C;
-   color: #fff;
-   border-radius: 16px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
-   margin-bottom: 23px;
- }
- 
- #first-serv,
- #second-serv,
- #third-serv,
- #fourth-serv {
-   width: 160px;
-   height: 30px;
-   background: transparent;
-   border: 1px solid #F84B4C;
-   border-radius: 16px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-family: PT Sans Caption;
-   font-style: normal;
-   font-weight: normal;
-   font-size: 16px;
-   line-height: 140%;
-   color: #F84B4C;
-   flex-wrap: wrap;
-   cursor: pointer;
- }
- 
- 
- #fourth-serv:hover {
-   background-color: #F84B4C;
-   color: white;
- }
- 
- #third-serv:hover {
-   background-color: #F84B4C;
-   color: white;
- }
- 
- #second-serv:hover {
-   background-color: #F84B4C;
-   color: white;
- }
- 
- #first-serv:hover {
-   background-color: #F84B4C;
-   color: white;
- }
- 
- .serv-cards {
-   display: flex;
-   flex-wrap: wrap;
-   column-gap: 60px;
-   margin: 5% auto;
- }
- 
- .serv-card {
-   max-width: 431px;
-   height: 311px;
-   border: 1px solid #F84B4C;
-   border-radius: 16px;
-   margin: 2% auto;
-   background: white;
- }
- 
- .serv-heading {
-   font-style: normal;
-   text-align: center;
-   font-weight: bold;
-   font-size: 24px;
-   line-height: 120%;
-   font-family: PT Sans Caption;
-   text-align: center;
-   color: #220F0F;
-   margin-top: 23px;
- 
- }
- 
- .serv-tx {
-   font-family: PT Sans Caption;
-   text-align: left;
-   font-style: normal;
-   font-weight: normal;
-   font-size: 16px;
-   line-height: 140%;
-   display: flex;
-   align-items: center;
-   color: #806D6D;
-   padding: 23px;
-   cursor: pointer;
- }
- 
- .serv-btn {
-   width: 210px;
-   height: 46px;
-   background-color: transparent;
-   border: 1px solid #F84B4C;
-   border-radius: 16px;
-   color: #F84B4C;
-   cursor: pointer;
-   
- }
- .serv-btn:hover{
-    background-color: #F84B4C;
-    color: white;
+  max-height: 580px;
+  background: url(../images/Rectangle-8.png) no-repeat;
+  margin: 45px auto;
+  background-size: 100% 100%;
+  border: 1px solid red;
+  border-radius: 32px;
+}
 
- }
- 
- 
+.banner-inner {
+  width: 45%;
+  height: 322px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px;
+}
 
- 
- .form-heading {
-   font-family: Poppins;
-   font-style: normal;
-   font-weight: bold;
-   font-size: 48px;
-   line-height: 120%;
-   text-align: center;
-   color: #220F0F;
-   margin-top: 60px;
- }
- 
- .form-main {
-   margin: 4% auto;
-   display: flex;
-   justify-content: center;
-   max-width: 950px;
- }
- 
- .form-style {
-   font-style: normal;
-   font-weight: bold;
-   font-size: 16px;
-   line-height: 120%;
-   color: #220F0F;
-   font-family: 'Proxima Nova Light';
-   margin: 2%;
- }
- 
- #fname,
- #form-mail {
-   width: 395px;
-   height: 38px;
-   border: 1px solid #F84B4C;
-   border-radius: 16px;
- 
- }
- 
- 
- #fname::placeholder {
-   position: relative;
-   left: 30px;
-   font-family: 'Proxima Nova Light';
-   font-style: normal;
-   font-weight: normal;
-   font-size: 16px;
-   line-height: 140%;
-   color: #BFB6B6;
- }
- 
- #form-mail::placeholder {
-   position: relative;
-   left: 30px;
-   font-family: 'Proxima Nova Light';
-   font-style: normal;
-   font-weight: normal;
-   font-size: 16px;
-   line-height: 140%;
-   color: #BFB6B6;
- }
- 
- .form-box-info {
-   display: flex;
-   justify-content: space-between;
-   width: 750px;
- }
- 
- .form-texr-area {
-   margin: 0 auto;
- }
- 
- #message {
-   width: 856px;
-   height: 138px;
-   border: 1px solid #F84B4C;
-   border-radius: 16px;
- }
- 
- .form-mail {
-   margin-left: 57px;
- }
- 
- 
- #choose-serv {
-   width: 390px;
-   height: 46px;
-   border: 1px solid #F84B4C;
-   border-radius: 16px;
-   
- }
- 
- select {
-   font-family: 'Proxima Nova Light';
-   font-style: normal;
-   font-weight: normal;
-   font-size: 16px;
-   line-height: 140%;
-   padding: 10px;
-   background-position: calc(100% - 3%) center;
-   padding-right: 20px;
-   background-color: #ffff;
- }
- .color-w{
-   color: #fff !important;
- }
- .form-select {
-   margin: 0 auto;
-   display: flex;
-   justify-content: center;
-   margin: 20px 0;
- }
- 
- .form-submit {
-   width: 210px;
-   height: 45px;
-   border: 1px solid #F84B4C;
-   border-radius: 16px;
-   background-color: #F84B4C;
-   color: #fff;
- 
- }
- 
- .form-btn {
-   display: flex;
-   justify-content: center;
- }
- .contact-info{
-   width: 200px;
- }
- .contact-logo{
-   display: flex;
- }
+.banner-title {
+  font-family: "Proxima Nova ";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 120%;
+  text-decoration-line: underline;
+  color: #220f0f;
+  text-align: left;
+}
+
+.banner-text-one,
+.banner-text-two {
+  font-family: "Proxima Nova ";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  color: #806d6d;
+  margin: 1% 0;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.serv {
+  width: 160px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid #f84b4c;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: PT Sans Caption;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  color: #f84b4c;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.serv:hover {
+  background-color: #f84b4c;
+  color: white;
+}
+
+.serv.active {
+  background-color: #f84b4c;
+  color: #fff;
+}
+
+.serv-cards {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 60px;
+  margin: 5% auto;
+}
+
+.serv-card {
+  max-width: 431px;
+  height: 311px;
+  border: 1px solid #f84b4c;
+  border-radius: 16px;
+  margin: 2% auto;
+  background: white;
+}
+
+.serv-heading {
+  font-style: normal;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 120%;
+  font-family: PT Sans Caption;
+  text-align: center;
+  color: #220f0f;
+  margin-top: 23px;
+}
+
+.serv-tx {
+  font-family: PT Sans Caption;
+  text-align: left;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #806d6d;
+  padding: 23px;
+  cursor: pointer;
+}
+
+.serv-btn {
+  width: 210px;
+  height: 46px;
+  background-color: transparent;
+  border: 1px solid #f84b4c;
+  border-radius: 16px;
+  color: #f84b4c;
+  cursor: pointer;
+}
+.serv-btn:hover {
+  background-color: #f84b4c;
+  color: white;
+}
+
+.form-heading {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 120%;
+  text-align: center;
+  color: #220f0f;
+  margin-top: 60px;
+}
+
+.form-main {
+  margin: 4% auto;
+  display: flex;
+  justify-content: center;
+  max-width: 950px;
+}
+
+.form-style {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 120%;
+  color: #220f0f;
+  font-family: "Proxima Nova Light";
+  margin: 2%;
+}
+
+.form-input {
+  width: 100%;
+  max-width: 365px;
+  height: 38px;
+  border: 1px solid #f84b4c;
+  border-radius: 16px;
+}
+
+.form-input::placeholder {
+  position: relative;
+  left: 30px;
+  font-family: "Proxima Nova Light";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  color: #bfb6b6;
+}
+
+.form-box-info {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height: 5em;  
+  gap: 20px;
+  width: 750px;
+}
+
+.form-box-info-servise {
+  display: grid;
+  grid-template-columns: auto auto;
+  height: 5em;  
+  gap: 20px;
+  width: 750px;
+}
+
+.form-texr-area {
+  margin: 0 auto;
+}
+
+#message {
+  width: 100%;
+  height: 138px;
+  border: 1px solid #f84b4c;
+  border-radius: 16px;
+}
+
+#choose-serv {
+  width: 390px;
+  height: 46px;
+  border: 1px solid #f84b4c;
+  border-radius: 16px;
+}
+
+select {
+  font-family: "Proxima Nova Light";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  padding: 10px;
+  background-position: calc(100% - 3%) center;
+  padding-right: 20px;
+  background-color: #ffff;
+}
+.color-w {
+  color: #fff !important;
+}
+.form-select {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.form-submit {
+  width: 210px;
+  height: 45px;
+  border: 1px solid #f84b4c;
+  border-radius: 16px;
+  background-color: #f84b4c;
+  color: #fff;
+}
+
+.form-btn {
+  display: flex;
+  justify-content: center;
+}
+.contact-info {
+  width: 200px;
+}
+.contact-logo {
+  display: flex;
+}
