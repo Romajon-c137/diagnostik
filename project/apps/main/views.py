@@ -4,12 +4,14 @@ from django.contrib import messages
 
 from apps.slide.models import Slide
 from apps.services.models import Service, Category as ServiceCategory
+from apps.specialists.models import Department, Person, Role
 from .models import FreeCall
 from .forms import Form
 
 def main(request):
+    doctors = Person.objects.filter(published=True, role=2)
     slides = Slide.objects.filter(is_active=True).order_by('order')
-    return render(request, 'main/index.html', {'slides': slides})
+    return render(request, 'main/index.html', {'slides': slides, 'doctors': doctors})
 
 
 
@@ -32,7 +34,10 @@ def clinic(request):
     return render(request, 'clinic/index.html')
 
 def specialists(request):
-    return render(request, 'specialists/index.html')
+    roles = Role.objects.filter(published=True)
+    departments = Department.objects.filter(published=True)
+    person = Person.objects.filter(published=True)
+    return render(request, 'specialists/index.html', {'roles': roles, 'departments': departments, 'person': person})
 
 def form(request):
     if request.method == "POST":
