@@ -1,5 +1,11 @@
+from unicodedata import category
 from django.shortcuts import render
+from django.contrib import messages
+
 from apps.slide.models import Slide
+from apps.services.models import Service, Category as ServiceCategory
+from .models import FreeCall
+from .forms import Form
 
 def main(request):
     slides = Slide.objects.filter(is_active=True).order_by('order')
@@ -8,7 +14,10 @@ def main(request):
 
 
 def services(request):
-    return render(request, 'services/index.html')
+    services = Service.objects.filter(category__slug=request.GET['category']) if 'category' in request.GET else Service.objects.all()
+    serviceCategory = ServiceCategory.objects.filter(is_active=True)
+    active = request.GET['category'] if 'category' in request.GET else 'all'
+    return render(request, 'services/index.html', {'services': services.filter(published=True, category__is_active=True), 'serviceCategory': serviceCategory, 'active': active})
 
 def labs(request):
     return render(request, 'labs/index.html')
@@ -24,3 +33,18 @@ def clinic(request):
 
 def specialists(request):
     return render(request, 'specialists/index.html')
+
+def form(request):
+    if request.method == "POST":
+        form = Form(request.POST)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            if FreeCall.objects.filter(e_mail=instance.e_mail).exists():
+                messages.warning(request, "Your Email Already exists in our database")
+            else:
+                instance.save()
+                messages.success(request, "Your Email has been submitted to our database")
+            return render(request, 'components/free_call.html', {'form': form})
+    else:
+        form = Form()
+        return render(request, "components/free_call.html", {'form': form})
