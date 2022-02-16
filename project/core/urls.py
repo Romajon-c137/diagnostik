@@ -22,6 +22,7 @@ from apps.main import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.main, name='main'),
+    path('form/', views.form, name='accept'),
     path('labs', views.labs, name='labs'),
     path('news', views.news, name='news'),
     path('prices', views.prices, name='prices'),

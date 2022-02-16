@@ -3,11 +3,15 @@ from django.db import models
 from sorl.thumbnail import ImageField
 from ckeditor.fields import RichTextField
 
+from core.settings import DOMAIN
+
+# button_link_example = '<a href="" class="btn btn-primary">Подробнее</a>' % DOMAIN
+
 class Slide(models.Model):
     title = models.CharField(max_length=200, verbose_name='Заголовок', blank=True, null=True)
     description = RichTextField( verbose_name='Описание', blank=True, null=True)
     image = ImageField(upload_to='slides/', verbose_name='Изображение')
-    button_link = models.URLField(max_length=200, blank=True, null=True, verbose_name='Ссылка для кнопки')
+    button_link = models.URLField(max_length=200, blank=True, null=True, verbose_name='Ссылка для кнопки', default='Например: %s/form' % DOMAIN,)
     button_title = models.CharField(max_length=50, blank=True, null=True, verbose_name='Текст кнопки')
     order = models.IntegerField(default=0, verbose_name='Порядок')
     is_active = models.BooleanField(default=True, verbose_name='Активно')

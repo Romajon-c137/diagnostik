@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Department, Person
+from .models import Department, Person, Role
 
 
 class DepartmentAdmin(admin.ModelAdmin):
@@ -12,8 +12,8 @@ class DepartmentAdmin(admin.ModelAdmin):
 
 
 class PersonAdmin(admin.ModelAdmin):
-    list_display = ['name', 'published', 'department']
-    list_filter = ['department']
+    list_display = ['name', 'published', 'department', 'role']
+    list_filter = ['department', 'roles', 'role', 'published']
 
     search_fields = ['name', 'description']
     prepopulated_fields = {"slug": ("name",)}
@@ -26,3 +26,4 @@ class PersonAdmin(admin.ModelAdmin):
 
 admin.site.register(Department, DepartmentAdmin)
 admin.site.register(Person, PersonAdmin)
+admin.site.register(Role)
