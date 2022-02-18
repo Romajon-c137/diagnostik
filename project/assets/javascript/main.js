@@ -36,6 +36,25 @@ const swiper2 = new Swiper('.swiper.swiper2', {
 
 });
 
+const swiper3 = new Swiper('.swiper.swiper3', {
+   slidesPerView: width <= 995 ? 1 : 2 && width <= 1258 ? 2 : 3,
+   spaceBetween: 30,
+   loop: true,
+
+   // If we need pagination
+   pagination: {
+      el: '.swiper-pagination3',
+      clickable: true,
+   },
+
+   // Navigation arrows
+   navigation: {
+      nextEl: '.swiper-button-next3',
+      prevEl: '.swiper-button-prev3',
+   },
+
+});
+
 
 
 let btn = document.querySelector('#btn-load-more');

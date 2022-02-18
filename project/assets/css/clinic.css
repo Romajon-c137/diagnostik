@@ -1,0 +1,144 @@
+.banner-serv {
+   max-height: 580px;
+   background-image: url(../images/Clinics/Desktop/hospital.png);
+   background-repeat: no-repeat;
+   margin: 45px auto;
+   background-size: cover;
+   background-position: center;
+   border: 1px solid red;
+   border-radius: 32px;
+}
+
+.banner-wrap-caption {
+   background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 2%, rgba(251, 251, 251, 0) 100%);
+   border-radius: 30px;
+}
+
+.background-slide {
+   background-image: url(../images/team-image1.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+
+}
+
+.swiper-slide {
+   width: 458px !important;
+   height: 500px;
+   border-radius: 32px;
+   border: 1px solid #fba5a5 !important;
+}
+
+.categories2 {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 40px;
+   padding: 40px;
+}
+
+.swiper-button-next3 {
+   position: absolute !important;
+   top: 45% !important;
+   color: #f84b4c !important;
+   /* right: 2% !important; */
+
+}
+
+.swiper-button-prev3 {
+   position: absolute !important;
+   top: 45% !important;
+   color: #f84b4c !important;
+   /* left: 2% !important; */
+
+}
+
+.abuot-clinic-big-card {
+   display: flex;
+   flex-wrap: wrap;
+   max-width: 1312px;
+   gap: 44px;
+   margin-bottom: 55px;
+   row-gap: 80px;
+}
+
+.clinic-card-text {
+   max-width: 753px;
+   text-align: left;
+   font-family: Proxima Nova;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 140%;
+   color: #806D6D;
+}
+
+.card-heading {
+   font-family: Proxima Nova;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 32px;
+   line-height: 120%;
+   text-align: left;
+   color: #220F0F;
+}
+
+.clinic-card-img {
+   background-image: url(../images/Rectangle-8.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   width: 500px;
+   height: 500px;
+   border-radius: 32px;
+   border: 1px solid #f84b4c;
+}
+
+.clinic-info-btn {
+   width: 210px;
+   height: 46px;
+   background-color: #f84b4c;
+   border: 1px solid #f84b4c;
+   border-radius: 16px;
+   color: white;
+   cursor: pointer;
+}
+
+.clinic-info-btn:hover {
+   background-color: transparent;
+   color: #f84b4c;
+}
+
+.clinic-card-info {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin: 25px 0 55px;
+}
+
+.clinic-card-img2 {
+   background-image: url(../images/Rectangle-8.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   width: 500px;
+   height: 500px;
+   border-radius: 32px;
+   border: 1px solid #f84b4c;
+}
+.all-doctors{
+   width: 210px;
+   height: 46px;
+   background-color: #f84b4c;
+   border: 1px solid #f84b4c;
+   border-radius: 16px;
+   color: white;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 60px auto;
+}
+.all-doctors:hover {
+   background-color: transparent;
+   color: #f84b4c;
+}

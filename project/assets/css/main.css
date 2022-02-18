@@ -219,9 +219,7 @@
 }
 
 .doctors-slider {
-  margin: 5% 0;
-  padding-bottom: 8%;
-  height: 550px;
+  padding-bottom: 3%;
 }
 
 .swiper1 {
@@ -248,7 +246,7 @@
 }
 .swiper-button-next2 {
   position: absolute !important;
-  top: 45% !important;
+  top: 35% !important;
   color: #f84b4c !important;
   /* right: 2% !important; */
   
@@ -256,7 +254,7 @@
 
 .swiper-button-prev2 {
   position: absolute !important;
-  top: 45% !important;
+  top: 35% !important;
   color: #f84b4c !important;
   /* left: 2% !important; */
   
@@ -499,4 +497,10 @@
   justify-content: center;
   flex-wrap: wrap;
   padding-bottom: 60px;
+}
+.swiper-slide img {
+  width: 430px;
+  height: 500px;
+  border-radius: 32px;
+  border: 1px solid #fba5a5 !important;
 }
