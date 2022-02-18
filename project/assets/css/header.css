@@ -29,6 +29,9 @@
   cursor: pointer;
 
 }
+.menu-list a{
+  color: black;
+}
 
 .menu-list li:hover {
   text-decoration: underline;

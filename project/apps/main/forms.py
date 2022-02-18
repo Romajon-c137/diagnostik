@@ -19,6 +19,6 @@ class Form(forms.ModelForm):
             'full_name': forms.TextInput(attrs={'placeholder': 'Ведите ваше имя', 'class': 'form-input'}),
             'e_mail': forms.EmailInput(attrs={'placeholder': 'Ваш Email', 'class': 'form-input', 'pattern': '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,10}$'}),
             'phone_number': forms.NumberInput(attrs={'placeholder': 'Ваш номер телефона', 'class': 'form-input', 'type': 'tel', 'pattern': '^[0-9]{11,15}$'}),
-            'message': forms.TextInput(attrs={'placeholder': 'Ваше сообщения', 'id': 'message'}),
+            'message': forms.Textarea(attrs={'placeholder': 'Ваше сообщения', 'id': 'message'}),
             'subject': Select(attrs={'id': 'choose-serv'}),
         }
