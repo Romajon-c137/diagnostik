@@ -139,6 +139,10 @@
     padding-top: 25px;
     
 }
+.social-icon li img:hover{
+   cursor: pointer;
+   color: red;
+}
 
 .footer-thumb {
    max-width: 360px;
@@ -158,20 +162,17 @@
    text-align: left; 
    color: #fff;
 }
-.m-f {
-}
+
 .m-f-time {
    padding-left: 8px;
    color: rgb(226, 223, 223);
 }
-.sat {
-}
+
 .sat-time {
    padding-left: 8px;
    color: rgb(226, 223, 223);
 }
-.sun {
-}
+
 .sun-time {
    padding-left: 8px;
    color: rgb(226, 223, 223);
