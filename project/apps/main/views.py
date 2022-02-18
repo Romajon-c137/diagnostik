@@ -5,7 +5,7 @@ from django.contrib import messages
 from apps.slide.models import Slide
 from apps.services.models import Service, Category as ServiceCategory
 from apps.specialists.models import Department, Person, Role
-from .models import FreeCall
+from .models import FreeCall, Page
 from .forms import Form
 
 def main(request):
@@ -53,3 +53,7 @@ def form(request):
     else:
         form = Form()
         return render(request, "components/free_call.html", {'form': form})
+
+def page(request, slug):
+    page = Page.objects.get(slug=slug)
+    return render(request, 'main/page.html', {'page': page})
