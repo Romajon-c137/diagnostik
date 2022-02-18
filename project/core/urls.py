@@ -16,19 +16,11 @@ Including another URLconf
 from django.conf.urls.static import static
 from core import settings
 from django.contrib import admin
-from django.urls import path
-from apps.main import views
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.main, name='main'),
-    path('form/', views.form, name='accept'),
-    path('labs', views.labs, name='labs'),
-    path('news', views.news, name='news'),
-    path('prices', views.prices, name='prices'),
-    path('clinic', views.clinic, name='clinic'),
-    path('specialists', views.specialists, name='specialists'),
-    path('services', views.services, name='services'),
+    path('', include('apps.main.urls')),
 ]
 
 

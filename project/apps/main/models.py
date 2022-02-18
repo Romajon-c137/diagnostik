@@ -26,7 +26,7 @@ class Page(models.Model):
     order = models.PositiveIntegerField(default=0, blank=False, null=False, verbose_name="Порядок")
 
     def get_absolute_url(self):
-        return self.slug
+        return '/page/%s' % self.slug
 
     def __str__(self):
         return '%s-%s' % (self.id, self.title)
