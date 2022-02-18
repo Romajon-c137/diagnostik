@@ -8,12 +8,11 @@ from apps.specialists.models import Department, Person, Role
 from .models import FreeCall, Page
 from .forms import Form
 
+
 def main(request):
     doctors = Person.objects.filter(published=True, role=2)
     slides = Slide.objects.filter(is_active=True).order_by('order')
     return render(request, 'main/index.html', {'slides': slides, 'doctors': doctors})
-
-
 
 def services(request):
     services = Service.objects.filter(category__slug=request.GET['category']) if 'category' in request.GET else Service.objects.all()
@@ -45,10 +44,10 @@ def form(request):
         if form.is_valid():
             instance = form.save(commit=False)
             if FreeCall.objects.filter(e_mail=instance.e_mail).exists():
-                messages.warning(request, "Your Email Already exists in our database")
+                messages.warning(request, "Вы уже отправляли заявку на получение консультации")
             else:
                 instance.save()
-                messages.success(request, "Your Email has been submitted to our database")
+                messages.success(request, "Ваша заявка отправлена")
             return render(request, 'components/free_call.html', {'form': form})
     else:
         form = Form()

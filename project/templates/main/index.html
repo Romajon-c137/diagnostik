@@ -191,7 +191,8 @@
               <!-- Slides -->
 
               {% for doctor in doctors %}
-              <div class="swiper-slide"><img src="media/{{ doctor.image }}" alt="{{ doctor.name }}" srcset=""></div>
+              <div class="swiper-slide background-slide">
+                <img src="media/{{ doctor.image }}" alt="{{ doctor.name }}" srcset=""></div>
               {% endfor %}
             </div>
 

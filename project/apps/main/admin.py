@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Page, FreeCall
+from .models import Page, FreeCall, Lab, Result
 
 
 class PageAdmin(admin.ModelAdmin):
@@ -26,3 +26,5 @@ class FreeCallAdmin(admin.ModelAdmin):
 
 admin.site.register(Page, PageAdmin)
 admin.site.register(FreeCall, FreeCallAdmin)
+admin.site.register(Result)
+admin.site.register(Lab)
