@@ -52,3 +52,51 @@ class FreeCall(models.Model):
     message = models.TextField(verbose_name="Сообшения", blank=True)
     phone_number = models.CharField(max_length=50, blank=True, verbose_name="Номер телефона")
     status = models.BooleanField(verbose_name="Обработана?", default=False)
+
+
+class Result(models.Model):
+    def __str__(self):
+        return self.name
+    class Meta:
+        db_table = "result"
+        verbose_name = "Result"
+        verbose_name_plural = "Results"
+
+    id = models.CharField(max_length=20, unique=True, primary_key=True)
+    name = models.CharField(max_length=100)
+    namein = models.CharField(max_length=50)
+    result = models.CharField(max_length=50)
+    norm = models.CharField(max_length=50)
+
+
+class Lab(models.Model):
+    def __str__(self):
+        return self.id
+    class Meta:
+        db_table = "lab"
+        verbose_name = "Lab"
+        verbose_name_plural = "Labs"
+
+    STATUSES = (
+        (1, "1"),
+        (2, "2"),
+        (3, "3")
+    )
+
+    GERDERS = (
+        (1, "Мужской"),
+        (2, "Женский"),
+    )
+
+    id = models.CharField(max_length=20, unique=True, primary_key=True)
+    full_name = models.CharField(max_length=50, blank=True, null=True)
+    delivery_date = models.DateField(blank=True, null=True)
+    born_date = models.DateField(blank=True, null=True)
+    order_date = models.DateTimeField(blank=True, null=True)
+    client_code = models.IntegerField(blank=True, null=True)
+    status = models.IntegerField(choices=STATUSES, default=1)
+    gender = models.IntegerField(choices=GERDERS)
+    oder_number = models.IntegerField(blank=True, null=True)
+    pin = models.IntegerField(blank=True, null=True)
+    comment = models.CharField(max_length=50, blank=True, null=True)
+    list = models.ManyToManyField( Result, related_name="list", blank=True )

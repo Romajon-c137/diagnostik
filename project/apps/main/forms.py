@@ -22,3 +22,9 @@ class Form(forms.ModelForm):
             'message': forms.Textarea(attrs={'placeholder': 'Ваше сообщения', 'id': 'message'}),
             'subject': Select(attrs={'id': 'choose-serv'}),
         }
+
+
+class ResultForm(forms.Form):
+    oder_number = forms.IntegerField(label=False, widget=forms.TextInput(attrs={'class':'search_input', 'placeholder':'Номер заказа', "required": "required"}))
+    pin = forms.IntegerField(label=False, widget=forms.TextInput(attrs={'class':'search_input', 'placeholder':'Кодовое слово (Пин)', "required": "required"}))
+
