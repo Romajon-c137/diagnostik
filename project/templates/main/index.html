@@ -7,88 +7,88 @@
 {% endblock %}
 {% block content %}
 
-  <main>
-      <!--  -->
-      {% if slides.all %}
-      <div class="swiper-container">
-        <div class="container">
-          <!-- Slider main container -->
-          <div class="swiper swiper1">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
+<main>
+  <!--  -->
+  {% if slides.all %}
+  <div class="swiper-container">
+    <div class="container">
+      <!-- Slider main container -->
+      <div class="swiper swiper1">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
 
-              {% for slide in slides %}
-                <div class="swiper-slide banner-caption">
-                  <div class="banenr-img" style="background-image: url('media/{{ slide.image }}');">
-                    <div class="banner-info">
+          {% for slide in slides %}
+          <div class="swiper-slide banner-caption">
+            <div class="banenr-img" style="background-image: url('media/{{ slide.image }}');">
+              <div class="banner-info">
 
-                    <div class="banner-description">
-                      <h1 class="banner-title">
-                        {{ slide.title|truncatechars:50 }}
-                      </h1>
-                      <p class="banner-text">{{ slide.description|striptags|truncatechars:200 }}</p>
-                      </div>
-                      
-                      {% if slide.button_link and slide.button_title%}
-                        <a class="appointment-lnk" href="{{ slide.button_link }}">
-                          <button class="appointment-btn">{{ slide.button_title }}</button>
-                        </a>
-                      {% endif %}
-                    </div>
-                  </div>
+                <div class="banner-description">
+                  <h1 class="banner-title">
+                    {{ slide.title|truncatechars:50 }}
+                  </h1>
+                  <p class="banner-text">{{ slide.description|striptags|truncatechars:200 }}</p>
                 </div>
-              {% endfor %}
-              
 
+                {% if slide.button_link and slide.button_title%}
+                <a class="appointment-lnk" href="{{ slide.button_link }}">
+                  <button class="appointment-btn">{{ slide.button_title }}</button>
+                </a>
+                {% endif %}
+              </div>
             </div>
           </div>
-        </div>
-        <!--  -->
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev swiper-button-prev1"></div>
-        <div class="swiper-button-next swiper-button-next1"></div>
-      </div>
-      {% endif %}
-  
-
-      <div class="container">
-        <div class="about-cards">
-
-          <div class="card">
-            <h2 class="count">24</h1>
-              <p class="description">Отделения</p>
-          </div>
-
-
-          <div class="card">
-            <h2 class="count">37</h1>
-              <p class="description">Видов исследований</p>
-          </div>
-
-
-          <div class="card">
-            <h2 class="count">86</h1>
-              <p class="description">Специалиста</p>
-          </div>
-
-
-          <div class="card">
-            <h2 class="count">63</h1>
-              <p class="description">Видов исследований</p>
-          </div>
-
-
-          <div class="card">
-            <h2 class="count">11</h1>
-              <p class="description">Видов исследований</p>
-          </div>
+          {% endfor %}
 
 
         </div>
       </div>
     </div>
-  </main>
+    <!--  -->
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev swiper-button-prev1"></div>
+    <div class="swiper-button-next swiper-button-next1"></div>
+  </div>
+  {% endif %}
+
+
+  <div class="container">
+    <div class="about-cards">
+
+      <div class="card">
+        <h2 class="count">24</h1>
+          <p class="description">Отделения</p>
+      </div>
+
+
+      <div class="card">
+        <h2 class="count">37</h1>
+          <p class="description">Видов исследований</p>
+      </div>
+
+
+      <div class="card">
+        <h2 class="count">86</h1>
+          <p class="description">Специалиста</p>
+      </div>
+
+
+      <div class="card">
+        <h2 class="count">63</h1>
+          <p class="description">Видов исследований</p>
+      </div>
+
+
+      <div class="card">
+        <h2 class="count">11</h1>
+          <p class="description">Видов исследований</p>
+      </div>
+
+
+    </div>
+  </div>
+  </div>
+</main>
 <section class="about-banner">
   <div class="container">
     <div class="banner-caption">
@@ -182,24 +182,26 @@
       </div>
     </div>
     <section class="doctors-slider">
-      <div class="container">
-        <!-- Slider main container -->
-        <div class="swiper swiper2">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
+      <div class="swiper-container doctor-container">
+        <div class="container">
+          <!-- Slider main container -->
+          <div class="swiper swiper2">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
 
-            {% for doctor in doctors %}
+              {% for doctor in doctors %}
               <div class="swiper-slide"><img src="media/{{ doctor.image }}" alt="{{ doctor.name }}" srcset=""></div>
-            {% endfor %}
+              {% endfor %}
+            </div>
+
           </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination swiper-pagination2"></div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination swiper-pagination2"></div>
 
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev swiper-button-prev2"></div>
-          <div class="swiper-button-next swiper-button-next2"></div>
-
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev swiper-button-prev2"></div>
+            <div class="swiper-button-next swiper-button-next2"></div>
         </div>
       </div>
     </section>
@@ -289,7 +291,7 @@
         </div>
     </div>
 
-  
+
     <div id="clinic-location">
       <div class="location">
         <div class="located">

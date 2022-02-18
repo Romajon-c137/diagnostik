@@ -27,3 +27,6 @@
   margin: 0 auto;
   position: relative;
 }
+.swiper-container.doctor-container{
+height: auto !important;
+}

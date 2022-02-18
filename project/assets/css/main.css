@@ -246,6 +246,21 @@
   /* left: 2% !important; */
   
 }
+.swiper-button-next2 {
+  position: absolute !important;
+  top: 45% !important;
+  color: #f84b4c !important;
+  /* right: 2% !important; */
+  
+}
+
+.swiper-button-prev2 {
+  position: absolute !important;
+  top: 45% !important;
+  color: #f84b4c !important;
+  /* left: 2% !important; */
+  
+}
 .swiper-pagination1{
   position: absolute !important;
   top: 65% !important;
