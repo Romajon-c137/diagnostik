@@ -30,7 +30,10 @@ def prices(request):
     return render(request, 'prices/index.html')
 
 def clinic(request):
-    return render(request, 'clinic/index.html')
+    departments = Department.objects.filter(published=True)
+    people = Person.objects.filter(department__slug=request.GET['department']) if 'department' in request.GET else Person.objects.all()
+    active = request.GET['department'] if 'department' in request.GET else 'all'
+    return render(request, 'clinic/index.html', {'departments': departments, 'people': people.filter(published=True, department__published=True), 'active': active})
 
 def specialists(request):
     roles = Role.objects.filter(published=True)
