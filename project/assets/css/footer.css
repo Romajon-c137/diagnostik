@@ -113,7 +113,9 @@
 }
 .quick-menu li{
    cursor: pointer;
+   color: white;
 }
+
 .quick-menu li:hover{
    cursor: pointer;
    color: rgb(226, 223, 223);
