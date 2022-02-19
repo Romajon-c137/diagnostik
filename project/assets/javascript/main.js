@@ -55,7 +55,63 @@ const swiper3 = new Swiper('.swiper.swiper3', {
 
 });
 
+const swiper4 = new Swiper('.swiper.swiper4', {
+   slidesPerView: width <= 995 ? 1 : 2 && width <= 1258 ? 2 : 3,
+   spaceBetween: 30,
+   loop: true,
 
+   // If we need pagination
+   pagination: {
+      el: '.swiper-pagination4',
+      clickable: true,
+   },
+
+   // Navigation arrows
+   navigation: {
+      nextEl: '.swiper-button-next4',
+      prevEl: '.swiper-button-prev4',
+   },
+
+});
+
+const swiper5 = new Swiper('.swiper.swiper5', {
+   slidesPerView: width <= 995 ? 1 : 2 && width <= 1440 ? 2 : 3,
+   spaceBetween: 30,
+   loop: true,
+
+   // If we need pagination
+   pagination: {
+      el: '.swiper-pagination5',
+      clickable: true,
+   },
+
+   // Navigation arrows
+   navigation: {
+      nextEl: '.swiper-button-next5',
+      prevEl: '.swiper-button-prev5',
+   },
+
+});
+
+
+const swiper6 = new Swiper('.swiper.swiper6', {
+   slidesPerView: width <= 995 ? 1 : 2 && width <= 1440 ? 2 : 3,
+   spaceBetween: 30,
+   loop: true,
+
+   // If we need pagination
+   pagination: {
+      el: '.swiper-pagination6',
+      clickable: true,
+   },
+
+   // Navigation arrows
+   navigation: {
+      nextEl: '.swiper-button-next6',
+      prevEl: '.swiper-button-prev6',
+   },
+
+});
 
 let btn = document.querySelector('#btn-load-more');
 let hides = document.querySelectorAll('#hidden');
