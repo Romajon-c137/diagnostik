@@ -131,3 +131,5 @@ dmypy.json
 .DS_Store
 project/media/
 .vscode
+migrations/
+
