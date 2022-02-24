@@ -4,12 +4,12 @@
 {% block styles %}
 
     <!--  services  -->
-   <link href="{% static 'css/services.css' %}" rel="stylesheet" />
-<link href="{% static 'css/prices.css' %}" rel="stylesheet" />
-<link href="{% static 'css/main.css' %}" rel="stylesheet" />
-<link href="{% static 'css/clinic.css' %}" rel="stylesheet" />
-<link href="{% static 'css/labs.css' %}" rel="stylesheet" />
-<link href="{% static 'css/specialist.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/services.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/prices.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/main.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/clinic.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/labs.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/specialist.css' %}" rel="stylesheet" />
 
 {% endblock %}
 
@@ -18,17 +18,12 @@
 <section>
     <div class="container">
         <div class="departments">
-            <a href="" class="department active">Руководство</a>
-            <a href="" class="department">Узи</a>
-            <a href="" class="department">Кардиолог</a>
-            <a href="" class="department">Эндосколист</a>
-            <a href="" class="department">Невролог</a>
-            <a href="" class="department">Гинеколог</a>
-            <a href="" class="department">Терапевт</a>
-            <a href="" class="department">Лор</a>
-            <a href="" class="department">Симейный врач</a>
-            <a href="" class="department">Лаборанты</a>
-            
+            {% if first %}
+              <a href="{% url 'specialists' %}" class="department{% if active == 'all' %} active{% endif %}">{{ first.name }}</a>
+            {% endif %}
+            {% for role in roles %}
+              <a href="?role={{ role.id }}" class="department{% if active == role.id %} active{% endif %}">{{ role.name }}</a>
+            {% endfor %}
         </div>
     </div>
 </section>
