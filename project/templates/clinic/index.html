@@ -37,42 +37,14 @@
   <div class="container">
 
 <div class="categories2">
-  <a  href='/clinic#departments' class="serv{% if 'all' == active %} active{% endif %}">Все</a>
+  <a  href='/clinic#departments' class="serv{% if active == 'all' %} active{% endif %}">Все</a>
   {% for department in departments %}
        <a href='/clinic?department={{ department.slug }}#departments' class="serv{% if department.slug == active %} active{% endif %}">{{ department.name }}</a>
   {% endfor %}
 </div>
 
 </div>
-    <div class="swiper-container doctor-container">
-      <div class="container">
-        <!-- Slider main container -->
-        <div class="swiper swiper3">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            {% for person in people %}
-            <div class="sliders-with-name">
-              <div class="swiper-slide background-slide"  style="background-image: url('media/{{ person.image }}');"></div>
-              <div class="doctors-names">Иван Иванов Иванович</div>
-              <div class="doctors-depart">Malesuada lectus</div>
-            </div>
-            {% endfor %}
-          </div>
-        
-        </div>
-      
-        <!-- If we need pagination -->
-        <div class="swiper-pagination swiper-pagination3"></div>
-        
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev swiper-button-prev3"></div>
-        <div class="swiper-button-next swiper-button-next3"></div>
-         
-      </div>
-      
-    </div>
-    <div class="all-doctors">Все врачи</div>
+    {% include 'components/slide.html' %}
   </section>
   <section>
     <div class="container">

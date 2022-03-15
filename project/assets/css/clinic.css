@@ -14,10 +14,6 @@
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
-
-}
-
-.swiper-slide {
    width: 458px !important;
    height: 500px;
    border-radius: 32px;
