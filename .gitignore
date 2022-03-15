@@ -127,7 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-/migrations
-migrations/
+
 .DS_Store
 project/media/
+.vscode
+migrations/
+

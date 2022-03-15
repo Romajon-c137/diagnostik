@@ -7,20 +7,18 @@
    border: 1px solid red;
    border-radius: 32px;
 }
-
 .banner-wrap-caption {
    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 2%, rgba(251, 251, 251, 0) 100%);
-   border-radius: 28px;
+   border-radius: 32px;
+   height: 100%;
 }
+
+
 
 .background-slide {
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
-
-}
-
-.swiper-slide {
    width: 458px !important;
    height: 500px;
    border-radius: 32px;
@@ -50,12 +48,22 @@
 
 }
 
-.abuot-clinic-big-card {
+.abuot-clinic-big-card-1 {
    display: flex;
    flex-wrap: wrap;
+   align-items: center;
    max-width: 1312px;
    gap: 44px;
-   margin-bottom: 55px;
+   margin: 30px auto;
+   row-gap: 80px;
+}
+.abuot-clinic-big-card-2 {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   max-width: 1312px;
+   gap: 44px;
+   margin: 30px auto;
    row-gap: 80px;
 }
 
@@ -109,8 +117,9 @@
 .clinic-card-info {
    display: flex;
    flex-direction: column;
+   row-gap: 20px;
    justify-content: space-between;
-   margin: 25px 0 55px;
+   margin: 25px 0;
 }
 
 .clinic-card-img2 {
@@ -139,4 +148,31 @@
 .all-doctors:hover {
    background-color: transparent;
    color: #f84b4c;
+}
+.doctors-names{
+   font-family: Proxima Nova;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 32px;
+   line-height: 120%;
+   text-align: center;
+   color: #220F0F;
+   
+}
+.doctors-depart{
+   font-family: Proxima Nova;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 18px;
+   line-height: 140%;
+   text-align: center;
+   color: #806D6D;
+   
+}
+.sliders-with-name{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   row-gap: 20px;
+   gap: 20px;
 }

@@ -3,6 +3,14 @@ from django.contrib import admin
 from .models import Department, Person, Role
 
 
+class RoleAdmin(admin.ModelAdmin):
+    list_display = ('name', 'published', 'slug')
+    list_filter = ('published',)
+    search_fields = ('name',)
+    prepopulated_fields = {'slug': ('name',)}
+    list_editable = ('published',)
+
+
 class DepartmentAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
 
@@ -26,4 +34,4 @@ class PersonAdmin(admin.ModelAdmin):
 
 admin.site.register(Department, DepartmentAdmin)
 admin.site.register(Person, PersonAdmin)
-admin.site.register(Role)
+admin.site.register(Role, RoleAdmin)

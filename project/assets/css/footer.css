@@ -3,6 +3,7 @@
    position: relative;
    bottom: 4em;
    display: block;
+   cursor: pointer;
 }
 
 .angle-up-btn a {
@@ -85,15 +86,21 @@
    display: flex;
    justify-content: center;
    gap: 85px;
-   align-items: baseline;
+   text-align: left;
+   flex-wrap: wrap;
 }
 .footer-menu {
    max-width: 360px;
    height: 248px;
-
-
 }
 .footer-menu-title {
+   text-align: left;
+   font-size: 25px;
+   font-family: "Poppins";
+   padding: 10px 0;
+   color: #fff;
+}
+.footer-pages-title {
    text-align: left;
    font-size: 25px;
    font-family: "Poppins";
@@ -110,6 +117,20 @@
    font-weight: 600;
    line-height: 29px;
    font-family: 'Proxima Nova Light';
+   cursor: pointer;
+}
+.quick-menu-pages li a{
+   color: #fff;
+   cursor: pointer;
+   text-align: left;
+   display: flex;
+   flex-direction: column;
+   row-gap: 10px;
+   color: #fff;
+   font-size: 14px;
+   font-weight: 600;
+   line-height: 29px;
+   font-family: 'Proxima Nova';
 }
 .quick-menu li{
    cursor: pointer;
@@ -156,6 +177,7 @@
    font-size: 25px;
    font-family: "Poppins";
    color: #fff;
+   padding: 10px 0;
 }
 .opening-hours {
    display: flex;

@@ -36,10 +36,12 @@
           <div class="serv-cards">
                {% for service in services %}
                     <div class="serv-card">
+                         <div class="serv-conetn">
                          <div class="serv-heading"> {{ service.title }}</div>
                          <div class="serv-tx">
                               {{ service.description|striptags|truncatechars:220  }}
                          </div>
+                    </div>
                          <button class="serv-btn">
                               Подробнее
                          </button>

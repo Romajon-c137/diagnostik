@@ -12,21 +12,27 @@
 {% endblock %}
 
 {% block content %}
-
+{% if first %}
 <section>
     <div class="container">
         <div class="results">
             <div class="results-option">
                 <h1 class="result-title">Анализы</h1>
                 <ul class="department-result">
-                    <li class="active-result">Dictumst. Ex</li>
-                    <li>Ornare ex</li>
-                    <li>Morbi tortor</li>
-                    <li>Accumsan hac arcu</li>
-                    <li>Et vel dapibus</li>
-                    <li>Morbi tortor</li>
-                    <li>Imperdiet est</li>
-                    <li>Luctus vestibulum</li>
+                    {% if first %}
+                        <li class="{% if active == 'first' %}active-result{% endif %}">
+                            <a href="{% url 'prices' %}">
+                            {{ first.name}}
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% for analysis in analysises %}
+                        <li class="{% if active == analysis.id %}active-result{% endif %}">
+                            <a href="{% url 'prices' %}?active={{ analysis.id }}">
+                            {{ analysis.name }}
+                            </a>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="hub-description hub-description2">
@@ -36,21 +42,14 @@
                 <div class="description-info">
                     <div class="descript-top">
                 <h1 class="description-title">
-                    Dictumst. Ex
+                    {{ analysis.name }}
                 </h1>
                 <div class="description-text">
-                   <p>Aenean in est. Et vel dapibus luctus molestie hac ut. Molestie adipiscing sit molestie dui sit nunc
-                    mollis in eleifend mauris nisi arcu dictumst. Non urna sodales nunc augue vitae sed mattis ornare
-                    sapien velit nulla sed imperdiet vestibulum cursus hac ut. Morbi tortor, et ultricies. Imperdiet
-                    est.</p> 
-                    <br>
-                    <p> c. Luctus vestibulum vel in molestie velit sit in in imperdiet quis, morbi integer eleifend
-                        venenatis nulla lorem ve.</p>
-                   
+                    {{ analysis.description|safe }}
                 </div>
             </div>
                 <div class="price-list">
-                <div class="result-price">1300 сом</div>
+                <div class="result-price">{{ analysis.price }} сом</div>
                 <button class="appointment-btn btn-red-60">Записатся</button>
             </div>
             </div>
@@ -60,9 +59,7 @@
 
     </div>
 </section>
-
-
-
+{% endif %}
 
 
 <section>

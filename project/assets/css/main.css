@@ -12,6 +12,13 @@
   padding: 30px 0;
 }
 
+.background-slide {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
 .info-box {
   width: 398px;
   height: 398px;
@@ -50,21 +57,9 @@
   background-repeat: no-repeat;
   border-radius: 32px;
 
-  height: calc(100vh - 287px);
+  height: calc(100vh - 355px);
 }
 
-.banner-caption {
-  height: 650px !important;
-  display: flex;
-  /* justify-content: center; */
-  flex-direction: column;
-  text-align: center;
-  background: linear-gradient(10deg,
-        rgba(255, 255, 255, 0.5) 0%,
-        rgba(255, 255, 255, 0.5) 100%);
-  height: 100%;
-  color: #fff;
-}
 
 .banner-description{
   height: 23%;
@@ -122,7 +117,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 3% auto;
+  margin-bottom: 3%;
   padding-bottom: 40px;
 }
 
@@ -145,12 +140,6 @@
 }
 
 
-.about-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 3% auto;
-}
 
 .card {
   width: 262px;
@@ -231,7 +220,7 @@
 
 .swiper-button-next {
   position: absolute !important;
-  top: 45% !important;
+  top: 40% !important;
   color: #f84b4c !important;
   /* right: 2% !important; */
   
@@ -239,14 +228,14 @@
 
 .swiper-button-prev {
   position: absolute !important;
-  top: 45% !important;
+  top: 40% !important;
   color: #f84b4c !important;
   /* left: 2% !important; */
   
 }
 .swiper-button-next2 {
   position: absolute !important;
-  top: 35% !important;
+  top: 40% !important;
   color: #f84b4c !important;
   /* right: 2% !important; */
   
@@ -254,7 +243,7 @@
 
 .swiper-button-prev2 {
   position: absolute !important;
-  top: 35% !important;
+  top: 40% !important;
   color: #f84b4c !important;
   /* left: 2% !important; */
   
@@ -262,6 +251,9 @@
 .swiper-pagination1{
   position: absolute !important;
   top: 65% !important;
+}
+.swiper-pagination3{
+  bottom: -30px !important;
 }
 .feedback-cards {
   display: flex;
@@ -498,9 +490,26 @@
   flex-wrap: wrap;
   padding-bottom: 60px;
 }
-.swiper-slide img {
+/* .swiper-slide img {
   width: 430px;
   height: 500px;
   border-radius: 32px;
   border: 1px solid #fba5a5 !important;
+} */
+.all-doctors{
+  width: 210px;
+  height: 46px;
+  background-color: #f84b4c;
+  border: 1px solid #f84b4c;
+  border-radius: 16px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto;
+}
+.all-doctors:hover {
+  background-color: transparent;
+  color: #f84b4c;
 }
