@@ -64,6 +64,7 @@
    flex-direction: column;
    justify-content: space-between;
    padding: 60px 0;
+   height: 100%;
    row-gap: 35px;
 }
 

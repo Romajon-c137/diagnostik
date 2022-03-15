@@ -86,7 +86,8 @@
    display: flex;
    justify-content: center;
    gap: 85px;
-   align-items: baseline;
+   text-align: left;
+   flex-wrap: wrap;
 }
 .footer-menu {
    max-width: 360px;
@@ -176,6 +177,7 @@
    font-size: 25px;
    font-family: "Poppins";
    color: #fff;
+   padding: 10px 0;
 }
 .opening-hours {
    display: flex;
