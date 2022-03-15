@@ -55,10 +55,10 @@ def clinic(request):
 def specialists(request):
     roles = Role.objects.filter(published=True)
     departments = Department.objects.filter(published=True)
-    person = Person.objects.filter(published=True)
+    role = Role.objects.get(slug=request.GET['role']) if 'role' in request.GET else Role.objects.first()
     active = request.GET['role'] if 'role' in request.GET else 'all'
-    print(active)
-    context = {'roles': roles[1:], 'first': roles.first(), 'departments': departments, 'person': person, 'active': active}
+    people = Person.objects.filter(published=True, roles=role)
+    context = {'roles': roles[1:], 'first': roles.first(), 'departments': departments, 'people': people, 'active': active, 'role': role}
     return render(request, 'specialists/index.html', context)
 
 

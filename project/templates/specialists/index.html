@@ -22,7 +22,7 @@
               <a href="{% url 'specialists' %}" class="department{% if active == 'all' %} active{% endif %}">{{ first.name }}</a>
             {% endif %}
             {% for role in roles %}
-              <a href="?role={{ role.id }}" class="department{% if active == role.id %} active{% endif %}">{{ role.name }}</a>
+              <a href="?role={{ role.slug }}" class="department{% if active == role.slug %} active{% endif %}">{{ role.name }}</a>
             {% endfor %}
         </div>
     </div>
@@ -30,60 +30,23 @@
 
 <section>
     <div class="container">
+        {% if role %}
         <div class="head-department">
-            <h1 class="department-title">Руководство</h1>
+            <h1 class="department-title">{{ role.name }}</h1>
             <div class="department-text">
-              <p>Vestibulum urna quis, augue molestie ipsum pellentesque ut. Nunc adipiscing pulvinar vel sed amet dapibus justo sodales eleifend accumsan amet, velit odio. Platea hac vulputate pulvinar ornare vitae aenean elit. Mauris dapibus faucibus. Molestie hac hac adipiscing in venenatis malesuada est. Ultricies. Justo vulputate malesuada id ut. Ex. Integer sit id vitae elit. Efficitur tempus libero, augue mattis et sit vitae vitae amet, leo, amet, in et.</p>  
-              <br>
-                <p>Dolor nulla accumsan non amet, arcu in nisi risus imperdiet cras amet sit hac elit. Aenean vestibulum ut. Augue sed orci, ipsum leo, cursus vel morbi vitae in vel malesuada vestibulum orci, non dapibus faucibus. Dictum. Risus vulputate dui integer ut. Amet, ultricies. Velit nisi hac amet ornare eleifend risus elit. Ornare ornare mattis sit odio. Leo, lectus sit vel risus mauris nec urna lacinia et. Faucibus. Et. Vel nunc libero, mauris odio.</p>
-
+              {{ role.description|safe }}
             </div>
         </div>
+        {% endif %}
 
 
-        <div class="swiper-container doctor-container">
-            <div class="container">
-              <!-- Slider main container -->
-              <div class="swiper swiper5">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                  <!-- Slides -->
-      
-                  <div class="swiper-slide background-slide">
-                  
-                 
-                </div>
-                
-                <div class="swiper-slide background-slide">
-                  
-                 
-                </div>
-                <div class="swiper-slide background-slide">
-                  
-                 
-                </div>
-      
-              </div>
-              
-              </div>
-             
-      
-                <!-- If we need pagination -->
-                <div class="swiper-pagination swiper-pagination5"></div>
-                
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev swiper-button-prev5"></div>
-                <div class="swiper-button-next swiper-button-next5"></div>
-               
-            </div>
-            
-          </div>
-          <div class="all-doctors">Все врачи</div>
+        {% include 'components/slide.html' %}
+
     </div>
 </section>
 
 
-<section>
+{% comment %} <section>
     <div class="container">
         <div class="hub-department">
             <h1 class="department-title-hub">УЗИ</h1>
@@ -135,7 +98,7 @@
           </div>
           <div class="all-doctors">Все врачи</div>
     </div>
-</section>
+</section> {% endcomment %}
 
 {% endblock %}
 
