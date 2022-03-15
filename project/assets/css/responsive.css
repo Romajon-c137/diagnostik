@@ -21,8 +21,93 @@
   .categories{
     justify-content: center;
   }
+  .abuot-clinic-big-card-2{
+    flex-direction: column-reverse;
+    align-items: flex-start !important;
+    row-gap: 20px !important;
+  }
+  .abuot-clinic-big-card-1{
+    row-gap: 20px !important;
+  }
+  .clinic-card-img{
+    width: 100% !important;
+  }
+  .clinic-card-img2{
+    width: 100% !important;
+  }
+  .footer-content {
+    gap: 40px !important;
+    width: 285px;
+    justify-content: left;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .banner-text-one{
+    width: 320px;
+  }
+  .banner-text-two{
+    width: 320px;
+  }
+  .banner-inner{
+    padding: 40px !important;
+  }
+  .banner-serv{
+    height: 450px;
+  }
+  .categories2{
+    flex-wrap: nowrap !important;
+  }
+  .doctors-slider{
+    padding-bottom: 1% !important;
+  }
+  .card{
+    width: 95%;
+    margin: 0 auto;
+  }
+  .about-cards {
+    gap: 13px;
+  }
+  .banner-text-1{
+    width: 320px;
+  }
+  .banner-text-2{
+    width: 242px;
+  }
+  .banner-info-2{
+    padding: 40px !important;
+    justify-content: flex-start;
+  }
+
+  .description-info{
+    width: 331px;
+    gap: 0px !important;
+    margin: 0 auto;
+  }
+  .results{
+    padding: 20px 0 !important;
+    row-gap: 50px !important;
+   
+  }
+  .hub-description{
+    padding: 0 26px !important;
+    flex-direction: column ; 
+  }
+  .description-text{
+    font-size: 14px !important;
+  }
+  .result-price{
+    width: 111px;
+    font-size: 27px !important;
+  }
+  .hub-img{
+    width: 100% !important;
+  }
+  .department-result{
+    padding-left: 40px !important;
+  }
   
 }
+
 
 @media (min-width: 576px) and (max-width: 767px) {
   .swiper-container {
@@ -48,7 +133,7 @@
     max-width: 458px;
   }
   .about-cards {
-    row-gap: 20px;
+    gap: 13px;
   }
   .card:first-child {
     width: 100%;
@@ -58,6 +143,72 @@
   }
   .categories{
     justify-content: center;
+  }
+  .abuot-clinic-big-card-2{
+    flex-direction: column-reverse;
+    align-items: flex-start !important;
+    row-gap: 20px !important;
+  }
+  .abuot-clinic-big-card-1{
+    row-gap: 20px !important;
+  }
+  .clinic-card-img{
+    width: 100% !important;
+  }
+  .clinic-card-img2{
+    width: 100% !important;
+  }
+  .footer-content {
+    gap: 40px !important;
+    width: 550px;
+    justify-content: left;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .banner-text-one{
+    width: 320px;
+  }
+  .banner-text-two{
+    width: 320px;
+  }
+  .banner-inner{
+    padding: 40px !important;
+  }
+  .banner-serv{
+    height: 450px;
+  }
+  .doctors-slider{
+    padding-bottom: 1% !important;
+  }
+  .banner-text-1{
+    width: 320px;
+  }
+  .banner-text-2{
+    width: 320px;
+  }
+  .banner-info-2{
+    padding: 40px !important;
+    justify-content: flex-start;
+  }
+
+  .description-info{
+    width: 387px;
+    gap: 0px !important;
+    margin: 0 auto;
+  }
+  .results{
+    padding: 20px 0 !important;
+   
+  }
+  .hub-description{
+    padding: 0 26px !important;
+    flex-direction: column ; 
+  }
+  .department-result{
+    padding-left: 40px !important;
+  }
+  .hub-img{
+    width: 100% !important;
   }
 }
 
@@ -87,6 +238,46 @@
   .categories{
     justify-content: center;
   }
+  .abuot-clinic-big-card-2{
+    flex-direction: column-reverse;
+    align-items: flex-start !important;
+    row-gap: 20px !important;
+  }
+  .abuot-clinic-big-card-1{
+    row-gap: 20px !important;
+  }
+  .clinic-card-img{
+    width: 100% !important;
+  }
+  .clinic-card-img2{
+    width: 100% !important;
+  }
+  .footer-content {
+    gap: 40px !important;
+    width: 599px;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .doctors-slider{
+    padding-bottom: 1% !important;
+  }
+  .description-info{
+    width: 387px;
+    gap: 0px !important;
+  }
+  .results{
+    padding: 20px 0 !important;
+  }
+  .hub-description{
+    padding: 0 26px !important;
+  }
+  .description-text{
+    font-size: 14px !important;
+  }
+  .result-price{
+    width: 111px;
+    font-size: 27px !important;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -105,6 +296,9 @@
   .menu-list {
     margin-left: 20px;
     gap: 15px;
+  }
+  .menu-list li{
+    font-size: 15px;
   }
   .result-btn {
     width: 155px;
@@ -139,6 +333,33 @@
   }
   .categories{
     justify-content: center;
+  }
+  .clinic-card-text{
+    max-width: 468px !important;
+    row-gap: 20px !important;
+  }
+  .clinic-card-img2{
+    height: 469px !important;
+    width: 445px !important;
+  }
+  .clinic-card-img{
+    height: 469px !important;
+    width: 445px !important;
+  }
+  .footer-content{
+    gap: 24px !important;
+  }
+  .footer-content {
+    gap: 62px !important;
+    width: 599px;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .doctors-slider{
+    padding-bottom: 1% !important;
+  }
+  .description-info{
+    width: 600px;
   }
 }
 
@@ -187,4 +408,20 @@
     font-size: 22px;
   }
 
+  .clinic-card-text{
+    max-width: 590px !important;
+    row-gap: 20px !important;
+  }
+  .clinic-card-img2{
+    height: 445px !important;
+  }
+  .clinic-card-img{
+    height: 445px !important;
+  }
+  .footer-content{
+    gap: 76px !important;
+  }
+  .doctors-slider{
+    padding-bottom: 1% !important;
+  }
 }

@@ -17,8 +17,8 @@
 }
 .background-color-lightRed{
     background-color: #F89191;
-    height: 390px;
-    padding-top: 60px;
+    height: auto;
+    padding:60px 0;
 }
 
 .swiper-container {

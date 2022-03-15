@@ -3,10 +3,10 @@
 
 {% block styles %}
 
-    <!--  services  -->
-    <link href="{% static 'css/services.css' %}" rel="stylesheet"/>
-    <link href="{% static 'css/clinic.css' %}" rel="stylesheet"/>
-    <link href="{% static 'css/main.css' %}" rel="stylesheet"/>
+<!--  services  -->
+<link href="{% static 'css/services.css' %}" rel="stylesheet" />
+<link href="{% static 'css/clinic.css' %}" rel="stylesheet" />
+<link href="{% static 'css/main.css' %}" rel="stylesheet" />
 
 
 {% endblock %}
@@ -14,70 +14,125 @@
 {% block content %}
 
 <section id="banner-services">
-    <div class="container">
-        
-   <div class="banner-serv">
-       
+  <div class="container">
+
+    <div class="banner-serv">
+      <div class="banner-wrap-caption">
         <div class="banner-inner">
-             <h2 class="banner-title">Об услугах</h2>
-             <p class="banner-text-one">Aenean in est. Et vel dapibus luctus molestie hac ut. Molestie adipiscing
-                  sit molestie dui sit nunc mollis in eleifend mauris nisi arcu dictumst. Non urna sodales nunc
-                  augue vitae sed mattis ornare sapien velit nulla sed imperdiet vestibulum cursus hac ut. Morbi
-                  tortor, et ultricies. Imperdiet est. Accumsan hac arcu justo justo venenatis dapibus quis,
-                  tortor, dolor nulla dictu.</p>
-             <p class="banner-text-two">Ornare ex. Luctus vestibulum vel in molestie velit sit in in imperdiet
-                  quis, morbi integer eleifend venenatis nulla lorem ve.</p>
+          <h2 class="banner-title">Об услугах</h2>
+          <p class="banner-text-one">Aenean in est. Et vel dapibus luctus molestie hac ut. Molestie adipiscing
+            sit molestie dui sit nunc mollis in eleifend mauris nisi arcu dictumst. Non urna sodales nunc
+            augue vitae sed mattis ornare sapien velit nulla sed imperdiet vestibulum cursus hac ut. Morbi
+            tortor, et ultricies. Imperdiet est. Accumsan hac arcu justo justo venenatis dapibus quis,
+            tortor, dolor nulla dictu.</p>
+          <p class="banner-text-two">Ornare ex. Luctus vestibulum vel in molestie velit sit in in imperdiet
+            quis, morbi integer eleifend venenatis nulla lorem ve.</p>
         </div>
-   
-   </div>
-   </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="doctors-slider" id="departments">
   <div class="container">
 
-<div class="categories2">
-  <a  href='/clinic#departments' class="serv{% if active == 'all' %} active{% endif %}">Все</a>
-  {% for department in departments %}
-       <a href='/clinic?department={{ department.slug }}#departments' class="serv{% if department.slug == active %} active{% endif %}">{{ department.name }}</a>
-  {% endfor %}
-</div>
 
-</div>
-    {% include 'components/slide.html' %}
-  </section>
-  <section>
+    <div class="categories2">
+      <a href='/clinic#departments' class="serv{% if 'all' == active %} active{% endif %}">Все</a>
+      {% for department in departments %}
+      <a href='/clinic?department={{ department.slug }}#departments'
+        class="serv{% if department.slug == active %} active{% endif %}">{{ department.name }}</a>
+      {% endfor %}
+    </div>
+
+  </div>
+  <div class="swiper-container doctor-container">
     <div class="container">
-      <div class="abuot-clinic-big-card">
-        <div class="clinic-card-img">
+      <!-- Slider main container -->
+      <div class="swiper swiper3">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          {% for person in people %}
+          <div class="sliders-with-name">
+            <div class="swiper-slide background-slide" style="background-image: url('media/{{ person.image }}');"></div>
+            <div class="doctors-names">Иван Иванов Иванович</div>
+            <div class="doctors-depart">Malesuada lectus</div>
+          </div>
+          {% endfor %}
+        </div>
 
+      </div>
+
+      <!-- If we need pagination -->
+      <div class="swiper-pagination swiper-pagination3"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev swiper-button-prev3"></div>
+      <div class="swiper-button-next swiper-button-next3"></div>
+
+    </div>
+
+  </div>
+  <div class="all-doctors">Все врачи</div>
+</section>
+<section>
+  <div class="container">
+    <div class="abuot-clinic-big-card-1">
+      <div class="clinic-card-img">
+
+      </div>
+      <div class="clinic-card-info">
+        <h1 class="card-heading">
+          Dictumst. Ex
+        </h1>
+        <div class="clinic-card-text">
+          Ex. Sit sed dictumst. Et pellentesque cras hac leo, quis, nisi orci, sit sit non urna nisi pellentesque cursus
+          sapien lectus nulla vulputate dictum. Faucibus. Velit vulputate id dapibus in malesuada vitae adipiscing in
+          ultricies. Sit pulvinar amet lacinia pulvinar orci, et urna ornare ultricies. Eleifend non dolor amet cras
+          est. In accumsan dui faucibus. Amet, lorem cursus lorem dictum id quam, et. Ipsum non in tortor, orci, aenean
+          interdum nec est. Dui mollis aenean tempus ornare eleifend non orci, morbi libero, non malesuada vitae dolor
+          tempus venenatis dolor sed lorem tortor, libero, mauris hac eleifend mauris ultricies. Dictum morbi dolor
+          dolor imperdiet sed et efficitur sit quam, lectus tempus lectus urna amet, ipsum sit urna nec dictumst. Sit
+          amet, pulvinar faucibus. Nec nulla ultricies. Molestie nunc in interdum malesuada amet, faucibus. Hac
+          vulputate luctus nisi lorem et. Interdum dictum hac et mattis adipiscing sit ipsum malesuada morbi ultricies.
+          Venenatis et vel et. Amet, dui faucibus. Sapien odio. Imperdiet in dictum. Sit mattis molestie venenatis
+          sapien sodales ultricies. Accumsan libero, libero, imperdiet in mollis tempus pellentesque ipsum ornare mollis
+          id et non non sapien et integer urna leo, sed integer accumsan in mattis nisi justo aenean morbi quam, morbi
+          no.
         </div>
-        <div class="clinic-card-info">
-          <h1 class="card-heading">
-            Dictumst. Ex
-          </h1>
-          <div class="clinic-card-text">
-            Ex. Sit sed dictumst. Et pellentesque cras hac leo, quis, nisi orci, sit sit non urna nisi pellentesque cursus sapien lectus nulla vulputate dictum. Faucibus. Velit vulputate id dapibus in malesuada vitae adipiscing in ultricies. Sit pulvinar amet lacinia pulvinar orci, et urna ornare ultricies. Eleifend non dolor amet cras est. In accumsan dui faucibus. Amet, lorem cursus lorem dictum id quam, et. Ipsum non in tortor, orci, aenean interdum nec est. Dui mollis aenean tempus ornare eleifend non orci, morbi libero, non malesuada vitae dolor tempus venenatis dolor sed lorem tortor, libero, mauris hac eleifend mauris ultricies. Dictum morbi dolor dolor imperdiet sed et efficitur sit quam, lectus tempus lectus urna amet, ipsum sit urna nec dictumst. Sit amet, pulvinar faucibus. Nec nulla ultricies. Molestie nunc in interdum malesuada amet, faucibus. Hac vulputate luctus nisi lorem et. Interdum dictum hac et mattis adipiscing sit ipsum malesuada morbi ultricies. Venenatis et vel et. Amet, dui faucibus. Sapien odio. Imperdiet in dictum. Sit mattis molestie venenatis sapien sodales ultricies. Accumsan libero, libero, imperdiet in mollis tempus pellentesque ipsum ornare mollis id et non non sapien et integer urna leo, sed integer accumsan in mattis nisi justo aenean morbi quam, morbi no.
-          </div>
-          <button class="clinic-info-btn">Информация</button>
+        <button class="clinic-info-btn">Информация</button>
+      </div>
+
+      
+    </div>
+    <div class="abuot-clinic-big-card-2">
+
+      <div class="clinic-card-info">
+        <h1 class="card-heading">
+          Dictumst. Ex
+        </h1>
+        <div class="clinic-card-text">
+          Ex. Sit sed dictumst. Et pellentesque cras hac leo, quis, nisi orci, sit sit non urna nisi pellentesque
+          cursus sapien lectus nulla vulputate dictum. Faucibus. Velit vulputate id dapibus in malesuada vitae
+          adipiscing in ultricies. Sit pulvinar amet lacinia pulvinar orci, et urna ornare ultricies. Eleifend non
+          dolor amet cras est. In accumsan dui faucibus. Amet, lorem cursus lorem dictum id quam, et. Ipsum non in
+          tortor, orci, aenean interdum nec est. Dui mollis aenean tempus ornare eleifend non orci, morbi libero, non
+          malesuada vitae dolor tempus venenatis dolor sed lorem tortor, libero, mauris hac eleifend mauris ultricies.
+          Dictum morbi dolor dolor imperdiet sed et efficitur sit quam, lectus tempus lectus urna amet, ipsum sit urna
+          nec dictumst. Sit amet, pulvinar faucibus. Nec nulla ultricies. Molestie nunc in interdum malesuada amet,
+          faucibus. Hac vulputate luctus nisi lorem et. Interdum dictum hac et mattis adipiscing sit ipsum malesuada
+          morbi ultricies. Venenatis et vel et. Amet, dui faucibus. Sapien odio. Imperdiet in dictum. Sit mattis
+          molestie venenatis sapien sodales ultricies. Accumsan libero, libero, imperdiet in mollis tempus
+          pellentesque ipsum ornare mollis id et non non sapien et integer urna leo, sed integer accumsan in mattis
+          nisi justo aenean morbi quam, morbi no.
         </div>
-        <div class="abuot-clinic-big-card">
-        
-          <div class="clinic-card-info">
-            <h1 class="card-heading">
-              Dictumst. Ex
-            </h1>
-            <div class="clinic-card-text">
-              Ex. Sit sed dictumst. Et pellentesque cras hac leo, quis, nisi orci, sit sit non urna nisi pellentesque cursus sapien lectus nulla vulputate dictum. Faucibus. Velit vulputate id dapibus in malesuada vitae adipiscing in ultricies. Sit pulvinar amet lacinia pulvinar orci, et urna ornare ultricies. Eleifend non dolor amet cras est. In accumsan dui faucibus. Amet, lorem cursus lorem dictum id quam, et. Ipsum non in tortor, orci, aenean interdum nec est. Dui mollis aenean tempus ornare eleifend non orci, morbi libero, non malesuada vitae dolor tempus venenatis dolor sed lorem tortor, libero, mauris hac eleifend mauris ultricies. Dictum morbi dolor dolor imperdiet sed et efficitur sit quam, lectus tempus lectus urna amet, ipsum sit urna nec dictumst. Sit amet, pulvinar faucibus. Nec nulla ultricies. Molestie nunc in interdum malesuada amet, faucibus. Hac vulputate luctus nisi lorem et. Interdum dictum hac et mattis adipiscing sit ipsum malesuada morbi ultricies. Venenatis et vel et. Amet, dui faucibus. Sapien odio. Imperdiet in dictum. Sit mattis molestie venenatis sapien sodales ultricies. Accumsan libero, libero, imperdiet in mollis tempus pellentesque ipsum ornare mollis id et non non sapien et integer urna leo, sed integer accumsan in mattis nisi justo aenean morbi quam, morbi no.
-            </div>
-            <button class="clinic-info-btn">Информация</button>
-          </div>
-          <div class="clinic-card-img2">
-  
-          </div>
-        </div>
+        <button class="clinic-info-btn">Информация</button>
+      </div>
+      <div class="clinic-card-img2">
+
       </div>
     </div>
-  </section>
+  </div>
+</section>
 {% endblock %}
-
