@@ -114,7 +114,6 @@
   </div>
 </section>
 <div class="background-color">
- 
 
     <div class="container">
       <div class="information-boxes">
@@ -181,6 +180,7 @@
 
       </div>
     </div>
+    {% if people.all %}
     <section class="doctors-slider">
       <div class="swiper-container doctor-container">
         <div class="container">
@@ -208,6 +208,7 @@
       </div>
       <div class="all-doctors">Все врачи</div>
     </section>
+    {% endif %}
 
 </div>
 <section class="feedbacks">
