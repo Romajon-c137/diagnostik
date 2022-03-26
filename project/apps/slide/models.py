@@ -18,9 +18,6 @@ class Slide(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Создано')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Обновлено')
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE, verbose_name='Автор')
-
-    def __str__(self):
-        return self.title
     
     class Meta:
         verbose_name = 'Слайд'

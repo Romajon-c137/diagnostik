@@ -7,7 +7,9 @@ ROLES = (
     (0, 'Руководство'),
     (1, 'Доктор'),
     (2, 'Врач'),
-    (3, 'Лаборант'),
+    (3, 'Старшая медсестра'),
+    (4, 'Лаборант'),
+    (5, 'Лаборант высшей категории'),
 )
 
 class Role(models.Model):
@@ -51,9 +53,10 @@ class Person(models.Model):
     description = RichTextField(verbose_name="Биография", null=True, blank=True)
     published = models.BooleanField(default=True, verbose_name="Опубликовано")
     slug = models.SlugField(verbose_name="Ярлык", unique=True)
-    roles = models.ManyToManyField(Role, verbose_name="Должносты")
+    experience = models.IntegerField(verbose_name="Опыт работы", null=True, blank=True)
+    roles = models.ManyToManyField(Role, verbose_name="Должносты", blank=True)
     role = models.IntegerField(choices=ROLES, verbose_name="Роль на сайте", default=0)
-    department = models.ForeignKey(Department, on_delete=models.CASCADE, verbose_name='Отделение', related_name='person_department')
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, verbose_name='Отделение', related_name='person_department', null=True, blank=True)
     seo_title = models.CharField(max_length=200, verbose_name="SEO Title", blank=True)
     seo_description = models.CharField(max_length=300, verbose_name="SEO Description", blank=True)
 
