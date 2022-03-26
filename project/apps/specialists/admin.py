@@ -6,7 +6,7 @@ from .models import Department, Person, Role
 class RoleAdmin(admin.ModelAdmin):
     list_display = ('name', 'published', 'slug')
     list_filter = ('published',)
-    search_fields = ('name',)
+    search_fields = ('name', 'experience')
     prepopulated_fields = {'slug': ('name',)}
     list_editable = ('published',)
 

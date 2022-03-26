@@ -14,7 +14,7 @@ class FreeCallAdmin(admin.ModelAdmin):
     fields = []
     list_filter = ['full_name', 'subject', 'status']
     list_display = ['full_name', 'phone_number', 'e_mail', 'status']
-    readonly_fields = ['message', 'full_name', 'e_mail', 'phone_number', 'subject']
+    readonly_fields = ['message', 'full_name', 'e_mail', 'phone_number', 'subject', 'town']
 
     def save_model(self, request, obj, form, change):
         obj.author = request.user
