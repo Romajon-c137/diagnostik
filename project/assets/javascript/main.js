@@ -143,3 +143,8 @@ if (width <= 1441) {
 
 }
 
+let burger_menu = document.getElementById('burger-menu');
+
+burger_menu.addEventListener('click', (e) => {
+   console.log('burger-menu');
+})

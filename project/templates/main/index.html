@@ -3,7 +3,34 @@
 
 {% block index %}
 {% block header %}
-{% include 'components/header.html' %}
+<header>
+  <div class="container">
+    <div class="main-menu">
+      <div class="left-side">
+        <a href="/" 
+          ><img class="logo" src="{% static 'images/logo.png' %}" alt="" />
+        </a>
+
+        <ul class="menu-list">
+          <li><a href="/">Главная</a></li>
+          <li> <a href="/clinic">Клиника</a></li>
+          <li> <a href="/prices">Цены</a></li>
+          <li> <a href="/labs">Лабаратории</a></li>
+          <li> <a href="/services">Услуги</a></li>
+          <li> <a href="/specialists">Спецеалисты / отделение</a></li>
+        </ul>
+      </div>
+      <div class="right-side">
+        <ul class="phone-menu">
+          <li>+996 700 600 600</li>
+          <li>+996 700 600 600</li>
+        </ul>
+        <button class="result-btn">Результаты анализов</button>
+      </div>
+      <div class="hamburger" id="burger-menu"></div>
+    </div>
+  </div>
+</header>
 {% endblock %}
 {% block content %}
 
@@ -443,7 +470,76 @@
 
 
 {% block footer %}
-{% include 'components/footer.html' %}
+<footer>
+  <div class="background-color-lightRed">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-contact">
+          <div class="footer-contact-title">
+            Contact Info
+          </div>
+          <div class="footer-contact-text">
+            Fusce at libero iaculis, venenatis augue quis, pharetra lorem. Curabitur ut dolor eu elit consequat
+            ultricies.
+          </div>
+          <div class="contact-logo-and-info">
+            <div class="contact-info">
+              <p><i class="fa fa-phone"></i> 010-070-0170</p>
+              <p><i class="fa fa-envelope"></i> info@company.com</p>
+            </div>
+            <div class="footer-logo">
+              <a href="#"> <img src="{% static '/images/Prototype/Services/Desktop/Logo 2.png' %}" alt=""></a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="footer-menu">
+          <div class="footer-menu-title">
+            Quick-menu
+          </div>
+          <ul class="quick-menu">
+            <li>Главная</li>
+            <li>Клиника</li>
+            <li>Цены</li>
+            <li>Лабаратории</li>
+            <li>Услуги</li>
+            <li>Спецеалисты / отделение</li>
+          </ul>
+        </div>
+        <div class="footer-pages">
+          <div class="footer-pages-title">
+            Pages
+          </div>
+          <ul class="quick-menu-pages">
+            {% for page in footer %}
+              <li><a href="{{ page.get_absolute_url }}">{{ page.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="footer-thumb">
+          <div class="opening-hours">
+            <h4 class="working-title" data-wow-delay="0.4s">Opening Hours</h4>
+            <p class="m-f">Monday - Friday: <span class="m-f-time">06:00 AM - 10:00 PM</span></p>
+            <p class="sat">Saturday: <span class="sat-time">09:00 AM - 08:00 PM</span></p>
+            <p class="sun">Sunday: <span class="sun-time">Closed</span></p>
+          </div>
+
+          <ul class="social-icon">
+            <li class="facebbok"> <img src="{% static 'svg/facebook.svg' %}" alt=""> </li>
+            <li class="instagram"> <img src="{% static 'svg/instagram.svg' %}" alt="" srcset=""></li>
+            <li class="twitter"> <img src="{% static 'svg/twitter.svg' %}" alt=""></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+</footer>
 {% endblock %}
 
 {% endblock %}
