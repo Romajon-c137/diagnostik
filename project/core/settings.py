@@ -13,6 +13,8 @@ import environ
 
 from pathlib import Path
 
+root = environ.Path(__file__) - 2
+
 env = environ.Env(
     DEBUG=(bool, False)
 )
@@ -25,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
+ALLOWED_HOSTS = ["127.0.0.1", 'localhost', 'clinic.kg', '94.228.126.180']
 
 
 # Quick-start development settings - unsuitable for production
@@ -142,14 +144,14 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-STATICFILES_DIRS = [BASE_DIR / 'assets']
-
 STATIC_URL = '/static/'
-
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = root('static')
 
 MEDIA_URL = '/media/'
+MEDIA_ROOT = root('media')
 
-MEDIA_ROOT = BASE_DIR / 'media'
+STATICFILES_DIRS = (
+    root('assets'),
+)
 
 DOMAIN = env('DOMAIN')
