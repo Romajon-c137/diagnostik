@@ -1,5 +1,5 @@
 .banner-serv {
-   background-image: url(../images/Clinics/Desktop/hospital.png);
+   background-image: url(../images/Clinics/slide/2.jpg);
    background-repeat: no-repeat;
    margin: 45px auto;
    background-size: cover;
@@ -89,7 +89,7 @@
 }
 
 .clinic-card-img {
-   background-image: url(../images/Rectangle-8.png);
+   background-image: url(../images/Clinics/slide/3.jpg);
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
@@ -123,7 +123,7 @@
 }
 
 .clinic-card-img2 {
-   background-image: url(../images/Rectangle-8.png);
+   background-image: url(../images/Clinics/slide/4.jpg);
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
