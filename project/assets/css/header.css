@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   gap: 34px;
-  margin-left: 61px;
+  margin-left: 30px;
   width: 100%;
 }
 
@@ -31,6 +31,7 @@
 }
 .menu-list a{
   color: black;
+  font-size: 18px;
 }
 
 .menu-list li:hover {
@@ -55,13 +56,18 @@
   cursor: pointer;
 }
 
+.phone-menu a {
+  color: #000;
+  text-decoration: none;
+}
+
 .phone-menu li:hover {
   text-decoration: underline;
   color: rgb(54, 54, 54);
 }
 
 .result-btn {
-  width: 210px;
+  padding: 0 20px;
   height: 46px;
   display: flex;
   align-items: center;
