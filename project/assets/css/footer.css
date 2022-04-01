@@ -56,10 +56,11 @@
 }
 
 .contact-info {
+   padding-top: 10px;
    display: flex;
    flex-direction: column;
    justify-content: center;
-   row-gap: 30px;
+   row-gap: 15px;
    text-align: left;
    color: #fff;
 }
