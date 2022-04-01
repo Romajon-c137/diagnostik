@@ -60,11 +60,20 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
-   row-gap: 15px;
+   row-gap: 10px;
    text-align: left;
    color: #fff;
 }
 
+.contact-info a {
+   color: #fff;
+   text-decoration: none;
+}
+
+.contact-info a:hover {
+   color: #f84b4c;
+   text-decoration: underline;
+}
 
 
 .fa-phone {
@@ -120,6 +129,21 @@
    font-family: 'Proxima Nova Light';
    cursor: pointer;
 }
+
+.quick-menu li a{
+   color: #fff;
+   cursor: pointer;
+   text-align: left;
+   display: flex;
+   flex-direction: column;
+   row-gap: 10px;
+   color: #fff;
+   font-size: 14px;
+   font-weight: 600;
+   line-height: 29px;
+   font-family: 'Proxima Nova';
+}
+
 .quick-menu-pages li a{
    color: #fff;
    cursor: pointer;
