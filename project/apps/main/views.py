@@ -8,6 +8,7 @@ from apps.slide.models import Slide
 from apps.services.models import Service, Category as ServiceCategory
 from apps.specialists.models import Department, Person, Role
 from apps.prices.models import Analysis
+from apps.reviews.models import Review
 from .models import FreeCall, Page
 from .forms import Form
 
@@ -15,7 +16,9 @@ from .forms import Form
 def main(request):
     doctors = Person.objects.filter(published=True, role=2)
     slides = Slide.objects.filter(is_active=True).order_by('order')
-    return render(request, 'main/index.html', {'slides': slides, 'doctors': doctors})
+    reviews = Review.objects.filter(published=True)[:3]
+    hiddenreviews = Review.objects.filter(published=True)[3:]
+    return render(request, 'main/index.html', {'slides': slides, 'doctors': doctors, 'reviews': reviews, 'hiddenreviews': hiddenreviews})
 
 
 def services(request):

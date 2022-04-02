@@ -244,71 +244,31 @@
     {% endif %}
 
 </div>
+{% if reviews.all %}
 <section class="feedbacks">
   <div class="container">
     <h2 class="feedback-header">Отзывы</h2>
     <div class="feedback-cards">
+      {% for review in reviews %}
       <div class="feedback-card">
-        <h5 class="before-header">Кардиолог</h5>
-        <h3 class="person-name">Иван Иванов Иванович</h3>
-        <h5 class="after-header">Иван Иванов Иванович</h5>
-        <p class="feedback">Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum
-          nec vestibulum elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi
-          elit. Leo, ultricies amet...</p>
-        <p class="feedback-date">00.00.0000</p>
-        <button class="read-more">Читать полностью</button>
+        {% comment %} <h5 class="before-header">Кардиолог</h5> {% endcomment %}
+        <h3 class="person-name">{{ review.name }}</h3>
+        {% comment %} <h5 class="after-header">Иван Иванов Иванович</h5> {% endcomment %}
+        <p class="feedback">{{ review.review|striptags|truncatechars:220  }}</p>
+        <p class="feedback-date">{{ review.created_at }}</p>
+        <a href="{{ review.id }}"><button class="read-more">Читать полностью</button></a>
       </div>
-      <div class="feedback-card">
-        <h5 class="before-header">Кардиолог</h5>
-        <h3 class="person-name">Иван Иванов Иванович</h3>
-        <h5 class="after-header">Иван Иванов Иванович</h5>
-        <p class="feedback">Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum
-          nec vestibulum elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi
-          elit. Leo, ultricies amet...</p>
-        <p class="feedback-date">00.00.0000</p>
-        <button class="read-more">Читать полностью</button>
+      {% endfor %}
+      {% for review in hiddenreviews %} 
+      <div class="feedback-card hidden">
+        {% comment %} <h5 class="before-header">Кардиолог</h5> {% endcomment %}
+        <h3 class="person-name">{{ review.name }}</h3>
+        {% comment %} <h5 class="after-header">Иван Иванов Иванович</h5> {% endcomment %}
+        <p class="feedback">{{ review.review|striptags|truncatechars:220  }}</p>
+        <p class="feedback-date">{{ review.created_at }}</p>
+        <a href="{{ review.id }}"><button class="read-more">Читать полностью</button></a>
       </div>
-      <div class="feedback-card media-card">
-        <h5 class="before-header">Кардиолог</h5>
-        <h3 class="person-name">Иван Иванов Иванович</h3>
-        <h5 class="after-header">Иван Иванов Иванович</h5>
-        <p class="feedback">Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum
-          nec vestibulum elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi
-          elit. Leo, ultricies amet...</p>
-        <p class="feedback-date">00.00.0000</p>
-        <button class="read-more">Читать полностью</button>
-      </div>
-      <!-- header part -->
-      <div id="hidden" class="feedback-card ">
-        <h5 class="before-header">Кардиолог</h5>
-        <h3 class="person-name">Иван Иванов Иванович</h3>
-        <h5 class="after-header">Иван Иванов Иванович</h5>
-        <p class="feedback">Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum
-          nec vestibulum elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi
-          elit. Leo, ultricies amet...</p>
-        <p class="feedback-date">00.00.0000</p>
-        <button class="read-more">Читать полностью</button>
-      </div>
-      <div id="hidden" class="feedback-card media-card ">
-        <h5 class="before-header">Кардиолог</h5>
-        <h3 class="person-name">Иван Иванов Иванович</h3>
-        <h5 class="after-header">Иван Иванов Иванович</h5>
-        <p class="feedback">Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum
-          nec vestibulum elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi
-          elit. Leo, ultricies amet...</p>
-        <p class="feedback-date">00.00.0000</p>
-        <button class="read-more">Читать полностью</button>
-      </div>
-      <div id="hidden" class="feedback-card ">
-        <h5 class="before-header">Кардиолог</h5>
-        <h3 class="person-name">Иван Иванов Иванович</h3>
-        <h5 class="after-header">Иван Иванов Иванович</h5>
-        <p class="feedback">Risus libero, malesuada orci, sit sit dui leo, lacinia mauris arcu vestibulum
-          nec vestibulum elit. Risus velit mauris ut. Non augue lorem dictum vestibulum odio. Vel nisi
-          elit. Leo, ultricies amet...</p>
-        <p class="feedback-date">00.00.0000</p>
-        <button class="read-more">Читать полностью</button>
-      </div>
+      {% endfor %}
 
 
     </div>
@@ -319,6 +279,7 @@
     </div>
   </div>
 </section>
+{% endif %}
 <div class="background-color">
   <div class="container">
     <div class="loc-wrapper">
@@ -330,7 +291,7 @@
 
 
     <div id="clinic-location">
-      <div class="location">
+      {% comment %} <div class="location">
         <div class="located">
           <div class="pre-location">Бишкек</div>
           <div class="street">ул. Энтузиастов, 30</div>
@@ -433,11 +394,11 @@
           </div>
 
         </div>
-      </div>
+      </div> {% endcomment %}
       <div class="location media-loc">
         <div class="located l-media">
-          <div class="pre-location">Бишкек</div>
-          <div class="street">ул. Энтузиастов, 30</div>
+          <div class="pre-location">Город Исфана</div>
+          <div class="street">улица Алтын - Бешик, 30</div>
         </div>
 
         <div class="table t-media">
@@ -446,15 +407,20 @@
               Время работы
             </div>
             <div class="time">
-              ПН - ПТ 09:00 - 20:00
-              СБ - ВС 10:00 - 19:00
+              ПН - ПТ 08:00 - 17:00
+              <br>
+              СБ - 08:00 - 13:00
+              <br>
+              ВС - Закрыто
             </div>
           </div>
           <div class="phone-contact">
             <div class="pre-phone"> Телефон</div>
             <div class="phones">
-              +0 (000) 000-00-00
-              +0 (000) 000-00-00
+              <a href="tel:0777 065 065">0777 065 065</a>
+              <a href="tel:0778 150 347">0778 150 347</a>
+              <a href="tel:0770 437 270">0770 437 270</a>
+              <a href="tel:0706 637 270">0706 637 270</a>
             </div>
           </div>
 

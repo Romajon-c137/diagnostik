@@ -451,6 +451,12 @@
   line-height: 140%;
 }
 
+.phones a {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+}
+
 .pre-location,
 .pre-time,
 .pre-phone {

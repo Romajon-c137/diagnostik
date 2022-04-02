@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", 'localhost', 'clinic.americandream.kg', '159.89.98.142', 'clinic.771795-cy01816.tmweb.ru']
+ALLOWED_HOSTS = ["127.0.0.1", 'localhost', 'www.diagnostik.kg', '159.89.98.142', 'diagnostik.kg', 'test.diagnostik.kg']
 
 
 # Quick-start development settings - unsuitable for production
