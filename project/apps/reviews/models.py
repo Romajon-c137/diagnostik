@@ -1,6 +1,7 @@
 from unicodedata import name
 from django.db import models
 from ckeditor.fields import RichTextField
+from django.urls import reverse
 
 # Create your models here.
 class Review(models.Model):
@@ -26,3 +27,6 @@ class Review(models.Model):
         ordering = ('-created_at',)
         verbose_name = 'Отзыв'
         verbose_name_plural = 'Отзывы'
+
+    def get_absolute_url(self):
+        return '/review/%s' % self.id

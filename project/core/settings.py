@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", 'localhost', 'www.diagnostik.kg', '159.89.98.142', 'diagnostik.kg', 'test.diagnostik.kg']
+ALLOWED_HOSTS = ["127.0.0.1", 'localhost', '0.0.0.0', 'www.diagnostik.kg', '159.89.98.142', 'diagnostik.kg', 'test.diagnostik.kg']
 
 
 # Quick-start development settings - unsuitable for production
@@ -144,13 +144,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/var/www/clinic_back/project/static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/var/www/clinic_back/project/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
-STATICFILES_DIRS = (
-    root('assets'),
-)
+STATICFILES_DIRS = [BASE_DIR / 'assets']
 
 DOMAIN = env('DOMAIN')

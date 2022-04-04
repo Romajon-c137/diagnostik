@@ -256,7 +256,7 @@
         {% comment %} <h5 class="after-header">Иван Иванов Иванович</h5> {% endcomment %}
         <p class="feedback">{{ review.review|striptags|truncatechars:220  }}</p>
         <p class="feedback-date">{{ review.created_at }}</p>
-        <a href="{{ review.id }}"><button class="read-more">Читать полностью</button></a>
+        <a href="{{ review.get_absolute_url }}"><button class="read-more">Читать полностью</button></a>
       </div>
       {% endfor %}
       {% for review in hiddenreviews %} 
@@ -266,7 +266,7 @@
         {% comment %} <h5 class="after-header">Иван Иванов Иванович</h5> {% endcomment %}
         <p class="feedback">{{ review.review|striptags|truncatechars:220  }}</p>
         <p class="feedback-date">{{ review.created_at }}</p>
-        <a href="{{ review.id }}"><button class="read-more">Читать полностью</button></a>
+        <a href="{{ review.get_absolute_url }}"><button class="read-more">Читать полностью</button></a>
       </div>
       {% endfor %}
 

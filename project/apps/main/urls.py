@@ -11,4 +11,5 @@ urlpatterns = [
     path('clinic', clinic, name='clinic'),
     path('specialists', specialists, name='specialists'),
     path('services', services, name='services'),
+    path('review/<int:id>/', review, name='review'),
 ]

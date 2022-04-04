@@ -85,3 +85,8 @@ def form(request):
 def page(request, slug):
     page = Page.objects.get(slug=slug)
     return render(request, 'main/page.html', {'page': page})
+
+
+def review(request, id):
+    review = Review.objects.get(id=id)
+    return render(request, 'main/review.html', {'review': review})
