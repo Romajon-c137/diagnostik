@@ -50,24 +50,26 @@
           <!-- Slides -->
 
           {% for slide in slides %}
-          <div class="swiper-slide banner-caption">
+          <div class="swiper-slide banner-caption ">
             <div class="banenr-img" style="background-image: url('media/{{ slide.image }}');">
-              <div class="banner-info">
+            
+              <div class="banner-cover">
+                <div class="banner-info">
+                  <div class="banner-description">
+                    <h1 class="banner-title">
+                      {% if slide.title %}
+                        {{ slide.title|truncatechars:50 }}
+                      {% endif %}
+                    </h1>
+                    <p class="banner-text">{{ slide.description|striptags|truncatechars:200 }}</p>
+                  </div>
 
-                <div class="banner-description">
-                  <h1 class="banner-title">
-                    {% if slide.title %}
-                      {{ slide.title|truncatechars:50 }}
-                    {% endif %}
-                  </h1>
-                  <p class="banner-text">{{ slide.description|striptags|truncatechars:200 }}</p>
+                  {% if slide.button_link and slide.button_title%}
+                  <a class="appointment-lnk" href="{{ slide.button_link }}">
+                    <button class="appointment-btn">{{ slide.button_title }}</button>
+                  </a>
+                  {% endif %}
                 </div>
-
-                {% if slide.button_link and slide.button_title%}
-                <a class="appointment-lnk" href="{{ slide.button_link }}">
-                  <button class="appointment-btn">{{ slide.button_title }}</button>
-                </a>
-                {% endif %}
               </div>
             </div>
           </div>

@@ -16,7 +16,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
 }
 
 .info-box {
@@ -49,29 +48,37 @@
   color: #806d6d;
 }
 
+.banner-cover {
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 32px;
+  height: 100%;
+}
+
 .banenr-img {
-  background: linear-gradient(rgba(255, 255, 255, 0.3) 100%,
-        rgba(177, 177, 177, 0.5) 100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 32px;
 
-  height: calc(100vh - 355px);
+  height: 650px;
 }
 
-
-.banner-description{
-  height: 23%;
+.banner-description {
+  padding: 0 50px 0 80px;
+  max-width: 581px;
 }
 
 .banner-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 55%;
-  padding: 100px;
-  max-width: 60%;
+  height: 450px;
+  width: 100%;
 }
 
 .banner-title {
@@ -93,9 +100,10 @@
   color: #806d6d;
   margin-top: 20px;
 }
-.appointment-lnk{
+.appointment-lnk {
+  padding: 80px 0 0 80px;
   width: 210px;
-  margin-top: 100px;
+  
 }
 
 .appointment-btn {
@@ -107,11 +115,11 @@
   color: #ffffff;
   cursor: pointer;
 }
-.appointment-btn:hover{
+.appointment-btn:hover {
   cursor: pointer;
   background: transparent;
-  border: 2px solid #F84B4C;
-  color: #F84B4C;
+  border: 2px solid #f84b4c;
+  color: #f84b4c;
 }
 .about-cards {
   display: flex;
@@ -139,12 +147,10 @@
   font-family: "Poppins";
 }
 
-
-
 .card {
   width: 262px;
   height: 145px;
-  border: 1px solid #F84B4C;
+  border: 1px solid #f84b4c;
   border-radius: 32px;
   display: flex;
   align-items: center;
@@ -153,10 +159,10 @@
 }
 
 .count {
-  color: #ABA6A6;
+  color: #aba6a6;
   padding: 0;
   font-size: 48px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 .description {
@@ -167,9 +173,11 @@
 }
 
 .banner-img-2 {
-  background: linear-gradient(rgba(255, 255, 255, 0.2) 100%,
-        rgba(177, 177, 177, 0.5) 100%),
-     url("../images/Home-page/Rectangle-8.jpg") center center no-repeat;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.2) 100%,
+      rgba(177, 177, 177, 0.5) 100%
+    ),
+    url("../images/Home-page/Rectangle-8.jpg") center center no-repeat;
   border-radius: 32px;
   background-size: cover;
   height: 600px;
@@ -223,7 +231,6 @@
   top: 40% !important;
   color: #f84b4c !important;
   /* right: 2% !important; */
-  
 }
 
 .swiper-button-prev {
@@ -231,14 +238,12 @@
   top: 40% !important;
   color: #f84b4c !important;
   /* left: 2% !important; */
-  
 }
 .swiper-button-next2 {
   position: absolute !important;
   top: 40% !important;
   color: #f84b4c !important;
   /* right: 2% !important; */
-  
 }
 
 .swiper-button-prev2 {
@@ -246,13 +251,12 @@
   top: 40% !important;
   color: #f84b4c !important;
   /* left: 2% !important; */
-  
 }
-.swiper-pagination1{
+.swiper-pagination1 {
   position: absolute !important;
   top: 65% !important;
 }
-.swiper-pagination3{
+.swiper-pagination3 {
   bottom: -30px !important;
 }
 .feedback-cards {
@@ -267,9 +271,8 @@
   width: 370px;
   height: 431px;
   border-radius: 16px;
-  border: 1px solid #F84B4C;
+  border: 1px solid #f84b4c;
   padding: 30px;
-
 }
 
 .before-header {
@@ -278,7 +281,7 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 140%;
-  color: #BFB6B6;
+  color: #bfb6b6;
   text-align: right;
 }
 
@@ -288,7 +291,7 @@
   font-size: 24px;
   line-height: 120%;
   text-align: center;
-  color: #220F0F;
+  color: #220f0f;
   padding: 25px 0;
 }
 
@@ -299,8 +302,7 @@
   font-size: 14px;
   line-height: 140%;
   text-align: left;
-  color: #BFB6B6;
-
+  color: #bfb6b6;
 }
 
 .feedback {
@@ -308,10 +310,9 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 140%;
-  color: #806D6D;
+  color: #806d6d;
   text-align: left;
   padding-bottom: 25px;
-
 }
 
 .feedback-date {
@@ -319,7 +320,7 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 140%;
-  color: #BFB6B6;
+  color: #bfb6b6;
   text-align: right;
 }
 
@@ -328,14 +329,14 @@
   height: 46px;
   border-radius: 16px;
   background-color: transparent;
-  border: 1px solid #F84B4C;
-  color: #F84B4C;
+  border: 1px solid #f84b4c;
+  color: #f84b4c;
   margin: 20% auto;
   font-weight: 500;
 }
 
 .read-more:hover {
-  background-color: #F84B4C;
+  background-color: #f84b4c;
   cursor: pointer;
   color: white;
   font-weight: 600;
@@ -349,7 +350,7 @@
   line-height: 120%;
   display: flex;
   align-items: center;
-  color: #220F0F;
+  color: #220f0f;
   margin-bottom: 30px;
 }
 
@@ -357,19 +358,17 @@
   width: 272px;
   height: 46px;
   border-radius: 16px;
-  border: 1px solid #F84B4C;
-  color: #F84B4C;
+  border: 1px solid #f84b4c;
+  color: #f84b4c;
   font-weight: bold;
   text-align: center;
   background-color: transparent;
-
 }
 
 #btn-load-more:hover {
-  background-color: #F84B4C;
+  background-color: #f84b4c;
   cursor: pointer;
   color: white;
-
 }
 
 .btns {
@@ -383,20 +382,17 @@
   width: 272px;
   height: 46px;
   border-radius: 16px;
-  border: 1px solid #F84B4C;
-  color: #F84B4C;
+  border: 1px solid #f84b4c;
+  color: #f84b4c;
   font-weight: bold;
   text-align: center;
   background-color: transparent;
-
-
 }
 
 #btn-close:hover {
-  background-color: #F84B4C;
+  background-color: #f84b4c;
   cursor: pointer;
   color: white;
-
 }
 
 #hidden {
@@ -410,7 +406,7 @@
 .batken-loc {
   width: 120px;
   height: 30px;
-  background-color: #F84B4C;
+  background-color: #f84b4c;
   color: #fff;
   border-radius: 16px;
   display: flex;
@@ -419,11 +415,11 @@
   font-weight: 400;
   cursor: pointer;
 }
-.batken-loc:hover{
-   background-color: #ffff;
-   color: #F84B4C;
-   border: 1px solid #F84B4C;
-   cursor: pointer;
+.batken-loc:hover {
+  background-color: #ffff;
+  color: #f84b4c;
+  border: 1px solid #f84b4c;
+  cursor: pointer;
 }
 
 .loc-wrapper {
@@ -434,13 +430,13 @@
 .location {
   width: 431px;
   height: 180px;
-  border: 1px solid #F84B4C;
+  border: 1px solid #f84b4c;
   border-radius: 16px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   margin: 1%;
 }
 .clinic-header {
-   padding: 20px 0;
+  padding: 20px 0;
 }
 .working-hours,
 .phone-contact {
@@ -460,14 +456,12 @@
 .pre-location,
 .pre-time,
 .pre-phone {
-
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 140%;
   text-align: left;
-  color: #ABA6A6;
-
+  color: #aba6a6;
 }
 
 .time,
@@ -478,7 +472,6 @@
 
 .table {
   display: flex;
-
 }
 
 .located {
@@ -502,7 +495,7 @@
   border-radius: 32px;
   border: 1px solid #fba5a5 !important;
 } */
-.all-doctors{
+.all-doctors {
   width: 210px;
   height: 46px;
   background-color: #f84b4c;

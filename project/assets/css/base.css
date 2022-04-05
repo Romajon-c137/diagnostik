@@ -22,8 +22,8 @@
 }
 
 .swiper-container {
-  max-width: calc(1440px + 130px);
-  height: calc(100vh - 287px);
+  /* max-width: calc(1440px + 130px); */
+  /* height: calc(100vh - 287px); */
   margin: 0 auto;
   position: relative;
 }
