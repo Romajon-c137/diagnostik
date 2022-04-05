@@ -30,6 +30,16 @@
   <body>
 <div class="background-color">
     {% block index %}{% endblock %}
+    <div class="phone-call">
+      <a href="#">
+        <img src="{% static '/svg/phone.svg' %}" width="50" alt="Call Now" title="Call Now">
+        </a>
+      <a href="tel:+996777065065" >
+        <img src="{% static '/svg/telegram.svg' %}" alt="phone-call" />
+      </a>
+      <a href="tel:+996777065065">
+        <img src="{% static '/svg/wp.svg' %}" alt="phone-call" />
+      </a>
     </div>
   </body>
   <!--   Core JS Files   -->
