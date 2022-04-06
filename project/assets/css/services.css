@@ -51,7 +51,8 @@
 }
 
 .serv {
-  width: 160px;
+  min-width: 120px;
+  padding: 0 20px;
   height: 30px;
   background: transparent;
   border: 1px solid #f84b4c;

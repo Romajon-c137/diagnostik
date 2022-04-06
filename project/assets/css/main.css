@@ -38,8 +38,13 @@
 }
 
 .info-box h2 {
+  margin-top: 10px;
   font-size: 24px;
   text-align: center;
+  margin-bottom: auto;
+}
+
+.info-box p {
   margin-bottom: 30px;
 }
 
@@ -272,7 +277,7 @@
 
 .feedback-card {
   width: 370px;
-  height: 431px;
+  height: 350px;
   border-radius: 16px;
   border: 1px solid #f84b4c;
   padding: 30px;

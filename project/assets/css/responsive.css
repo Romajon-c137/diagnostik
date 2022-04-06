@@ -384,7 +384,7 @@
   }
   .info-box {
     width: 300px;
-    height: 300px;
+    height: 330px;
   }
   .media-loc{
     width: 78%;
@@ -423,5 +423,15 @@
   }
   .doctors-slider{
     padding-bottom: 1% !important;
+  }
+  .feedback-card {
+    width: 280px;
+    height: 330px;
+  }
+  .read-more {
+    margin: 0;
+  }
+  .person-name {
+    padding-bottom:20px
   }
 }
