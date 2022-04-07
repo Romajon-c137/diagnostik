@@ -17,6 +17,7 @@ class ServiceAdmin(admin.ModelAdmin):
 
     search_fields = ['title', 'description']
     prepopulated_fields = {"slug": ("title",)}
+    list_editable = ('published',)
 
     def save_model(self, request, obj, form, change):
         obj.author = request.user

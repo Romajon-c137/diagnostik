@@ -3,8 +3,9 @@ from .models import Page, FreeCall, Lab, Result
 
 
 class PageAdmin(admin.ModelAdmin):
-    list_display = ['title', 'name', 'status', 'edited_at']
+    list_display = ['title', 'name', 'status', 'edited_at', 'is_show']
     list_filter = ['status', 'menu', 'is_show']
+    list_editable = ('is_show',)
     search_fields = ['title', 'name']
     prepopulated_fields = {"slug": ("title",)}
     readonly_fields = ['created_at', 'edited_at', 'order']

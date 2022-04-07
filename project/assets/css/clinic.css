@@ -170,6 +170,7 @@
    
 }
 .sliders-with-name{
+   width: 458px;
    display: flex;
    flex-direction: column;
    justify-content: space-between;

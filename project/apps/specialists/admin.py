@@ -25,6 +25,8 @@ class PersonAdmin(admin.ModelAdmin):
 
     search_fields = ['name', 'description']
     prepopulated_fields = {"slug": ("name",)}
+    list_editable = ('published',)
+    
 
     def save_model(self, request, obj, form, change):
         obj.author = request.user

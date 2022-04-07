@@ -19,7 +19,7 @@
     <div class="banner-serv">
       <div class="banner-wrap-caption">
         <div class="banner-inner">
-          <h2 class="banner-title">Об услугах</h2>
+          <h2 class="banner-title">О клинике</h2>
           <p class="banner-text-one">Aenean in est. Et vel dapibus luctus molestie hac ut. Molestie adipiscing
             sit molestie dui sit nunc mollis in eleifend mauris nisi arcu dictumst. Non urna sodales nunc
             augue vitae sed mattis ornare sapien velit nulla sed imperdiet vestibulum cursus hac ut. Morbi
@@ -56,8 +56,8 @@
           {% for person in people %}
           <div class="sliders-with-name">
             <div class="swiper-slide background-slide" style="background-image: url('media/{{ person.image }}');"></div>
-            <div class="doctors-names">Иван Иванов Иванович</div>
-            <div class="doctors-depart">Malesuada lectus</div>
+            <div class="doctors-names">{{ person.name }}</div>
+            <div class="doctors-depart">{{ person.description|safe }}</div>
           </div>
           {% endfor %}
         </div>
