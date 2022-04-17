@@ -28,34 +28,35 @@
       {% block styles %} {% endblock %}
   </head>
   <body>
-<div class="background-color">
-    {% block index %}{% endblock %}
-    <div class="phone-call">
-      <a href="#">
-        <img src="{% static '/svg/phone.svg' %}" width="50" alt="Call Now" title="Call Now">
+    <div class="background-color">
+      {% block index %}{% endblock %}
+      <div class="phone-call">
+        <a href="#">
+          <img src="{% static '/svg/phone.svg' %}" width="50" alt="Call Now" title="Call Now">
+          </a>
+        <a href="https://t.me/+996777065065" class="phone">
+          <img src="{% static '/svg/telegram.svg' %}" alt="phone-call" />
         </a>
-      <a href="https://t.me/+996777065065" class="phone">
-        <img src="{% static '/svg/telegram.svg' %}" alt="phone-call" />
-      </a>
-      <a href="https://api.whatsapp.com/send?phone=996777065065" class="phone">
-        <img src="{% static '/svg/wp.svg' %}" alt="phone-call" />
-      </a>
-    </div>
-    <div class="result__modal" id="result__modal">
-      <div class="result__modal-content">
-        <div class="result__modal-header">
-          <h2>Результаты</h2>
-          <span class="close" id="resultx-btn"></span>
-        </div>
-        <div class="result__modal-form">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          {% if result_form %}
-                <form action="/result" method="post">
-                    {% csrf_token %}
-                    {{ result_form }}
-                    <button type="submit" class="submit_button">Получить результат</button>
-                </form>
-            {% endif %}
+        <a href="https://api.whatsapp.com/send?phone=996777065065" class="phone">
+          <img src="{% static '/svg/wp.svg' %}" alt="phone-call" />
+        </a>
+      </div>
+      <div class="result__modal" id="result__modal">
+        <div class="result__modal-content">
+          <div class="result__modal-header">
+            <h2>Результаты</h2>
+            <span class="close" id="resultx-btn"></span>
+          </div>
+          <div class="result__modal-form">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            {% if result_form %}
+                  <form action="/result" method="post">
+                      {% csrf_token %}
+                      {{ result_form }}
+                      <button type="submit" class="submit_button">Получить результат</button>
+                  </form>
+              {% endif %}
+          </div>
         </div>
       </div>
     </div>

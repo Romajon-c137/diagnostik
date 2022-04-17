@@ -153,6 +153,11 @@ burger_menu.addEventListener('click', (e) => {
 let result_btn = document.getElementById('result-btn');
 let resultx_btn = document.getElementById('resultx-btn');
 let result__modal = document.getElementById('result__modal');
+let result__modal_content = document.querySelector('.result__modal-content');
+
+result__modal_content.addEventListener('click', (e) => {
+   e.stopPropagation();
+})
 
 result_btn.addEventListener('click', (e) => {
    console.log('result-btn');
@@ -161,6 +166,12 @@ result_btn.addEventListener('click', (e) => {
 })
 resultx_btn.addEventListener('click', (e) => {
    console.log('resultx-btn');
+   result__modal.classList.toggle('active');
+
+})
+
+result__modal.addEventListener('click', (e) => {
+   console.log('result__modal');
    result__modal.classList.toggle('active');
 
 })
