@@ -11,33 +11,31 @@ from .models import Page, Lab
 
 
 def conf(request):
+    footer = Page.objects.filter(menu='footer', is_show=True, status='published').order_by('order')
     return {
-        'form': Form()
+        'form': Form(),
+        'result_form': ResultForm(request.POST),
+        'footer': footer
     }
 
 
-def footer_menu(request):
-    footer = Page.objects.filter(menu='footer', is_show=True, status='published').order_by('order')
-    return {'footer': footer}
-
-
-def main(request):
+def result(request):
     if request.method == 'POST':
-        form = ResultForm(request.POST)
-        if form.is_valid():
+        result_form = ResultForm(request.POST)
+        if result_form.is_valid():
             try:
-                result = Lab.objects.get(oder_number=form.data['oder_number'], pin=form.data['pin'])
-                return render(request, 'index.html', {'result': result, 'form': form})
+                result = Lab.objects.get(oder_number=result_form.data['oder_number'], pin=result_form.data['pin'])
+                return render(request, 'result/index.html', {'result': result, 'result_form': result_form})
             except ObjectDoesNotExist:
-                return render(request, 'index.html', {'notexist': "Нет такой записи", 'form': form})
+                return render(request, 'result/index.html', {'notexist': "Нет такой записи", 'result_form': result_form})
     else:
-        form = ResultForm()
-    return render(request, 'index.html', {'form': form})
+        result_form = ResultForm()
+    return render(request, 'result/index.html', {'result_form': result_form})
 
 
 def html_to_pdf_view(request, oder_number, pin):
-    result = Lab.objects.get(oder_number=oder_number, pin=pin)
-    html_string = render_to_string('pdf_template.html', {'result': result})
+    result_form = Lab.objects.get(oder_number=oder_number, pin=pin)
+    html_string = render_to_string('result/pdf_template.html', {'result_form': result_form})
 
     html = HTML(string=html_string)
     html.write_pdf(target='/tmp/mypdf.pdf')

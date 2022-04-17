@@ -1,5 +1,6 @@
 from django.urls import path
 from .views import *
+from .context_processors import result
 
 urlpatterns = [
     path('', main, name='main'),
@@ -12,4 +13,5 @@ urlpatterns = [
     path('specialists', specialists, name='specialists'),
     path('services', services, name='services'),
     path('review/<int:id>/', review, name='review'),
+    path('result', result, name='result'),
 ]

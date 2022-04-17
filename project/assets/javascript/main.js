@@ -148,3 +148,17 @@ let burger_menu = document.getElementById('burger-menu');
 burger_menu.addEventListener('click', (e) => {
    console.log('burger-menu');
 })
+
+
+let result_btn = document.getElementById('result-btn');
+let resultx_btn = document.getElementById('resultx-btn');
+let result__modal = document.getElementById('result__modal');
+
+result_btn.addEventListener('click', (e) => {
+   result__modal.classList.toggle('active');
+
+})
+resultx_btn.addEventListener('click', (e) => {
+   result__modal.classList.toggle('active');
+
+})

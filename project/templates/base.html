@@ -41,6 +41,24 @@
         <img src="{% static '/svg/wp.svg' %}" alt="phone-call" />
       </a>
     </div>
+    <div class="result__modal" id="result__modal">
+      <div class="result__modal-content">
+        <div class="result__modal-header">
+          <h2>Результаты</h2>
+          <span class="close" id="resultx-btn"></span>
+        </div>
+        <div class="result__modal-form">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          {% if result_form %}
+                <form action="/result" method="post">
+                    {% csrf_token %}
+                    {{ result_form }}
+                    <button type="submit" class="submit_button">Получить результат</button>
+                </form>
+            {% endif %}
+        </div>
+      </div>
+    </div>
   </body>
   <!--   Core JS Files   -->
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

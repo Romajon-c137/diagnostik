@@ -1,0 +1,53 @@
+{% load i18n static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/index.css' %}">
+    </head>
+    <body>
+
+        <!-- <div class="header">
+            <h1>Diagnostik</h1>
+        </div> -->
+
+        <div class="row">
+            {% if result_form %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ result_form }}
+                    <button type="submit" class="submit_button">OK</button>
+                </form>
+            {% endif %}
+
+            {% if result %}
+            <div class="col-9 col-s-12">
+                <div class="container">
+                    <button class="download_btn" onclick="window.open(`download/{{result.oder_number}}/{{result.pin}}/`)">Скачать результать</button>
+                    <h1>Результаты</h1>
+                    <h3>Доставка результатов осуществляется автоматически после готовности.</h3>
+                    <div class="aside">
+                        {% include 'pdf_template.html' %}
+                    </div>
+                    <button onclick="window.open(`download/{{result.oder_number}}/{{result.pin}}/`)">Скачать результать</button>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if notexist %}
+            <div class="col-9 col-s-12">
+              <div class="container">
+                <h2>{{ notexist }}</h2>
+              </div>
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="footer">
+            <p>Copyright © Diagnostik <script type="text/javascript">
+                document.write(new Date().getFullYear());
+              </script> Все права защищены.</p>
+        </div>
+
+    </body>
+</html>
