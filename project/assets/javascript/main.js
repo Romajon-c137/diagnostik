@@ -155,10 +155,12 @@ let resultx_btn = document.getElementById('resultx-btn');
 let result__modal = document.getElementById('result__modal');
 
 result_btn.addEventListener('click', (e) => {
+   console.log('result-btn');
    result__modal.classList.toggle('active');
 
 })
 resultx_btn.addEventListener('click', (e) => {
+   console.log('resultx-btn');
    result__modal.classList.toggle('active');
 
 })
