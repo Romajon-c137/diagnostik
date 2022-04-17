@@ -3,35 +3,7 @@
 
 {% block index %}
 {% comment %} {% block header %} {% endcomment %}
-<header>
-  <div class="container">
-    <div class="main-menu">
-      <div class="left-side">
-        <a href="/" 
-          ><img class="logo" src="{% static 'images/logo.png' %}" alt="" />
-        </a>
 
-        <ul class="menu-list">
-          <li> <a href="/">Главная</a></li>
-          <li> <a href="/clinic">Клиника</a></li>
-          <li> <a href="/prices">Цены</a></li>
-          <li> <a href="/labs">Лабаратории</a></li>
-          <li> <a href="/services">Услуги</a></li>
-          <li> <a href="/specialists">Спецеалисты / отделение</a></li>
-        </ul>
-      </div>
-      <div class="right-side">
-        <ul class="phone-menu">
-          <li><a href="tel:0551 065 065">0551 065 065</a></li>
-          <li><a href="tel:0700 065 065">0700 065 065</a></li>
-          <li><a href="tel:0777 065 065">0777 065 065</a></li>
-        </ul>
-        <button class="result-btn" id="result-btn">Результаты анализов</button>
-      </div>
-      <div class="hamburger" id="burger-menu"></div>
-    </div>
-  </div>
-</header>
 {% comment %} {% endblock %} {% endcomment %}
 {% block content %}
 
@@ -515,7 +487,8 @@
   {% block scripts %}
 
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  <script src="{% static 'javascript/main.js' %}" type="text/javascript"></script>
+  <script src="{% static 'javascript/main.js' %}" type="text/javascript" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"
     integrity="sha512-yFjZbTYRCJodnuyGlsKamNE/LlEaEAxSUDe5+u61mV8zzqJVFOH7TnULE2/PP/l5vKWpUNnF4VGVkXh3MjgLsg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>

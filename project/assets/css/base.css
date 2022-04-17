@@ -51,11 +51,10 @@
 .result__modal-content {
   position: absolute;
   max-width: 500px;
+  max-height: 400px;
   width: calc(100% - 120px);
   height: calc(100% - 120px);
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 
   border: 1px solid #f84b4c;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.447);
@@ -89,18 +88,18 @@
   padding-left: 12px;
 
   font-family: 'Proxima Nova';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 140%;
-/* or 22px */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
 
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 
-/* Крастный для основного текста */
+  /* Крастный для основного текста */
 
-color: #806D6D;
+  color: #806D6D;
 }
 
 .result__modal-form {

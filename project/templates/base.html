@@ -29,6 +29,35 @@
   </head>
   <body>
     <div class="background-color">
+      <header>
+        <div class="container">
+          <div class="main-menu">
+            <div class="left-side">
+              <a href="/" 
+                ><img class="logo" src="{% static 'images/logo.png' %}" alt="" />
+              </a>
+      
+              <ul class="menu-list">
+                <li> <a href="/">Главная</a></li>
+                <li> <a href="/clinic">Клиника</a></li>
+                <li> <a href="/prices">Цены</a></li>
+                <li> <a href="/labs">Лабаратории</a></li>
+                <li> <a href="/services">Услуги</a></li>
+                <li> <a href="/specialists">Спецеалисты / отделение</a></li>
+              </ul>
+            </div>
+            <div class="right-side">
+              <ul class="phone-menu">
+                <li><a href="tel:0551 065 065">0551 065 065</a></li>
+                <li><a href="tel:0700 065 065">0700 065 065</a></li>
+                <li><a href="tel:0777 065 065">0777 065 065</a></li>
+              </ul>
+              <button class="result-btn" id="result-btn">Результаты анализов</button>
+            </div>
+            <div class="hamburger" id="burger-menu"></div>
+          </div>
+        </div>
+      </header>
       {% block index %}{% endblock %}
       <div class="phone-call">
         <a href="#">
