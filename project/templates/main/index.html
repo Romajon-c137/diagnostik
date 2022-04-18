@@ -438,7 +438,7 @@
   {% endblock %}
 
 
-  {% block footer %}
+  {% comment %} {% block footer %} {% endcomment %}
     <footer>
       <div class="background-color-lightRed">
         <div class="container">
@@ -509,12 +509,12 @@
         </div>
       </div>
     </footer>
-  {% endblock %}
+  {% comment %} {% endblock %} {% endcomment %}
 
 
 
 
-  {% block scripts %}
+  {% comment %} {% block scripts %} {% endcomment %}
 
     <!--   Core JS Files   -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> 
@@ -523,7 +523,7 @@
       integrity="sha512-yFjZbTYRCJodnuyGlsKamNE/LlEaEAxSUDe5+u61mV8zzqJVFOH7TnULE2/PP/l5vKWpUNnF4VGVkXh3MjgLsg=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  {% endblock %}
+  {% comment %} {% endblock %} {% endcomment %}
 
 
 {% endblock %}

@@ -106,12 +106,47 @@ const swiper6 = new Swiper(".swiper.swiper6", {
   },
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  // code
-console.log('DOMContentLoaded');
+if (width <= 1441) {
+  let mediaCard = document.querySelectorAll(".media-card");
+  for (let i = 0; i < mediaCard.length; i++) {
+    mediaCard[i].style.display = "none";
+  }
+}
+
+let burger_menu = document.getElementById("burger-menu");
+
+burger_menu.addEventListener("click", (e) => {
+  console.log("burger-menu");
+});
+
+let result_btn = document.getElementById("result-btn");
+let resultx_btn = document.getElementById("resultx-btn");
+let result__modal = document.getElementById("result__modal");
+let result__modal_content = document.querySelector(".result__modal-content");
+
+result__modal_content.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+result_btn.addEventListener("click", (e) => {
+  console.log("result-btn");
+  result__modal.classList.toggle("active");
+});
+resultx_btn.addEventListener("click", (e) => {
+  console.log("resultx-btn");
+  result__modal.classList.toggle("active");
+});
+
+result__modal.addEventListener("click", (e) => {
+  console.log("result__modal");
+  result__modal.classList.toggle("active");
+});
+
+try {
   let btn = document.querySelector("#btn-load-more");
   let hides = document.querySelectorAll("#hidden");
   let closeBtn = document.querySelector("#btn-close");
+  
   btn.addEventListener("click", (e) => {
     for (let i = 0; i < hides.length; i++) hides[i].style.display = "block";
     btn.style.display = "none";
@@ -128,39 +163,6 @@ console.log('DOMContentLoaded');
     btn.style.display = "block";
     closeBtn.style.display = "none";
   });
-  if (width <= 1441) {
-    let mediaCard = document.querySelectorAll(".media-card");
-    for (let i = 0; i < mediaCard.length; i++) {
-      mediaCard[i].style.display = "none";
-    }
-  }
-
-  let burger_menu = document.getElementById("burger-menu");
-
-  burger_menu.addEventListener("click", (e) => {
-    console.log("burger-menu");
-  });
-
-  let result_btn = document.getElementById("result-btn");
-  let resultx_btn = document.getElementById("resultx-btn");
-  let result__modal = document.getElementById("result__modal");
-  let result__modal_content = document.querySelector(".result__modal-content");
-
-  result__modal_content.addEventListener("click", (e) => {
-    e.stopPropagation();
-  });
-
-  result_btn.addEventListener("click", (e) => {
-    console.log("result-btn");
-    result__modal.classList.toggle("active");
-  });
-  resultx_btn.addEventListener("click", (e) => {
-    console.log("resultx-btn");
-    result__modal.classList.toggle("active");
-  });
-
-  result__modal.addEventListener("click", (e) => {
-    console.log("result__modal");
-    result__modal.classList.toggle("active");
-  });
-});
+} catch (error) {
+  console.log(error);
+}
