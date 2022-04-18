@@ -129,16 +129,13 @@ result__modal_content.addEventListener("click", (e) => {
 });
 
 result_btn.addEventListener("click", (e) => {
-  console.log("result-btn");
   result__modal.classList.toggle("active");
 });
 resultx_btn.addEventListener("click", (e) => {
-  console.log("resultx-btn");
   result__modal.classList.toggle("active");
 });
 
 result__modal.addEventListener("click", (e) => {
-  console.log("result__modal");
   result__modal.classList.toggle("active");
 });
 
@@ -164,5 +161,4 @@ try {
     closeBtn.style.display = "none";
   });
 } catch (error) {
-  console.log(error);
 }

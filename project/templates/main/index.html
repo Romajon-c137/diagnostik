@@ -2,10 +2,7 @@
 {% load static i18n %}
 
 {% block index %}
-  {% comment %} {% block header %} {% endcomment %}
-
-  {% comment %} {% endblock %} {% endcomment %}
-
+  {% block header %}
   <header>
     <div class="container">
       <div class="main-menu">
@@ -35,6 +32,9 @@
       </div>
     </div>
   </header>
+  {% endblock %}
+
+
 
   {% block content %}
 
@@ -438,7 +438,7 @@
   {% endblock %}
 
 
-  {% comment %} {% block footer %} {% endcomment %}
+  {% block footer %}
     <footer>
       <div class="background-color-lightRed">
         <div class="container">
@@ -509,12 +509,12 @@
         </div>
       </div>
     </footer>
-  {% comment %} {% endblock %} {% endcomment %}
+  {% endblock %}
 
 
 
 
-  {% comment %} {% block scripts %} {% endcomment %}
+  {% block scripts %}
 
     <!--   Core JS Files   -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> 
@@ -523,7 +523,7 @@
       integrity="sha512-yFjZbTYRCJodnuyGlsKamNE/LlEaEAxSUDe5+u61mV8zzqJVFOH7TnULE2/PP/l5vKWpUNnF4VGVkXh3MjgLsg=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  {% comment %} {% endblock %} {% endcomment %}
+  {% endblock %}
 
 
 {% endblock %}
