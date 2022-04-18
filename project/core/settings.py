@@ -58,7 +58,8 @@ INSTALLED_APPS = [
     'apps.specialists',
     'apps.slide',
 
-    'ckeditor'
+    'ckeditor',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

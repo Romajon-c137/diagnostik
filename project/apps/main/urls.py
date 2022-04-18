@@ -1,6 +1,6 @@
-from django.urls import path
+from django.urls import path, include
 from .views import *
-from .context_processors import result
+from .context_processors import result, html_to_pdf_view
 
 urlpatterns = [
     path('', main, name='main'),
@@ -14,4 +14,6 @@ urlpatterns = [
     path('services', services, name='services'),
     path('review/<int:id>/', review, name='review'),
     path('result', result, name='result'),
+    path('api/v1/', include('api.urls')),
+    path('download/<int:oder_number>/<int:pin>/', html_to_pdf_view, name='html_to_pdf_view'),
 ]
