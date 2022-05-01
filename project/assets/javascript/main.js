@@ -139,6 +139,12 @@ result__modal.addEventListener("click", (e) => {
   result__modal.classList.toggle("active");
 });
 
+// if(document.location.pathname === "/result"){
+//   result_btn.style.display = "none";
+// } else {
+//   resultx_btn.style.display = 'block';
+// }
+
 try {
   let btn = document.querySelector("#btn-load-more");
   let hides = document.querySelectorAll("#hidden");
