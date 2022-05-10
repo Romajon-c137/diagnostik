@@ -55,7 +55,7 @@
   padding: 0 20px;
   height: 30px;
   background: transparent;
-  border: 1px solid #f84b4c;
+  border: 1px solid #e6215f;
   border-radius: 16px;
   display: flex;
   justify-content: center;
@@ -65,18 +65,18 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 140%;
-  color: #f84b4c;
+  color: #e6215f;
   flex-wrap: wrap;
   cursor: pointer;
 }
 
 .serv:hover {
-  background-color: #f84b4c;
+  background-color: #e6215f;
   color: white;
 }
 
 .serv.active {
-  background-color: #f84b4c;
+  background-color: #e6215f;
   color: #fff;
 }
 
@@ -96,7 +96,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #f84b4c;
+  border: 1px solid #e6215f;
   border-radius: 16px;
   padding: 33px 0; 
   background: white;
@@ -131,13 +131,13 @@
   width: 210px;
   height: 46px;
   background-color: transparent;
-  border: 1px solid #f84b4c;
+  border: 1px solid #e6215f;
   border-radius: 16px;
-  color: #f84b4c;
+  color: #e6215f;
   cursor: pointer;
 }
 .serv-btn:hover {
-  background-color: #f84b4c;
+  background-color: #e6215f;
   color: white;
 }
 
@@ -174,10 +174,11 @@
   width: 100%;
   max-width: 365px;
   height: 38px;
-  border: 1px solid #f84b4c;
+  border: 1px solid #e6215f;
   border-radius: 16px;
   padding-left: 20px;
   outline: none;
+  margin-bottom: 20px;
 }
 
 .form-input::placeholder {
@@ -223,7 +224,7 @@
 #message {
   width: 100%;
   height: 138px;
-  border: 1px solid #f84b4c;
+  border: 1px solid #e6215f;
   border-radius: 16px;
   padding-left: 20px;
   padding-top: 20px;
@@ -233,7 +234,7 @@
 #choose-serv {
   width: 390px;
   height: 46px;
-  border: 1px solid #f84b4c;
+  border: 1px solid #e6215f;
   border-radius: 16px;
 }
 
@@ -261,14 +262,14 @@ select {
    padding-bottom: 5px;
 }
 #id_full_name:focus {
-   border-color: #f84b4c;
+   border-color: #e6215f;
  }
 .form-submit {
   width: 210px;
   height: 45px;
-  border: 1px solid #f84b4c;
+  border: 1px solid #e6215f;
   border-radius: 16px;
-  background-color: #f84b4c;
+  background-color: #e6215f;
   color: #fff;
 }
 

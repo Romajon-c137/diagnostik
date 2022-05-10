@@ -35,7 +35,7 @@
 .swiper-button-next3 {
    position: absolute !important;
    top: 45% !important;
-   color: #f84b4c !important;
+   color: #e6215f !important;
    /* right: 2% !important; */
 
 }
@@ -43,7 +43,7 @@
 .swiper-button-prev3 {
    position: absolute !important;
    top: 45% !important;
-   color: #f84b4c !important;
+   color: #e6215f !important;
    /* left: 2% !important; */
 
 }
@@ -96,14 +96,14 @@
    width: 500px;
    height: 500px;
    border-radius: 32px;
-   border: 1px solid #f84b4c;
+   border: 1px solid #e6215f;
 }
 
 .clinic-info-btn {
    width: 210px;
    height: 46px;
-   background-color: #f84b4c;
-   border: 1px solid #f84b4c;
+   background-color: #e6215f;
+   border: 1px solid #e6215f;
    border-radius: 16px;
    color: white;
    cursor: pointer;
@@ -111,7 +111,7 @@
 
 .clinic-info-btn:hover {
    background-color: transparent;
-   color: #f84b4c;
+   color: #e6215f;
 }
 
 .clinic-card-info {
@@ -130,13 +130,13 @@
    width: 500px;
    height: 500px;
    border-radius: 32px;
-   border: 1px solid #f84b4c;
+   border: 1px solid #e6215f;
 }
 .all-doctors{
    width: 210px;
    height: 46px;
-   background-color: #f84b4c;
-   border: 1px solid #f84b4c;
+   background-color: #e6215f;
+   border: 1px solid #e6215f;
    border-radius: 16px;
    color: white;
    cursor: pointer;
@@ -147,7 +147,7 @@
 }
 .all-doctors:hover {
    background-color: transparent;
-   color: #f84b4c;
+   color: #e6215f;
 }
 .doctors-names{
    font-family: Proxima Nova;

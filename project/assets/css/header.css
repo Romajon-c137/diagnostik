@@ -73,7 +73,7 @@
   align-items: center;
   justify-content: center;
   color: #fff;
-  background: #f84b4c;
+  background: #e6215f;
   border: none;
   outline: none;
   border-radius: 32px;
@@ -83,8 +83,8 @@
 .result-btn:hover {
   cursor: pointer;
   background: transparent;
-  border: 2px solid #F84B4C;
-  color: #F84B4C;
+  border: 2px solid #e6215f;
+  color: #e6215f;
 }
 
 .hamburger {

@@ -14,10 +14,10 @@
           <ul class="menu-list">
             <li> <a href="/">Главная</a></li>
             <li> <a href="/clinic">Клиника</a></li>
-            <li> <a href="/prices">Цены</a></li>
-            <li> <a href="/labs">Лабаратории</a></li>
+            {% comment %} <li> <a href="/prices">Цены</a></li> {% endcomment %}
+            <li> <a href="/labs">Лаборатория</a></li>
             <li> <a href="/services">Услуги</a></li>
-            <li> <a href="/specialists">Спецеалисты / отделение</a></li>
+            <li> <a href="/specialists">Специалисты / Отделения</a></li>
           </ul>
         </div>
         <div class="right-side">
@@ -409,7 +409,7 @@
         <div class="loc-map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21212.88408164272!2d70.81018600611347!3d40.05884826874741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ba40173d13590b%3A0xa35d68d6d18e8885!2z0JHQsNGC0LrQtdC9!5e0!3m2!1sru!2skg!4v1644064080428!5m2!1sru!2skg"
-            width="100%" height="491" style="border: 1px solid #F84B4C; border-radius: 32px; margin: 2% 0;"
+            width="100%" height="491" style="border: 1px solid #e6215f; border-radius: 32px; margin: 2% 0;"
             allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
@@ -438,7 +438,7 @@
                   <a href="mailto:diagnostic.kg@mail.ru"><i class="fa fa-envelope"></i> diagnostic.kg@mail.ru</p>
                 </div>
                 <div class="footer-logo">
-                  <a href="#"> <img src="{% static '/images/Prototype/Services/Desktop/Logo 2.png' %}" alt=""></a>
+                  <a href="#"> <img src="{% static '/images/logo2forblack.png' %}" alt=""></a>
                 </div>
               </div>
             </div>
@@ -452,7 +452,7 @@
               <ul class="quick-menu">
                 <li><a href="/">Главная</a></li>
                 <li><a href="/clinic">Клиника</a></li>
-                <li><a href="/prices">Цены</a></li>
+                {% comment %} <li><a href="/prices">Цены</a></li> {% endcomment %}
                 <li><a href="/labs">Лабаратории</a></li>
                 <li><a href="/services">Услуги</a></li>
                 <li><a href="/specialists">Спецеалисты / отделение</a></li>

@@ -1,13 +1,13 @@
 .results {
    max-width: 100%;
    height: 624px;
-   border: 1px solid #f84b4c;
+   border: 1px solid #e6215f;
    border-radius: 32px;
    margin: 63px 0;
 }
 
 .active-result {
-   color: #F84B4C !important;
+   color: #e6215f !important;
 }
 
 .department-result li {
@@ -23,7 +23,7 @@
 }
 
 .department-result li:hover {
-   color: #F84B4C;
+   color: #e6215f;
 }
 
 .department-result {
@@ -56,7 +56,7 @@
    width: 320px;
    height: 320px;
    border-radius: 32px;
-   border: 1px solid #f84b4c;
+   border: 1px solid #e6215f;
 }
 
 .results {
@@ -161,7 +161,7 @@
 .swiper-button-next4 {
    position: absolute !important;
    top: 35% !important;
-   color: #f84b4c !important;
+   color: #e6215f !important;
    right: -4% !important;
 
 }
@@ -169,7 +169,7 @@
 .swiper-button-prev4 {
    position: absolute !important;
    top: 35% !important;
-   color: #f84b4c !important;
+   color: #e6215f !important;
    left: -4% !important;
 }
 
@@ -223,5 +223,5 @@
 }
 .btn-red-60:hover{
    background-color: transparent !important;
-   color: #f84b4c !important;
+   color: #e6215f !important;
 }

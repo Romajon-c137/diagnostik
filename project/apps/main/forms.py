@@ -26,6 +26,6 @@ class Form(forms.ModelForm):
 
 
 class ResultForm(forms.Form):
-    oder_number = forms.IntegerField(label=False, widget=forms.TextInput(attrs={'class':'search_input', 'placeholder':'Номер заказа', "required": "required"}))
+    oder_number = forms.IntegerField(label=False, widget=forms.TextInput(attrs={'class':'search_input', 'placeholder':'Номер', "required": "required"}))
     pin = forms.IntegerField(label=False, widget=forms.TextInput(attrs={'class':'search_input', 'placeholder':'Кодовое слово (Пин)', "required": "required"}))
 

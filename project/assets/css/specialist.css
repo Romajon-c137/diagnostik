@@ -10,7 +10,7 @@
 .department {
    width: 272px;
    height: 30px;
-   border: 1px solid #f84b4c;
+   border: 1px solid #e6215f;
    font-family: PT Sans Caption;
    font-style: normal;
    font-weight: normal;
@@ -18,7 +18,7 @@
    line-height: 140%;
    background-color: transparent;
    cursor: pointer;
-   color: #F84B4C;
+   color: #e6215f;
    border-radius: 16px;
    display: flex;
    align-items: center;
@@ -26,13 +26,13 @@
 }
 
 .department:hover {
-   background-color: #F84B4C;
+   background-color: #e6215f;
    color: white;
    cursor: pointer;
 }
 
 .active {
-   background-color: #F84B4C;
+   background-color: #e6215f;
    color: white;
    cursor: pointer;
 }
@@ -70,7 +70,7 @@
 .swiper-button-next5 {
    position: absolute !important;
    top: 45% !important;
-   color: #f84b4c !important;
+   color: #e6215f !important;
    right: -4% !important;
 
 }
@@ -78,14 +78,14 @@
 .swiper-button-prev5{
    position: absolute !important;
    top: 45% !important;
-   color: #f84b4c !important;
+   color: #e6215f !important;
    left: -4% !important;
 }
 
 .swiper-button-next6 {
    position: absolute !important;
    top: 45% !important;
-   color: #f84b4c !important;
+   color: #e6215f !important;
    right: -4% !important;
 
 }
@@ -93,7 +93,7 @@
 .swiper-button-prev6 {
    position: absolute !important;
    top: 45% !important;
-   color: #f84b4c !important;
+   color: #e6215f !important;
    left: -4% !important;
 }
 

@@ -17,7 +17,7 @@
 }
 
 .background-color-lightRed {
-  background-color: #f89191;
+  background-color: #d74775;
   height: auto;
   padding: 60px 0;
 }
@@ -56,7 +56,7 @@
   height: calc(100% - 120px);
   background-color: #fff;
 
-  border: 1px solid #f84b4c;
+  border: 1px solid #e6215f;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.447);
   border-radius: 16px;
 
@@ -78,8 +78,8 @@
 }
 
 .search_input {
-  margin-top: 30px;
-  border: 1px solid #F84B4C;
+  margin-bottom: 30px;
+  border: 1px solid #e6215f;
   box-sizing: border-box;
   border-radius: 16px;
   height: 46px;
@@ -117,7 +117,7 @@
 .result__modal-form button {
   margin-top: 30px;
   width: 100%;
-  background: #F84B4C;
+  background: #e6215f;
   border: 1px solid rgba(255, 255, 255, 0.6);
   box-sizing: border-box;
   border-radius: 16px;
@@ -132,4 +132,8 @@
   justify-content: center;
   height: 46px;
   color: #FFFFFF;
+}
+
+.logo {
+  height: 70px;
 }

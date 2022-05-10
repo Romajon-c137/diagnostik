@@ -22,7 +22,7 @@
 }
 
 .angle-up-btn a:hover {
-   background: #f84b4c;
+   background: #e6215f;
    color: #ffffff;
    transform: translateY(-5px);
 }
@@ -71,7 +71,7 @@
 }
 
 .contact-info a:hover {
-   color: #f84b4c;
+   color: #e6215f;
    text-decoration: underline;
 }
 
@@ -90,7 +90,13 @@
 }
 
 .footer-logo {
+   margin-top: 40px;
    margin-left: 30px;
+}
+
+.footer-logo img {
+   width: 200px;
+   height: auto;
 }
 .footer-content{
    display: flex;

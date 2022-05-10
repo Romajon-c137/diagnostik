@@ -14,13 +14,8 @@
     <div class="banner-serv">
          <div class="banner-inner">
               <h2 class="banner-title">Об услугах</h2>
-              <p class="banner-text-one">Aenean in est. Et vel dapibus luctus molestie hac ut. Molestie adipiscing
-                   sit molestie dui sit nunc mollis in eleifend mauris nisi arcu dictumst. Non urna sodales nunc
-                   augue vitae sed mattis ornare sapien velit nulla sed imperdiet vestibulum cursus hac ut. Morbi
-                   tortor, et ultricies. Imperdiet est. Accumsan hac arcu justo justo venenatis dapibus quis,
-                   tortor, dolor nulla dictu.</p>
-              <p class="banner-text-two">Ornare ex. Luctus vestibulum vel in molestie velit sit in in imperdiet
-                   quis, morbi integer eleifend venenatis nulla lorem ve.</p>
+              <p class="banner-text-one">Медицинский центр «Диагностик» оснащен самым современным медицинским оборудованием и предлагает широкий круг медицинских услуг. Специалисты центра оказывают услуги по ультразвуковому исследованию внутренних органов, гастроскопии, ЭКГ, суточный мониторинг работы сердца, иглорефлексотерапии и другим видам услуг. В центре имеется оснащенные современным оборудованием лаборатории, светотерапевтические ванны, кровати Нугабест, кедровая бочка, оборудования для электрофореза, КУФ и ингаляции.</p>
+              {% comment %} <p class="banner-text-two">Ornare e</p> {% endcomment %}
          </div>
     </div>
 
@@ -42,9 +37,7 @@
                               {{ service.description|striptags|truncatechars:220  }}
                          </div>
                     </div>
-                         <button class="serv-btn">
-                              Подробнее
-                         </button>
+                    <a href='/services/{{ service.slug }}' class="serv-btn">Подробнее</a>
                     </div>
                {% endfor %}
           </div>
