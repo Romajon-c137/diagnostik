@@ -4,17 +4,19 @@
   margin: 45px auto;
   background-size: cover;
   background-position: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   border-radius: 32px;
 }
 
 .banner-inner {
+  background: linear-gradient(90deg, rgba(10, 1, 45, 0.8) 2%, rgba(251, 251, 251, 0) 100%);
    width: 45%;
    height: 322px;
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
    padding: 100px;
+   border-radius: 32px;
 }
 
 .banner-title {
@@ -39,7 +41,7 @@
   text-align: left;
   display: flex;
   align-items: center;
-  color: #806d6d;
+  color: #ffffff;
   margin: 1% 0;
 }
 

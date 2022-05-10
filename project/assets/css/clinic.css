@@ -4,7 +4,7 @@
    margin: 45px auto;
    background-size: cover;
    background-position: center;
-   border: 1px solid red;
+   /* border: 1px solid red; */
    border-radius: 32px;
 }
 .banner-wrap-caption {
@@ -89,7 +89,7 @@
 }
 
 .clinic-card-img {
-   background-image: url(../images/Clinics/slide/3.jpg);
+   background-image: url(../images/Clinics/slide/photo_2022-05-10_13-42-36.jpg); 
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
