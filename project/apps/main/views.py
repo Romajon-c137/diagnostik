@@ -29,6 +29,10 @@ def services(request):
     return render(request, 'services/index.html', {'services': services.filter(published=True, category__is_active=True), 'serviceCategory': serviceCategory, 'active': active})
 
 
+def service(request, slug):
+    service = Service.objects.get(slug=slug)
+    return render(request, 'services/service.html', {'service': service})
+
 def labs(request):
     return render(request, 'labs/index.html')
 

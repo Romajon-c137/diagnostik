@@ -1,0 +1,26 @@
+{% extends 'main/index.html' %}
+{% load static i18n %}
+
+{% block styles %}
+
+    <!--  services  -->
+    <link href="{% static 'css/services.css' %}" rel="stylesheet"/>
+
+{% endblock %}
+
+{% block content %}
+
+<section>
+  <div class="container">
+    <div class="serv__inner">
+        <div class="serv-heading"> {{ service.title }}</div>
+        <div class="serv-description">
+             {{ service.description|safe  }}
+        </div>
+    </div>
+  </div>
+</section>
+
+</div>
+{% endblock %}
+

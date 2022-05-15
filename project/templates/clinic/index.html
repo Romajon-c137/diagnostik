@@ -1,36 +1,33 @@
-{% extends 'main/index.html' %}
-{% load static i18n %}
-
-{% block styles %}
+{% extends 'main/index.html' %} {% load static i18n %} {% block styles %}
 
 <!--  services  -->
 <link href="{% static 'css/services.css' %}" rel="stylesheet" />
 <link href="{% static 'css/clinic.css' %}" rel="stylesheet" />
 <link href="{% static 'css/main.css' %}" rel="stylesheet" />
 
-
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 
 <section id="banner-services">
   <div class="container">
-
     <div class="banner-serv">
       <div class="banner-wrap-caption">
         <div class="banner-inner">
           <h2 class="banner-title">О клинике</h2>
-          <p class="banner-text-one">«Диагностик» — это многопрофильная клиника с комфортным стационаром. 
-            Более 10 лет мы проводим диагностику 
-            и лечение взрослых и детей по большинству направлений медицины:
-            Терапия, кардиология, гинекологии и неврология.
+          <p class="banner-text-one">
+            «Диагностик» — это многопрофильная клиника с комфортным стационаром.
+            Более 10 лет мы проводим диагностику и лечение взрослых и детей по
+            большинству направлений медицины: Терапия, кардиология, гинекологии
+            и неврология.
           </p>
-            <p class="banner-text-two">
-            На каждом этапе лечения особое внимание уделяем комфорту и безопасности 
-            пациентов, применению только современных лицензированных препаратов нового поколения. 
-            </p>
-          <p class="banner-text-two">При проведении диагностики и лечения выбираем наиболее подходящие для 
-            нас методы и технологии.</p>
+          <p class="banner-text-two">
+            На каждом этапе лечения особое внимание уделяем комфорту и
+            безопасности пациентов, применению только современных
+            лицензированных препаратов нового поколения.
+          </p>
+          <p class="banner-text-two">
+            При проведении диагностики и лечения выбираем наиболее подходящие
+            для нас методы и технологии.
+          </p>
         </div>
       </div>
     </div>
@@ -39,97 +36,82 @@
 
 <section class="doctors-slider" id="departments">
   <div class="container">
-
-
     <div class="categories2">
-      <a href='/clinic#departments' class="serv{% if 'all' == active %} active{% endif %}">Все</a>
+      <a
+        href="/clinic#departments"
+        class="serv{% if 'all' == active %} active{% endif %}"
+        >Все</a
+      >
       {% for department in departments %}
-      <a href='/clinic?department={{ department.slug }}#departments'
-        class="serv{% if department.slug == active %} active{% endif %}">{{ department.name }}</a>
+      <a
+        href="/clinic?department={{ department.slug }}#departments"
+        class="serv{% if department.slug == active %} active{% endif %}"
+        >{{ department.name }}</a
+      >
       {% endfor %}
     </div>
-
   </div>
-  <div class="swiper-container doctor-container">
-    <div class="container">
-      <!-- Slider main container -->
-      <div class="swiper swiper7">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          {% for person in people %}
-          <div class="sliders-with-name">
-            <div class="swiper-slide background-slide" style="background-image: url('media/{{ person.image }}');"></div>
-            <div class="doctors-names">{{ person.name }}</div>
-            <div class="doctors-depart">{{ person.description|safe }}</div>
-          </div>
-          {% endfor %}
-        </div>
-
-      </div>
-
-      <!-- If we need pagination -->
-      <div class="swiper-pagination swiper-pagination7"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev swiper-button-prev7"></div>
-      <div class="swiper-button-next swiper-button-next7"></div>
-
-    </div>
-
-  </div>
+  
+  {% include 'components/slide.html' %}
+  
   <div class="all-doctors">Все врачи</div>
 </section>
 <section>
   <div class="container">
     <div class="abuot-clinic-big-card-1">
-      <div class="clinic-card-img">
-
-      </div>
+      <div class="clinic-card-img"></div>
       <div class="clinic-card-info">
-        <h1 class="card-heading">
-          Медицинский центр "Диагностик"
-        </h1>
+        <h1 class="card-heading">Медицинский центр "Диагностик"</h1>
         <div class="clinic-card-text">
-          - профилактика заболеваний,
-Диагностика, учреждение для укрепления здоровья
-оказывает амбулаторно-поликлиническую помощь с 2009 года больным из Лейлекского района, города Сулюкта, Баткенского района и соседней Республики Таджикистан.
- Сегодня, в соответствии с современными требованиями, центр оснащен самым современным медицинским оборудованием, таким как УЗИ, гастроскопия, ЭКГ, лаборатория суточного мониторирования ЭКГ, высококвалифицированными специалистами.
-Гинекология, терапия, кардиология, неврология и стоматология.
- Озокеритовый парафин для стационарных больных, электрофорез, светотерапевтические ванны, кровати Нугабест, аппарат второе сердце, КУФ, ингаляции, кедровая бочка, массажем, пиявками, консервированием, игольчатой рефлексологией лечебные и другие физиотерапевтические процедуры широко используются. Кроме того, было организовано трехразовое горячее питание.
+          - профилактика заболеваний, Диагностика, учреждение для укрепления
+          здоровья оказывает амбулаторно-поликлиническую помощь с 2009 года
+          больным из Лейлекского района, города Сулюкта, Баткенского района и
+          соседней Республики Таджикистан. Сегодня, в соответствии с
+          современными требованиями, центр оснащен самым современным медицинским
+          оборудованием, таким как УЗИ, гастроскопия, ЭКГ, лаборатория суточного
+          мониторирования ЭКГ, высококвалифицированными специалистами.
+          Гинекология, терапия, кардиология, неврология и стоматология.
+          Озокеритовый парафин для стационарных больных, электрофорез,
+          светотерапевтические ванны, кровати Нугабест, аппарат второе сердце,
+          КУФ, ингаляции, кедровая бочка, массажем, пиявками, консервированием,
+          игольчатой рефлексологией лечебные и другие физиотерапевтические
+          процедуры широко используются. Кроме того, было организовано
+          трехразовое горячее питание.
         </div>
         <button class="clinic-info-btn">Информация</button>
       </div>
-
-      
     </div>
-    {% comment %} <div class="abuot-clinic-big-card-2">
-
+    {% comment %}
+    <div class="abuot-clinic-big-card-2">
       <div class="clinic-card-info">
-        <h1 class="card-heading">
-          Dictumst. Ex
-        </h1>
+        <h1 class="card-heading">Dictumst. Ex</h1>
         <div class="clinic-card-text">
-          Ex. Sit sed dictumst. Et pellentesque cras hac leo, quis, nisi orci, sit sit non urna nisi pellentesque
-          cursus sapien lectus nulla vulputate dictum. Faucibus. Velit vulputate id dapibus in malesuada vitae
-          adipiscing in ultricies. Sit pulvinar amet lacinia pulvinar orci, et urna ornare ultricies. Eleifend non
-          dolor amet cras est. In accumsan dui faucibus. Amet, lorem cursus lorem dictum id quam, et. Ipsum non in
-          tortor, orci, aenean interdum nec est. Dui mollis aenean tempus ornare eleifend non orci, morbi libero, non
-          malesuada vitae dolor tempus venenatis dolor sed lorem tortor, libero, mauris hac eleifend mauris ultricies.
-          Dictum morbi dolor dolor imperdiet sed et efficitur sit quam, lectus tempus lectus urna amet, ipsum sit urna
-          nec dictumst. Sit amet, pulvinar faucibus. Nec nulla ultricies. Molestie nunc in interdum malesuada amet,
-          faucibus. Hac vulputate luctus nisi lorem et. Interdum dictum hac et mattis adipiscing sit ipsum malesuada
-          morbi ultricies. Venenatis et vel et. Amet, dui faucibus. Sapien odio. Imperdiet in dictum. Sit mattis
-          molestie venenatis sapien sodales ultricies. Accumsan libero, libero, imperdiet in mollis tempus
-          pellentesque ipsum ornare mollis id et non non sapien et integer urna leo, sed integer accumsan in mattis
-          nisi justo aenean morbi quam, morbi no.
+          Ex. Sit sed dictumst. Et pellentesque cras hac leo, quis, nisi orci,
+          sit sit non urna nisi pellentesque cursus sapien lectus nulla
+          vulputate dictum. Faucibus. Velit vulputate id dapibus in malesuada
+          vitae adipiscing in ultricies. Sit pulvinar amet lacinia pulvinar
+          orci, et urna ornare ultricies. Eleifend non dolor amet cras est. In
+          accumsan dui faucibus. Amet, lorem cursus lorem dictum id quam, et.
+          Ipsum non in tortor, orci, aenean interdum nec est. Dui mollis aenean
+          tempus ornare eleifend non orci, morbi libero, non malesuada vitae
+          dolor tempus venenatis dolor sed lorem tortor, libero, mauris hac
+          eleifend mauris ultricies. Dictum morbi dolor dolor imperdiet sed et
+          efficitur sit quam, lectus tempus lectus urna amet, ipsum sit urna nec
+          dictumst. Sit amet, pulvinar faucibus. Nec nulla ultricies. Molestie
+          nunc in interdum malesuada amet, faucibus. Hac vulputate luctus nisi
+          lorem et. Interdum dictum hac et mattis adipiscing sit ipsum malesuada
+          morbi ultricies. Venenatis et vel et. Amet, dui faucibus. Sapien odio.
+          Imperdiet in dictum. Sit mattis molestie venenatis sapien sodales
+          ultricies. Accumsan libero, libero, imperdiet in mollis tempus
+          pellentesque ipsum ornare mollis id et non non sapien et integer urna
+          leo, sed integer accumsan in mattis nisi justo aenean morbi quam,
+          morbi no.
         </div>
         <button class="clinic-info-btn">Информация</button>
       </div>
-      <div class="clinic-card-img2">
-
-      </div>
-    </div> {% endcomment %}
+      <div class="clinic-card-img2"></div>
+    </div>
+    {% endcomment %}
   </div>
 </section>
 {% endblock %}

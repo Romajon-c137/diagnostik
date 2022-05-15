@@ -35,7 +35,7 @@ const swiper2 = new Swiper(".swiper.swiper2", {
 });
 
 const swiper3 = new Swiper(".swiper.swiper3", {
-  slidesPerView: width <= 995 ? 1 : 2 && width <= 1258 ? 2 : 3,
+  slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
 
@@ -71,7 +71,7 @@ const swiper4 = new Swiper(".swiper.swiper4", {
 });
 
 const swiper5 = new Swiper(".swiper.swiper5", {
-  slidesPerView: width <= 995 ? 1 : 2 && width <= 1440 ? 2 : 3,
+  slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
 

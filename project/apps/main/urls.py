@@ -12,6 +12,7 @@ urlpatterns = [
     path('clinic', clinic, name='clinic'),
     path('specialists', specialists, name='specialists'),
     path('services', services, name='services'),
+    path('services/<str:slug>/', service, name='services'),
     path('review/<int:id>/', review, name='review'),
     path('result', result, name='result'),
     path('api/v1/', include('api.urls')),
