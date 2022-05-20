@@ -20,7 +20,7 @@
 
 .info-box {
   width: 398px;
-  height: 350px;
+  height: 440px;
   background-color: #ffff;
   border-radius: 32px;
   border: 1px solid #e6215f;
@@ -152,32 +152,21 @@
   color: #aba6a6;
   padding: 0;
   font-size: 48px;
-  font-family: "Poppins";
-}
-
-.card {
-  width: 262px;
-  height: 145px;
-  border: 1px solid #e6215f;
-  border-radius: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
 }
 
 .count {
   color: #aba6a6;
   padding: 0;
   font-size: 48px;
-  font-family: "Poppins";
+  font-family: 'Poppins', sans-serif;
 }
 
 .description {
   color: black;
   font-size: 18px;
   font-weight: bold;
-  font-family: "Poppins";
+  font-family: 'Poppins', sans-serif;
 }
 
 .banner-img-2 {
@@ -360,6 +349,7 @@
   align-items: center;
   color: #220f0f;
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 #btn-load-more {
@@ -626,4 +616,8 @@
     transform: scale(1);
     opacity: 0;
   }
+}
+
+.about-banner {
+  padding-bottom: 50px;
 }

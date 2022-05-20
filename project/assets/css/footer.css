@@ -28,7 +28,7 @@
 }
 
 .footer-contact {
-   max-width: 360px;
+   max-width: 320px;
    height: 248px;
 
 }
@@ -36,7 +36,7 @@
 .footer-contact-title {
    text-align: left;
    font-size: 25px;
-   font-family: "Poppins";
+   font-family: 'Poppins', sans-serif;
    padding: 10px 0;
    color: #ffff;
 }
@@ -100,26 +100,26 @@
 }
 .footer-content{
    display: flex;
-   justify-content: center;
-   gap: 85px;
+   justify-content: space-between;
    text-align: left;
    flex-wrap: wrap;
 }
 .footer-menu {
+   margin-left: 20px;
    max-width: 360px;
    height: 248px;
 }
 .footer-menu-title {
    text-align: left;
    font-size: 25px;
-   font-family: "Poppins";
+   font-family: 'Poppins', sans-serif;
    padding: 10px 0;
    color: #fff;
 }
 .footer-pages-title {
    text-align: left;
    font-size: 25px;
-   font-family: "Poppins";
+   font-family: 'Poppins', sans-serif;
    padding: 10px 0;
    color: #fff;
 }
@@ -206,7 +206,7 @@
 .working-title {
    text-align: left;
    font-size: 25px;
-   font-family: "Poppins";
+   font-family: 'Poppins', sans-serif;
    color: #fff;
    padding: 10px 0;
 }

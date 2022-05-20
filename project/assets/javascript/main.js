@@ -114,10 +114,18 @@ if (width <= 1441) {
 }
 
 let burger_menu = document.getElementById("burger-menu");
-
+let close_btn = document.getElementById('close_btn')
 burger_menu.addEventListener("click", (e) => {
-  console.log("burger-menu");
+  let main_list = document.querySelector('.menu-list')
+  main_list.classList.toggle('active')
+  close_btn.style.display = 'block'
 });
+
+
+close_btn.addEventListener('click', () => {
+  let main_list = document.querySelector('.menu-list')
+  main_list.classList.toggle('active')
+})
 
 let result_btn = document.getElementById("result-btn");
 let resultx_btn = document.getElementById("resultx-btn");
