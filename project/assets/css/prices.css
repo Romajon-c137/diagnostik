@@ -70,7 +70,7 @@
 
 .hub-description {
    display: flex;
-   gap: 55px;
+   gap: 20px;
    padding: 45px;
 }
 
@@ -98,10 +98,11 @@
 }
 
 .description-info {
+   width: 100%;
    display: flex;
    flex-direction: column;
-   gap: 20px;
    justify-content: space-between;
+   flex-wrap: wrap;
 }
 .descript-top{
    display: flex;
@@ -120,13 +121,14 @@
    color: #220F0F;
    display: flex;
    align-items: center;
-
 }
 
 .price-list {
    display: flex;
-   gap: 30px;
-   margin: 50px 0;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   padding: 20px;
+   gap: 10px;
 }
 
 .slider-heading {

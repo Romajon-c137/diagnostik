@@ -34,8 +34,8 @@ def service(request, slug):
     return render(request, 'services/service.html', {'service': service})
 
 def labs(request):
-    return render(request, 'labs/index.html')
-
+    analysises = Analysis.objects.filter(published=True)
+    return render(request, 'labs/index.html', {'analysises': analysises})
 
 def news(request):
     return render(request, 'news/index.html')

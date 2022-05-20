@@ -145,9 +145,6 @@
   .doctors-slider{
     padding-bottom: 1% !important;
   }
-  .description-info{
-    width: 600px;
-  }
   .hub-banner-title {
     font-size: 30px;
   }
@@ -205,10 +202,6 @@
   .doctors-slider{
     padding-bottom: 1% !important;
   }
-  .description-info{
-    width: 387px;
-    gap: 0px !important;
-  }
   .results{
     padding: 20px 0 !important;
   }
@@ -224,13 +217,16 @@
   }
   .lab-card{
     height: 100%;
-    padding-top: 26px;
+    flex-wrap: wrap;
   }
   .footer-contact {
     height: 100%;
   }
   .footer-menu {
     margin: 0;
+  }
+  .hub-info {
+    padding: 50px;
   }
 }
 
@@ -312,12 +308,6 @@
     padding: 40px !important;
     justify-content: flex-start;
   }
-
-  .description-info{
-    width: 387px;
-    gap: 0px !important;
-    margin: 0 auto;
-  }
   .results{
     padding: 20px 0 !important;
    
@@ -390,9 +380,6 @@
   .banner-serv{
     height: 450px;
   }
-  .categories2{
-    flex-wrap: nowrap !important;
-  }
   .doctors-slider{
     padding-bottom: 1% !important;
   }
@@ -412,12 +399,6 @@
   .banner-info-2{
     padding: 40px !important;
     justify-content: flex-start;
-  }
-
-  .description-info{
-    width: 331px;
-    gap: 0px !important;
-    margin: 0 auto;
   }
   .results{
     padding: 20px 0 !important;

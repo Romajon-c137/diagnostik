@@ -1,7 +1,4 @@
-{% extends 'main/index.html' %}
-{% load static i18n %}
-
-{% block styles %}
+{% extends 'main/index.html' %} {% load static i18n %} {% block styles %}
 
 <!--  services  -->
 <link href="{% static 'css/services.css' %}" rel="stylesheet" />
@@ -10,233 +7,77 @@
 <link href="{% static 'css/clinic.css' %}" rel="stylesheet" />
 <link href="{% static 'css/labs.css' %}" rel="stylesheet" />
 
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 <section>
-    <div class="container">
-        <div class="hub-banner">
-            <div class="hub-info">
-        <h1 class="hub-banner-title">О лабаротории и оборудовании</h1>
+  <div class="container">
+    <div class="hub-banner">
+      <div class="hub-info">
+        <h1 class="hub-banner-title">О лаборотории и оборудовании</h1>
         <div class="hub-banner-text">
-         <p> Сегодня, в соответствии с современными требованиями, центр оснащен самым современным медицинским оборудованием, таким как УЗИ, гастроскопия, ЭКГ, лаборатория суточного мониторирования ЭКГ, высококвалифицированными специалистами.</p>
-    
+          <p>
+            Сегодня, в соответствии с современными требованиями, центр оснащен
+            самым современным медицинским оборудованием, таким как УЗИ,
+            гастроскопия, ЭКГ, лаборатория суточного мониторирования ЭКГ,
+            высококвалифицированными специалистами.
+          </p>
         </div>
-        </div>
+      </div>
     </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="categories2">
+      <a href="/services#our-work" class="serv active">Все</a>
+
+      <a href="#our-work" class="serv">Клиническая лабаротория</a>
+      <a href="#our-work" class="serv">Биохимическая лабаротория</a>
+      <a href="#our-work" class="serv">Иммуноферментный анализ</a>
     </div>
-    </section>
 
-
-    <section>
-    <div class="container">
-        <div class="categories2">
-            <a  href='/services#our-work' class="serv active">Все</a>
-        
-                 <a href='#our-work' class="serv">Клиническая лабаротория</a>
-                 <a href='#our-work' class="serv">Биохимическая лабаротория</a>
-                 <a href='#our-work' class="serv">Иммуноферментный анализ</a>
-         
+    <div class="lab-cards">
+      {% for analysis in analysises %}
+      <div class="lab-card">
+        <div class="hub-description">
+          {% comment %}
+          <div class="hub-img"></div>
+          {% endcomment %}
+          <div class="description-info">
+            <div class="descript-top">
+              {% comment %}
+              <div class="description-text">
+                <p>
+                  В организме все гормоны взаимосвязаны, и по состоянию одних
+                  гормонов нередко можно увидеть состояние других. В женском
+                  здоровье особенную роль играет репродуктивная панель. В
+                  зависимости от проблемы, с которой женщина обращается к
+                  специалисту, врач может назначить анализ крови на гормоны,
+                  чтобы подтвердить или опровергнуть предварительный анализ.
+                  Исследования на гормоны могут быть назначены, например, в
+                  следующих случаях: • нарушения в развитии тех или иных
+                  органов; • диагностика беременности; • бесплодие; •
+                  беременность с угрозой выкидыша; • нарушения обмена веществ;
+                </p>
+                <br />
+                <p>
+                  c. Luctus vestibulum vel in molestie velit sit in in imperdiet
+                  quis, morbi integer eleifend venenatis nulla lorem ve.
+                </p>
+              </div>
+              {% endcomment %}
+            </div>
+            <div class="price-list">
+              <h1 class="description-title">{{ analysis.name }}</h1>
+              <div class="result-price">{{ analysis.price }} сом</div>
+              <button class="appointment-btn btn-red-60">Записатся</button>
+            </div>
+          </div>
         </div>
-
-
-
-        <div class="lab-cards">
-            <div class="lab-card">
-                <div class="hub-description hub-description2">
-                    <div class="hub-img">
-    
-                    </div>
-                    <div class="description-info">
-                        <div class="descript-top">
-                    <h1 class="description-title">
-                        Гормональный
-                    </h1>
-                    <div class="description-text">
-                       <p>В организме все гормоны взаимосвязаны, и по состоянию одних гормонов нередко можно увидеть состояние других. В женском здоровье особенную роль играет репродуктивная панель. В зависимости от проблемы, с которой женщина обращается к специалисту, врач может назначить анализ крови на гормоны, чтобы подтвердить или опровергнуть предварительный анализ. Исследования на гормоны могут быть назначены, например, в следующих случаях: • нарушения в развитии тех или иных органов; • диагностика беременности; • бесплодие; • беременность с угрозой выкидыша; • нарушения обмена веществ;
-
-                    </p> 
-                        <br>
-                        <p> c. Luctus vestibulum vel in molestie velit sit in in imperdiet quis, morbi integer eleifend
-                            venenatis nulla lorem ve.</p>
-                       
-                    </div>
-                </div>
-                    <div class="price-list">
-                    <div class="result-price">1300 сом</div>
-                    <button class="appointment-btn btn-red-60">Записатся</button>
-                </div>
-                </div>
-               
-                </div>
-            </div>
-
-
-
-            <div class="lab-card">
-                <div class="hub-description hub-description2">
-                    <div class="hub-img">
-    
-                    </div>
-                    <div class="description-info">
-                        <div class="descript-top">
-                    <h1 class="description-title">
-                        Dictumst. Ex
-                    </h1>
-                    <div class="description-text">
-                       <p>Aenean in est. Et vel dapibus luctus molestie hac ut. Molestie adipiscing sit molestie dui sit nunc
-                        mollis in eleifend mauris nisi arcu dictumst. Non urna sodales nunc augue vitae sed mattis ornare
-                        sapien velit nulla sed imperdiet vestibulum cursus hac ut. Morbi tortor, et ultricies. Imperdiet
-                        est.</p> 
-                        <br>
-                        <p> c. Luctus vestibulum vel in molestie velit sit in in imperdiet quis, morbi integer eleifend
-                            venenatis nulla lorem ve.</p>
-                       
-                    </div>
-                </div>
-                    <div class="price-list">
-                    <div class="result-price">1300 сом</div>
-                    <button class="appointment-btn btn-red-60">Записатся</button>
-                </div>
-                </div>
-               
-                </div>
-            </div>
-
-
-
-            <div class="lab-card">
-                <div class="hub-description hub-description2">
-                    <div class="hub-img">
-    
-                    </div>
-                    <div class="description-info">
-                        <div class="descript-top">
-                    <h1 class="description-title">
-                        Dictumst. Ex
-                    </h1>
-                    <div class="description-text">
-                       <p>Aenean in est. Et vel dapibus luctus molestie hac ut. Molestie adipiscing sit molestie dui sit nunc
-                        mollis in eleifend mauris nisi arcu dictumst. Non urna sodales nunc augue vitae sed mattis ornare
-                        sapien velit nulla sed imperdiet vestibulum cursus hac ut. Morbi tortor, et ultricies. Imperdiet
-                        est.</p> 
-                        <br>
-                        <p> c. Luctus vestibulum vel in molestie velit sit in in imperdiet quis, morbi integer eleifend
-                            venenatis nulla lorem ve.</p>
-                       
-                    </div>
-                </div>
-                    <div class="price-list">
-                    <div class="result-price">1300 сом</div>
-                    <button class="appointment-btn btn-red-60">Записатся</button>
-                </div>
-                </div>
-               
-                </div>
-            </div>
-
-
-
-
-            <div class="lab-card">
-                <div class="hub-description hub-description2">
-                    <div class="hub-img">
-    
-                    </div>
-                    <div class="description-info">
-                        <div class="descript-top">
-                    <h1 class="description-title">
-                        Dictumst. Ex
-                    </h1>
-                    <div class="description-text">
-                       <p>Aenean in est. Et vel dapibus luctus molestie hac ut. Molestie adipiscing sit molestie dui sit nunc
-                        mollis in eleifend mauris nisi arcu dictumst. Non urna sodales nunc augue vitae sed mattis ornare
-                        sapien velit nulla sed imperdiet vestibulum cursus hac ut. Morbi tortor, et ultricies. Imperdiet
-                        est.</p> 
-                        <br>
-                        <p> c. Luctus vestibulum vel in molestie velit sit in in imperdiet quis, morbi integer eleifend
-                            venenatis nulla lorem ve.</p>
-                       
-                    </div>
-                </div>
-                    <div class="price-list">
-                    <div class="result-price">1300 сом</div>
-                    <button class="appointment-btn btn-red-60">Записатся</button>
-                </div>
-                </div>
-               
-                </div>
-            </div>
-
-
-
-
-            <div class="lab-card">
-                <div class="hub-description hub-description2">
-                    <div class="hub-img">
-    
-                    </div>
-                    <div class="description-info">
-                        <div class="descript-top">
-                    <h1 class="description-title">
-                        Dictumst. Ex
-                    </h1>
-                    <div class="description-text">
-                       <p>Aenean in est. Et vel dapibus luctus molestie hac ut. Molestie adipiscing sit molestie dui sit nunc
-                        mollis in eleifend mauris nisi arcu dictumst. Non urna sodales nunc augue vitae sed mattis ornare
-                        sapien velit nulla sed imperdiet vestibulum cursus hac ut. Morbi tortor, et ultricies. Imperdiet
-                        est.</p> 
-                        <br>
-                        <p> c. Luctus vestibulum vel in molestie velit sit in in imperdiet quis, morbi integer eleifend
-                            venenatis nulla lorem ve.</p>
-                       
-                    </div>
-                </div>
-                    <div class="price-list">
-                    <div class="result-price">1300 сом</div>
-                    <button class="appointment-btn btn-red-60">Записатся</button>
-                </div>
-                </div>
-               
-                </div>
-            </div>
-
-
-
-
-
-
-            <div class="lab-card">
-                <div class="hub-description hub-description2">
-                    <div class="hub-img">
-    
-                    </div>
-                    <div class="description-info">
-                        <div class="descript-top">
-                    <h1 class="description-title">
-                        Dictumst. Ex
-                    </h1>
-                    <div class="description-text">
-                       <p>Aenean in est. Et vel dapibus luctus molestie hac ut. Molestie adipiscing sit molestie dui sit nunc
-                        mollis in eleifend mauris nisi arcu dictumst. Non urna sodales nunc augue vitae sed mattis ornare
-                        sapien velit nulla sed imperdiet vestibulum cursus hac ut. Morbi tortor, et ultricies. Imperdiet
-                        est.</p> 
-                        <br>
-                        <p> c. Luctus vestibulum vel in molestie velit sit in in imperdiet quis, morbi integer eleifend
-                            venenatis nulla lorem ve.</p>
-                       
-                    </div>
-                </div>
-                    <div class="price-list">
-                    <div class="result-price">1300 сом</div>
-                    <button class="appointment-btn btn-red-60">Записатся</button>
-                </div>
-                </div>
-               
-                </div>
-            </div>
-        </div>
-        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </section>
 
 {% endblock %}
