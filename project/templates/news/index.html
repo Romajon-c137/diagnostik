@@ -9,8 +9,7 @@
 <div class="news__inner container">
   {% for news in all_news %}
     <div class="news__item">
-        <a href="/news/{{ news.slug }}" class="news__item--image">
-            <img src="{{ news.get_image_url }}" alt="{{ news.title }}">
+        <a href="/news/{{ news.slug }}" class="news__item--image" style="background-image: url('{{ news.get_image_url }}');">
         </a>
         <div class="news__item__inner">
             <div>

@@ -60,6 +60,7 @@ INSTALLED_APPS = [
 
     'ckeditor',
     'rest_framework',
+    'sorl.thumbnail',
 ]
 
 MIDDLEWARE = [
