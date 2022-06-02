@@ -10,6 +10,7 @@
 
 .news__item--image img {
     width: 150px;
+    height: 150px;
 }
 
 .news__item--title {
