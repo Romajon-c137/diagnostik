@@ -1,14 +1,13 @@
-from multiprocessing import context
-from multiprocessing.dummy import active_children
-from unicodedata import category
 from django.shortcuts import render
 from django.contrib import messages
+from django.core.paginator import Paginator
 
 from apps.slide.models import Slide
 from apps.services.models import Service, Category as ServiceCategory
 from apps.specialists.models import Department, Person, Role
 from apps.prices.models import Analysis
 from apps.reviews.models import Review
+from apps.news.models import News
 from .models import FreeCall, Page
 from .forms import Form
 
@@ -37,8 +36,16 @@ def labs(request):
     analysises = Analysis.objects.filter(published=True)
     return render(request, 'labs/index.html', {'analysises': analysises})
 
-def news(request):
-    return render(request, 'news/index.html')
+def all_news(request):
+    news_list = News.objects.all()
+    paginator = Paginator(news_list, 10)
+    page_number = request.GET.get('page')
+    all_news = paginator.get_page(page_number)
+    return render(request, 'news/index.html', {'all_news': all_news})
+
+def news(request, slug):
+    news = News.objects.get(slug=slug)
+    return render(request, 'news/detail.html', {'news': news})
 
 
 def prices(request):

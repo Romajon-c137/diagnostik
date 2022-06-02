@@ -42,3 +42,9 @@ class News(models.Model):
 
     def get_absolute_url(self):
         return '%s-%s' % (self.slug, self.pk)
+
+    def get_image_url(self):
+        if self.image:
+            return '/media/%s' % (self.image)
+        else:
+            return '/static/images/150x150.png'
