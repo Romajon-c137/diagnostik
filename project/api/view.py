@@ -1,5 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.pagination import PageNumberPagination
+from rest_framework import viewsets, mixins
 from .serializers import *
 from apps.main.models import Lab, Result
 
@@ -14,14 +15,14 @@ class StandardResultsSetPagination(PageNumberPagination):
     page_size_query_param = 'page_size'
     max_page_size = 100
 
-class ResultViewSet(ModelViewSet):
-    
+class ResultViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
+    http_method_names = ['post']
     queryset = Result.objects.all()
     serializer_class = ResultSerializer
 
 
-class LabViewSet(ModelViewSet):
-    
+class LabViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
+    http_method_names = ['post']
     queryset = Lab.objects.all()
     serializer_class = LabSerializer
     # pagination_class = StandardResultsSetPagination

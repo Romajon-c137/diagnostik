@@ -56,32 +56,43 @@ class FreeCall(models.Model):
 
 
 class Result(models.Model):
-    def __str__(self):
-        return self.name
-    class Meta:
-        db_table = "result"
-        verbose_name = "Result"
-        verbose_name_plural = "Results"
+    # def __str__(self):
+    #     return self.name
+    # class Meta:
+    #     db_table = "result"
+    #     verbose_name = "Result"
+    #     verbose_name_plural = "Results"
 
-    id = models.CharField(max_length=20, unique=True, primary_key=True)
-    name = models.CharField(max_length=100)
-    namein = models.CharField(max_length=50)
-    result = models.CharField(max_length=50)
-    norm = models.CharField(max_length=50)
+    # id = models.CharField(max_length=20, unique=True, primary_key=True)
+    # name = models.CharField(max_length=100)
+    # namein = models.CharField(max_length=50)
+    # result = models.CharField(max_length=50)
+    # norm = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.uid
+        
+    class Meta:
+        db_table = "list"
+        verbose_name = "List"
+        verbose_name_plural = "Lists"
+
+    uid = models.CharField(max_length=20, unique=True, primary_key=True, verbose_name="Идентификатор")
+    result = models.JSONField(blank=True, null=True, verbose_name="Результат")
 
 
 class Lab(models.Model):
     def __str__(self):
-        return self.id
+        return self.oder_number
     class Meta:
         db_table = "lab"
         verbose_name = "Lab"
         verbose_name_plural = "Labs"
 
     STATUSES = (
-        (1, "1"),
-        (2, "2"),
-        (3, "3")
+        (1, "Создан"),
+        (2, "Готово"),
+        (3, "Отменен")
     )
 
     GERDERS = (
@@ -89,15 +100,15 @@ class Lab(models.Model):
         (2, "Женский"),
     )
 
-    id = models.CharField(max_length=20, unique=True, primary_key=True)
-    full_name = models.CharField(max_length=50, blank=True, null=True)
-    delivery_date = models.DateField(blank=True, null=True)
-    born_date = models.DateField(blank=True, null=True)
-    order_date = models.DateTimeField(blank=True, null=True)
-    client_code = models.IntegerField(blank=True, null=True)
-    status = models.IntegerField(choices=STATUSES, default=1)
-    gender = models.IntegerField(choices=GERDERS)
-    oder_number = models.IntegerField(blank=True, null=True)
-    pin = models.IntegerField(blank=True, null=True)
-    comment = models.CharField(max_length=50, blank=True, null=True)
-    list = models.ManyToManyField( Result, related_name="list", blank=True )
+    # id = models.CharField(max_length=20, unique=True, primary_key=True, verbose_name="Идентификатор")
+    full_name = models.CharField(max_length=50, blank=True, null=True, verbose_name="Имя пациента")
+    # delivery_date = models.DateField(blank=True, null=True, verbose_name="Дата доставки")
+    born_date = models.DateField(blank=True, null=True, verbose_name="Дата рождения")
+    order_date = models.DateTimeField(blank=True, null=True, verbose_name="Дата заказа")
+    client_code = models.IntegerField(blank=True, null=True, verbose_name="Код клиента")
+    status = models.IntegerField(choices=STATUSES, default=1, verbose_name="Статус") # 1 - создан, 2 - готово ,3 - отменен  
+    gender = models.IntegerField(choices=GERDERS, verbose_name="Пол") # (1- Мужской, 2 - Женский)
+    oder_number = models.CharField(max_length=20, unique=True, primary_key=True, verbose_name="Номер заказа")
+    pin = models.IntegerField(blank=True, null=True, verbose_name="Секретный код")
+    comment = models.CharField(max_length=50, blank=True, null=True, verbose_name="Комментарий")
+    list = models.JSONField(blank=True, null=True, verbose_name="Список")

@@ -12,7 +12,6 @@ class PageAdmin(admin.ModelAdmin):
 
 
 class FreeCallAdmin(admin.ModelAdmin):
-    fields = []
     list_filter = ['full_name', 'subject', 'status']
     list_display = ['full_name', 'phone_number', 'e_mail', 'status']
     readonly_fields = ['message', 'full_name', 'e_mail', 'phone_number', 'subject', 'town']
@@ -25,7 +24,30 @@ class FreeCallAdmin(admin.ModelAdmin):
         return False
 
 
+class LabAdmin(admin.ModelAdmin):
+    
+    def has_add_permission(self, request):
+        return False
+    
+    def has_delete_permission(self, request, obj=None):
+        return False
+    
+    def has_change_permission(self, request, obj=None):
+        return False
+
+
+class ResultAdmin(admin.ModelAdmin):
+    
+    def has_add_permission(self, request):
+        return False
+    
+    def has_delete_permission(self, request, obj=None):
+        return False
+    
+    def has_change_permission(self, request, obj=None):
+        return False
+
 admin.site.register(Page, PageAdmin)
 admin.site.register(FreeCall, FreeCallAdmin)
-admin.site.register(Result)
-admin.site.register(Lab)
+admin.site.register(Result, ResultAdmin)
+admin.site.register(Lab, LabAdmin)

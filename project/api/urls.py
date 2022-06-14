@@ -7,7 +7,7 @@ from .view import ResultViewSet, LabViewSet
 
 router = routers.DefaultRouter()
 router.register('results', ResultViewSet, 'results')
-router.register('labs', LabViewSet, 'labs')
+router.register('neworder', LabViewSet, 'neworder')
 
 urlpatterns = [
     path("", include(router.urls), name='api'),
