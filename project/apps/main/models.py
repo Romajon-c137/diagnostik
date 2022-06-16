@@ -103,7 +103,7 @@ class Lab(models.Model):
     # id = models.CharField(max_length=20, unique=True, primary_key=True, verbose_name="Идентификатор")
     full_name = models.CharField(max_length=50, blank=True, null=True, verbose_name="Имя пациента")
     # delivery_date = models.DateField(blank=True, null=True, verbose_name="Дата доставки")
-    born_date = models.DateField(blank=True, null=True, verbose_name="Дата рождения")
+    born_date = models.DateTimeField(blank=True, null=True, verbose_name="Дата рождения")
     order_date = models.DateTimeField(blank=True, null=True, verbose_name="Дата заказа")
     client_code = models.IntegerField(blank=True, null=True, verbose_name="Код клиента")
     status = models.IntegerField(choices=STATUSES, default=1, verbose_name="Статус") # 1 - создан, 2 - готово ,3 - отменен  
