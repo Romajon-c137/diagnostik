@@ -29,11 +29,11 @@ class LabAdmin(admin.ModelAdmin):
     def has_add_permission(self, request):
         return False
     
-    def has_delete_permission(self, request, obj=None):
-        return False
+    # def has_delete_permission(self, request, obj=None):
+    #     return False
     
-    def has_change_permission(self, request, obj=None):
-        return False
+    # def has_change_permission(self, request, obj=None):
+    #     return False
 
 
 class ResultAdmin(admin.ModelAdmin):
@@ -41,11 +41,11 @@ class ResultAdmin(admin.ModelAdmin):
     def has_add_permission(self, request):
         return False
     
-    def has_delete_permission(self, request, obj=None):
-        return False
+    # def has_delete_permission(self, request, obj=None):
+    #     return False
     
-    def has_change_permission(self, request, obj=None):
-        return False
+    # def has_change_permission(self, request, obj=None):
+    #     return False
 
 admin.site.register(Page, PageAdmin)
 admin.site.register(FreeCall, FreeCallAdmin)

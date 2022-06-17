@@ -1,277 +1,117 @@
 {% load i18n static %}
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
-  td { border: 0.5px solid #bbb; }                                    
-</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      .result {
+        margin-top: 20px;
+        padding: 25px;
+        background-color: white;
+        color: black;
+        box-shadow: 0px 0px 20px -10px black;
+      }
+      td {
+        border: 1px solid #bbb;
+      }
+      .head {
+        display: flex;
+        justify-content: space-between;
+      }
+      .head img {
+        width: 250px;
+      }
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+      }
+      .sign {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .user__info {
+        border-top: 2px solid black;
+        padding-top: 5px;
+      }
+      .user__info div {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
-    <div class="page">
-      <div style="float: left; text-align: center;">
-        <img src="{% static 'images/logo.svg' %}" class="logo">
+    <div class="result">
+      <div class="head">
+        <div style="">
+        <img src="{% static 'images/logo2.png' %}" />
+        </div>
+        <div class="analiz__address">
+          <div>Кыргызская Республика, Баткенская обл.,</div>
+          <div>Лейлекский р-н, г.Раззаков, ул.Алтын-Бешик 30</div>
+          <div>Контактный тел.:0777 065 065, 0551 065 065</div>
+          <div>Время работы: Пн-Пт 07:30 - 17:00,</div>
+          <div>Сб: 07:30 - 14:00, Вс: выходной</div>
+          <div>Лицензия МЗ КР ИП № 2865</div>
+        </div>
       </div>
-      <div class="head_info">
-        КР ИП № 2786 лицензиясы
-        Ош ш. Маруфий 123
-        Тел. : 03222-22660, 0551 88-88-88, 0771 44-55-66
-        www.euroclinic.kg</div>
+      <br />
+      <br />
+      <div class="user__info">
+        <small>Статус: {{result.get_status_display}}</small>
+        <div>ФИО: {{result.full_name}}</div>
+        <div>Пол: {{result.get_gender_display}}</div>
+        <div>Дата рождения: {{result.born_date}}</div>
+        <div>Дата регистрации: {{result.order_date}}</div>
+      </div>
+      <br />
+      <br />
 
-      <div style="clear: both"></div>
- <br>
- <br>
-{{result.status}} <br>
- <br>
-
-
-
-      <span>Номер: </span><b><span style="padding-left: 169px">{{result.client_code}}</span></b><br>
-      <span>Жаран/ФИО: </span><b><span style="padding-left: 136px">{{result.full_name}}</span></b><br>
-      <span>Жынысы/Пол: </span><b><span style="padding-left: 128px">{{result.get_gender_display}}</span></b><br>
-      <span>Туулган күнү/Дата рождения: </span><b><span style="padding-left:
-          31px">{{result.born_date}}</span></b>
-      <br>
-      <span>Катталган күнү/Дата регистрации: </span><b><span>{{result.order_date}}</span></b>
-      <br><br>
       <table border="0" cellspacing="0" cellpadding="1" width="100%">
-
-        <tbody><tr>
-            <td width="45%" align="center"><b>Изилдөө / Исследование</b></td>
-            <td width="20%" align="center" class="result"><b>Жыйынтык /
-                Результат</b></td>
-            <td width="20%" align="center"><b>Нормасы / <br> Норма</b></td>
-            <td width="15%" align="center"><b>Ченем бирдиги / <br> Ед. изм.</b></td>
-          </tr><tr>
+        <thead>
+          <tr>
+            <td width="35%" align="center"><b>Параметр</b></td>
+            <td width="25%" align="center">
+              <b>Результат</b>
+            </td>
+            <td width="20%" align="center">
+              <b>Норма</b>
+            </td>
+            <td width="20%" align="center">
+              <b>Ед. изм.</b>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
             <td>Общий белок</td>
-            <td align="center" class="result">58.3 </td>
+            <td align="center">58.3</td>
             <td align="center">66.00 - 87.00</td>
             <td align="center">г/л</td>
-          </tr><tr>
-            <td>Общий билирубин</td>
-            <td align="center" class="result">6.7 </td>
-            <td align="center">5.00 - 21.00</td>
-            <td align="center">млмоль/л</td>
-          </tr><tr>
-            <td>Прямой билирубин</td>
-            <td align="center" class="result">2.8 </td>
-            <td align="center">0.00 - 6.80</td>
-            <td align="center"> </td>
-          </tr><tr>
-            <td>Непрямой билирубин</td>
-            <td align="center" class="result">3.9 </td>
-            <td align="center"></td>
-            <td align="center"> </td>
-          </tr><tr>
-            <td>АЛТ</td>
-            <td align="center" class="result">18.0 </td>
-            <td align="center">0.00 - 31.00</td>
-            <td align="center">ЕД/л</td>
           </tr>
-          <tr>
-            <td>АСТ</td>
-            <td align="center" class="result">12.0 </td>
-            <td align="center">0.00 - 31.00</td>
-            <td align="center">ЕД/л</td>
-          </tr><tr>
-            <td>Тимоловая проба</td>
-            <td align="center" class="result">1.8 </td>
-            <td align="center">0.00 - 5.00</td>
-            <td align="center">ЕД</td>
-          </tr><tr>
-            <td>СРБ количественный</td>
-            <td align="center" class="result">37,4 </td>
-            <td align="center">0.50 - 200.00</td>
-            <td align="center"> </td>
-          </tr>
-          <tr>
-            <td>Цвет</td>
-            <td align="center" class="result">жел </td>
-            <td align="center">Желтый</td>
-            <td align="center">в п/з</td>
-          </tr><tr>
-            <td>Прозрачность</td>
-            <td align="center" class="result">мут </td>
-            <td align="center">полный</td>
-            <td align="center"> </td>
-          </tr><tr>
-            <td>Плотность</td>
-            <td align="center" class="result">м/м </td>
-            <td align="center">1008.00 - 1025.00</td>
-            <td align="center">кг/м^3</td>
-          </tr><tr>
-            <td>Белок</td>
-            <td align="center" class="result">33 </td>
-            <td align="center">отр</td>
-            <td align="center">мг/л</td>
-          </tr><tr>
-            <td>Плоский эпителий</td>
-            <td align="center" class="result">мало </td>
-            <td align="center">мало</td>
-            <td align="center">вп/зр</td>
-          </tr><tr>
-            <td>Лейкоциты</td>
-            <td align="center" class="result">27-22-25 </td>
-            <td align="center">3-4-8</td>
-            <td align="center">вп/зр</td>
-          </tr><tr>
-            <td>Эритроциты:</td>
-            <td align="center" class="result">- </td>
-            <td align="center">0-1-0</td>
-            <td align="center">вп/зр</td>
-          </tr><tr>
-            <td>Цилиндры: зернистые</td>
-            <td align="center" class="result">- </td>
-            <td align="center"></td>
-            <td align="center"> </td>
-          </tr><tr>
-            <td>гиалиновые</td>
-            <td align="center" class="result">- </td>
-            <td align="center"></td>
-            <td align="center"> </td>
-          </tr><tr>
-            <td>Соли ураты</td>
-            <td align="center" class="result">- </td>
-            <td align="center"></td>
-            <td align="center"> </td>
-          </tr><tr>
-            <td>Соли крис. моча. кисл</td>
-            <td align="center" class="result">- </td>
-            <td align="center"></td>
-            <td align="center"> </td>
-          </tr><tr>
-            <td>Соли оскалаты</td>
-            <td align="center" class="result">- </td>
-            <td align="center"></td>
-            <td align="center"> </td>
-          </tr><tr>
-            <td>Бактерии</td>
-            <td align="center" class="result">- </td>
-            <td align="center"></td>
-            <td align="center"> </td>
-          </tr><tr>
-            <td>Почечный эпителий</td>
-            <td align="center" class="result">- </td>
-            <td align="center"></td>
-            <td align="center"> </td>
-          </tr><tr>
-            <td>Слизь</td>
-            <td align="center" class="result">- </td>
-            <td align="center"></td>
-            <td align="center"> </td>
-          </tr>
-          <tr>
-            <td>Гемоглобин</td>
-            <td align="center" class="result">120 </td>
-            <td align="center">120.00 - 140.00</td>
-            <td align="center">г/л</td>
-          </tr><tr>
-            <td>Эритроциты</td>
-            <td align="center" class="result">4.10 </td>
-            <td align="center">4.10 - 5.20</td>
-            <td align="center">10^12л</td>
-          </tr><tr>
-            <td>Цветовой показатель</td>
-            <td align="center" class="result">0.9 </td>
-            <td align="center">0.85 - 1.05</td>
-            <td align="center"> </td>
-          </tr><tr>
-            <td>Лейкоциты</td>
-            <td align="center" class="result">4.5 </td>
-            <td align="center">4.00 - 9.50</td>
-            <td align="center">10 9/л</td>
-          </tr><tr>
-            <td>СОЭ</td>
-            <td align="center" class="result">24 </td>
-            <td align="center">2.00 - 15.00</td>
-            <td align="center"> </td>
-          </tr><tr>
-            <td>Палочкоядерные нейтрофилы</td>
-            <td align="center" class="result">1 </td>
-            <td align="center">0.00 - 6.00</td>
-            <td align="center">%</td>
-          </tr><tr>
-            <td>Сегментоядерные нейтрофилы</td>
-            <td align="center" class="result">77 </td>
-            <td align="center">40.00 - 70.00</td>
-            <td align="center">%</td>
-          </tr><tr>
-            <td>Моноциты</td>
-            <td align="center" class="result">6 </td>
-            <td align="center">0.00 - 11.00</td>
-            <td align="center">%</td>
-          </tr><tr>
-            <td>Лимфоциты</td>
-            <td align="center" class="result">15 </td>
-            <td align="center">20.00 - 40.00</td>
-            <td align="center">%</td>
-          </tr><tr>
-            <td>Гематокрит</td>
-            <td align="center" class="result">35.0 </td>
-            <td align="center">35.00 - 47.00</td>
-            <td align="center">%</td>
-          </tr><tr>
-            <td>Эозинофилы</td>
-            <td align="center" class="result">1 </td>
-            <td align="center"></td>
-            <td align="center"> </td>
-          </tr><tr>
-            <td>Базофилы</td>
-            <td align="center" class="result">- </td>
-            <td align="center">0.00 - 1.00</td>
-            <td align="center">%</td>
-          </tr><tr>
-            <td>Средняя концентрация гемоглобина в эритроците</td>
-            <td align="center" class="result">34.2 </td>
-            <td align="center">32.00 - 36.00</td>
-            <td align="center"> </td>
-          </tr><tr>
-            <td>Среднее содержание гемоглобина в эритроуите</td>
-            <td align="center" class="result">28.4 </td>
-            <td align="center">27.00 - 34.00</td>
-            <td align="center"> </td>
-          </tr><tr>
-            <td>Распределение эритроцитов по обьему</td>
-            <td align="center" class="result">- </td>
-            <td align="center">11.50 - 14.50</td>
-            <td align="center"> </td>
-          </tr><tr>
-            <td>Средний обьем тромбоцитов</td>
-            <td align="center" class="result">9.5 </td>
-            <td align="center">7.00 - 11.00</td>
-            <td align="center"> </td>
-          </tr><tr>
-            <td>Тромбоциты</td>
-            <td align="center" class="result">211.0 </td>
-            <td align="center">150.00 - 320.00</td>
-            <td align="center">10 9/л</td>
-          </tr><tr>
-            <td>Тромбокрит</td>
-            <td align="center" class="result">0.199 </td>
-            <td align="center">1.08 - 2.82</td>
-            <td align="center"> </td>
-          </tr>
-        </tbody></table>
-
-
-      <p style="text-align: center">Лабораториянын башчысы / Заведующая
-        лабораторией: </p>
-      <div style="text-align:center; margin-left: 264px;">
-        <p> Исмаилова А. Ш.</p>
-        <img src="{% static 'images/sign.png' %}" style="height: 40px;
-          margin-top: -61px; margin-right: -181px;">
+          {% for item in result.list.all %} {{
+            item.name }} - {{ item.namein }} - {{ item.result }} - {{ item.norm }}
+            {% endfor %}
+        </tbody>
+      </table>
+      <div class="footer">
+        <div style="text-align: center">Дата: 09.06.2022 11:36:13</div>
+        <div style="text-align: center">Заведущая лабораторией:</div>
+        <div>Исматиллаева Салкынай</div>
       </div>
 
-      comment {{result.comment}}
+      <div class="sign">
+        <span>
+          Подпись:
+          <img src="{% static 'images/sign.png' %}" />
+        </span>
+      </div>
 
-{% for item in result.list.all %}
-{{ item.name }} -
-{{ item.namein }} -
-{{ item.result }} -
-{{ item.norm }}
-{% endfor %}
-
-
-
-
+      <br />
+      <br />
+      <div class="comment">
+        <h4>Комментарий: </h4>
+        {{result.comment}} 
+      </div>
     </div>
   </body>
 </html>

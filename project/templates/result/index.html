@@ -19,17 +19,11 @@
   {% endif %} {% if result %}
   <div class="col-9 col-s-12">
     <div class="container">
-      <button
-        class="download_btn"
-        onclick="window.open(`download/{{result.oder_number}}/{{result.pin}}/`)"
-      >
-        Скачать результать
-      </button>
       <h1>Результаты</h1>
       <h3>
         Доставка результатов осуществляется автоматически после готовности.
       </h3>
-      <div class="aside">{% include 'pdf_template.html' %}</div>
+      <div class="aside">{% include 'result/pdf_template.html' %}</div>
       <button
         onclick="window.open(`download/{{result.oder_number}}/{{result.pin}}/`)"
       >

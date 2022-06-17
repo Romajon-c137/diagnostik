@@ -34,14 +34,14 @@ def result(request):
 
 
 def html_to_pdf_view(request, oder_number, pin):
-    result_form = Lab.objects.get(oder_number=oder_number, pin=pin)
-    html_string = render_to_string('result/pdf_template.html', {'result_form': result_form})
+    result = Lab.objects.get(oder_number=oder_number, pin=pin)
+    html_string = render_to_string('result/pdf_template.html', {'result': result})
 
     html = HTML(string=html_string)
-    html.write_pdf(target='/tmp/mypdf.pdf')
+    html.write_pdf(target='/tmp/result.pdf')
 
     fs = FileSystemStorage('/tmp')
-    with fs.open('mypdf.pdf') as pdf:
+    with fs.open('result.pdf') as pdf:
         response = HttpResponse(pdf, content_type='application/pdf')
-        response['Content-Disposition'] = 'attachment; filename="mypdf.pdf"'
+        response['Content-Disposition'] = 'attachment; filename="result.pdf"'
         return response
