@@ -18,7 +18,7 @@
         justify-content: space-between;
       }
       .head img {
-        width: 200px;
+        width: 150px;
       }
       .footer {
         display: flex;
@@ -72,7 +72,7 @@
         <small>Статус: {{result.get_status_display}}</small>
         <div>ФИО: {{result.full_name}}</div>
         <div>Пол: {{result.get_gender_display}}</div>
-        <div>Дата рождения: {{result.born_date|date:"D d M Y"}}</div>
+        <div>Дата рождения: {{result.born_date|date:"d M Y"}}</div>
       </div>
       {% if result.status == 2 %}
 
@@ -118,8 +118,9 @@
       {% endif %}
 
       
+      <br />
       <div class="footer">
-        <div style="text-align: center">Дата: {{result.order_date|date:"D d M Y"}}</div>
+        <div style="text-align: center">Дата: {{result.order_date|date:"d M Y"}}</div>
         <div style="text-align: center">Заведущая лабораторией:</div>
         <div>Исматиллаева Салкынай</div>
       </div>
@@ -127,7 +128,7 @@
       <div class="sign">
         <span>
           <span>Подпись:</span>
-          <img src="{% static 'images/sign.png' %}" />
+          {% comment %} <img src="{% static 'images/sign.png' %}" /> {% endcomment %}
         </span>
       </div>
 
