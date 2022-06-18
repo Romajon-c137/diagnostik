@@ -55,29 +55,32 @@ class FreeCall(models.Model):
     status = models.BooleanField(verbose_name="Обработана?", default=False)
 
 
-class Result(models.Model):
-    # def __str__(self):
-    #     return self.name
-    # class Meta:
-    #     db_table = "result"
-    #     verbose_name = "Result"
-    #     verbose_name_plural = "Results"
+# class Result(models.Model):
+#     def __str__(self):
+#         return self.name
+#     class Meta:
+#         db_table = "result"
+#         verbose_name = "Result"
+#         verbose_name_plural = "Results"
 
-    # id = models.CharField(max_length=20, unique=True, primary_key=True)
-    # name = models.CharField(max_length=100)
-    # namein = models.CharField(max_length=50)
-    # result = models.CharField(max_length=50)
-    # norm = models.CharField(max_length=50)
+#     id = models.CharField(max_length=20, unique=True, primary_key=True)
+#     name = models.CharField(max_length=100)
+#     result = models.CharField(max_length=50)
+#     norm = models.CharField(max_length=50)
+
+
+class Result(models.Model):
 
     def __str__(self):
         return self.uid
         
     class Meta:
         db_table = "list"
-        verbose_name = "List"
-        verbose_name_plural = "Lists"
+        verbose_name = "Result"
+        verbose_name_plural = "Results"
 
     uid = models.CharField(max_length=40, unique=True, primary_key=True, verbose_name="Идентификатор")
+    name = models.CharField(blank=True, null=True, max_length=100, verbose_name="Название")
     result = models.JSONField(blank=True, null=True, verbose_name="Результат")
 
 

@@ -7,7 +7,7 @@ from django.shortcuts import render
 from weasyprint import HTML
 
 from .forms import Form, ResultForm
-from .models import Page, Lab
+from .models import Page, Lab, Result
 
 
 def conf(request):
@@ -25,7 +25,10 @@ def result(request):
         if result_form.is_valid():
             try:
                 result = Lab.objects.get(oder_number=result_form.data['oder_number'], pin=result_form.data['pin'])
-                return render(request, 'result/index.html', {'result': result, 'result_form': result_form})
+                analisys = []
+                for i in result.list:
+                    analisys.append(Result.objects.filter(uid=i['uid']))
+                return render(request, 'result/index.html', {'result': result, 'analisys': analisys, 'result_form': result_form})
             except ObjectDoesNotExist:
                 return render(request, 'result/index.html', {'notexist': "Нет такой записи", 'result_form': result_form})
     else:
@@ -35,9 +38,12 @@ def result(request):
 
 def html_to_pdf_view(request, oder_number, pin):
     result = Lab.objects.get(oder_number=oder_number, pin=pin)
-    html_string = render_to_string('result/pdf_template.html', {'result': result})
+    analisys = []
+    for i in result.list:
+        analisys.append(Result.objects.filter(uid=i['uid']))
+    html_string = render_to_string('result/pdf_template.html', {'result': result, 'analisys': analisys})
 
-    html = HTML(string=html_string)
+    html = HTML(string=html_string, base_url=request.build_absolute_uri())
     html.write_pdf(target='/tmp/result.pdf')
 
     fs = FileSystemStorage('/tmp')

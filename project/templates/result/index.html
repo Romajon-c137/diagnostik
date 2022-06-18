@@ -12,23 +12,25 @@
     </h1>
   </div>
   {% if result_form %}
-  <form action="" method="post">
+  <form action="" method="post" class="result__modal-form">
     {% csrf_token %} {{ result_form }}
-    <button type="submit" class="submit_button">OK</button>
+    <button type="submit" class="submit_button">Получить результат</button>
   </form>
   {% endif %} {% if result %}
   <div class="col-9 col-s-12">
     <div class="container">
       <h1>Результаты</h1>
       <h3>
-        Доставка результатов осуществляется автоматически после готовности.
+        Показ результатов осуществляется автоматически после готовности.
       </h3>
       <div class="aside">{% include 'result/pdf_template.html' %}</div>
-      <button
+      
+      {% if result.status == 2 %}<button
         onclick="window.open(`download/{{result.oder_number}}/{{result.pin}}/`)"
       >
         Скачать результать
       </button>
+      {% endif %}
     </div>
   </div>
   {% endif %} {% if notexist %}

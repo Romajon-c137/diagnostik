@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
       .result {
-        margin-top: 20px;
+        margin: 20px 0;
         padding: 25px;
         background-color: white;
         color: black;
@@ -18,7 +18,7 @@
         justify-content: space-between;
       }
       .head img {
-        width: 250px;
+        width: 200px;
       }
       .footer {
         display: flex;
@@ -37,12 +37,24 @@
         font-size: 18px;
         font-weight: bold;
       }
+      table {
+        width: 100%;
+      }
+      .sign img {
+        width: 50px;
+      }
+      .sign > span{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
     </style>
   </head>
   <body>
+    
     <div class="result">
       <div class="head">
-        <div style="">
+        <div>
         <img src="{% static 'images/logo2.png' %}" />
         </div>
         <div class="analiz__address">
@@ -60,48 +72,61 @@
         <small>Статус: {{result.get_status_display}}</small>
         <div>ФИО: {{result.full_name}}</div>
         <div>Пол: {{result.get_gender_display}}</div>
-        <div>Дата рождения: {{result.born_date}}</div>
-        <div>Дата регистрации: {{result.order_date}}</div>
+        <div>Дата рождения: {{result.born_date|date:"D d M Y"}}</div>
       </div>
-      <br />
-      <br />
+      {% if result.status == 2 %}
 
-      <table border="0" cellspacing="0" cellpadding="1" width="100%">
-        <thead>
-          <tr>
-            <td width="35%" align="center"><b>Параметр</b></td>
-            <td width="25%" align="center">
-              <b>Результат</b>
-            </td>
-            <td width="20%" align="center">
-              <b>Норма</b>
-            </td>
-            <td width="20%" align="center">
-              <b>Ед. изм.</b>
-            </td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Общий белок</td>
-            <td align="center">58.3</td>
-            <td align="center">66.00 - 87.00</td>
-            <td align="center">г/л</td>
-          </tr>
-          {% for item in result.list.all %} {{
-            item.name }} - {{ item.namein }} - {{ item.result }} - {{ item.norm }}
-            {% endfor %}
-        </tbody>
-      </table>
+        {% for analyse in analisys %}
+          {% for item in analyse %} 
+          <br />
+          <br />
+          <h3 style="text-align: center">{{item.name}}</h3>
+          <table>
+            <thead>
+              <tr>
+                <td width="35%" align="center"><b>Параметр</b></td>
+                <td width="25%" align="center">
+                  <b>Результат</b>
+                </td>
+                <td width="20%" align="center">
+                  <b>Норма</b>
+                </td>
+                <td width="20%" align="center">
+                  <b>Ед. изм.</b>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              {% for result in item.result %}
+              <tr>
+                <td>{{ result.name }}</td>
+                <td align="center">{{ result.result }}</td>
+                <td align="center">{{ result.norm }}</td>
+                <td align="center"></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+            
+          {% endfor %}
+        {% endfor %}
+
+      {% elif result.status == 1 %}
+      <h1 class="result">Результаты еще не получены</h1>
+      {% elif result.status == 3 %}
+        <h1 class="result">Результаты отменены</h1>
+      {% endif %}
+
+      
       <div class="footer">
-        <div style="text-align: center">Дата: 09.06.2022 11:36:13</div>
+        <div style="text-align: center">Дата: {{result.order_date|date:"D d M Y"}}</div>
         <div style="text-align: center">Заведущая лабораторией:</div>
         <div>Исматиллаева Салкынай</div>
       </div>
 
       <div class="sign">
         <span>
-          Подпись:
+          <span>Подпись:</span>
           <img src="{% static 'images/sign.png' %}" />
         </span>
       </div>
@@ -110,7 +135,7 @@
       <br />
       <div class="comment">
         <h4>Комментарий: </h4>
-        {{result.comment}} 
+        {% if result.comment %}{{ result.comment }}{% endif %}
       </div>
     </div>
   </body>
