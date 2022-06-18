@@ -25,7 +25,9 @@ class FreeCallAdmin(admin.ModelAdmin):
 
 
 class LabAdmin(admin.ModelAdmin):
-    
+    list_display = ['full_name', 'oder_number', 'pin', 'status']
+    list_filter = ['status', 'gender', 'order_date']
+    search_fields = ['full_name']
     def has_add_permission(self, request):
         return False
     
