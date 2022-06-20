@@ -25,12 +25,11 @@
       </h3>
       <div class="aside">{% include 'result/pdf_template.html' %}</div>
       
-      {% if result.status == 2 %}<button
+      <button
         onclick="window.open(`download/{{result.oder_number}}/{{result.pin}}/`)"
       >
         Скачать результать
       </button>
-      {% endif %}
     </div>
   </div>
   {% endif %} {% if notexist %}

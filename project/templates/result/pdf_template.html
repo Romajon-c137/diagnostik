@@ -69,15 +69,14 @@
       <br />
       <br />
       <div class="user__info">
-        <small>Статус: {{result.get_status_display}}</small>
         <div>ФИО: {{result.full_name}}</div>
         <div>Пол: {{result.get_gender_display}}</div>
         <div>Дата рождения: {{result.born_date|date:"d M Y"}}</div>
       </div>
-      {% if result.status == 2 %}
 
         {% for analyse in analisys %}
-          {% for item in analyse %} 
+        {% if analyse.data|length > 0 %}
+          {% for item in analyse.data %} 
           <br />
           <br />
           <h3 style="text-align: center">{{item.name}}</h3>
@@ -109,13 +108,11 @@
           </table>
             
           {% endfor %}
+          {% else %}
+            <h1 class="result">Результаты от анализа "{{ analyse.name }}"  еще не получены</h1>
+          {% endif %}
         {% endfor %}
 
-      {% elif result.status == 1 %}
-      <h1 class="result">Результаты еще не получены</h1>
-      {% elif result.status == 3 %}
-        <h1 class="result">Результаты отменены</h1>
-      {% endif %}
 
       
       <br />

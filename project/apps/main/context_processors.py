@@ -27,7 +27,7 @@ def result(request):
                 result = Lab.objects.get(oder_number=result_form.data['oder_number'], pin=result_form.data['pin'])
                 analisys = []
                 for i in result.list:
-                    analisys.append(Result.objects.filter(uid=i['uid']))
+                    analisys.append({"name": i['name'], 'data': Result.objects.filter(uid=i['uid'])})
                 return render(request, 'result/index.html', {'result': result, 'analisys': analisys, 'result_form': result_form})
             except ObjectDoesNotExist:
                 return render(request, 'result/index.html', {'notexist': "Нет такой записи", 'result_form': result_form})
