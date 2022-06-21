@@ -40,7 +40,7 @@ def html_to_pdf_view(request, oder_number, pin):
     result = Lab.objects.get(oder_number=oder_number, pin=pin)
     analisys = []
     for i in result.list:
-        analisys.append(Result.objects.filter(uid=i['uid']))
+        analisys.append({"name": i['name'], 'data': Result.objects.filter(uid=i['uid'])})
     html_string = render_to_string('result/pdf_template.html', {'result': result, 'analisys': analisys})
 
     html = HTML(string=html_string, base_url=request.build_absolute_uri())
