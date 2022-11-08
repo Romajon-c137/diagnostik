@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", 'localhost', '0.0.0.0', 'www.diagnostik.kg', '159.89.98.142', 'diagnostik.kg', 'test.diagnostik.kg']
+ALLOWED_HOSTS = ["127.0.0.1", 'localhost', '0.0.0.0', 'www.diagnostik.kg', '159.89.98.142', '46.101.153.225', 'diagnostik.kg', 'test.diagnostik.kg']
 
 
 # Quick-start development settings - unsuitable for production
