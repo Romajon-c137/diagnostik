@@ -14,7 +14,7 @@
     <div class="banner-serv">
          <div class="banner-inner">
               <h2 class="banner-title">Об услугах</h2>
-              <p class="banner-text-one">Медицинский центр «Диагностик» оснащен самым современным медицинским оборудованием и предлагает широкий круг медицинских услуг. Специалисты центра оказывают услуги по ультразвуковому исследованию внутренних органов, гастроскопии, ЭКГ, суточный мониторинг работы сердца, иглорефлексотерапии и другим видам услуг. В центре имеется оснащенные современным оборудованием лаборатории, светотерапевтические ванны, кровати Нугабест, кедровая бочка, оборудования для электрофореза, КУФ и ингаляции.</p>
+              <p class="banner-text-one">Медицинский центр «Диагностик» оснащен самым современным медицинским оборудованием и предлагает широкий спектр медицинских услуг. Специалисты центра оказывают услуги по ультразвуковому исследованию внутренних органов, гастроскопии, ЭКГ, суточный мониторинг работы сердца, иглорефлексотерапии и другим видам услуг. В центре имеется оснащенные современным оборудованием лаборатории, светотерапевтические ванны, кровати Нугабест, кедровая бочка, оборудования для электрофореза, КУФ и ингаляции.</p>
               {% comment %} <p class="banner-text-two">Ornare e</p> {% endcomment %}
          </div>
     </div>
@@ -64,23 +64,18 @@
                 {{ form.non_field_errors }}
                     <div>
                          {{ form.full_name.errors }}
-                         <label for="{{ form.full_name.id_for_label }}" class="form-style">{% trans "Ведите ваше имя" %}</label>
+                         <label for="{{ form.full_name.id_for_label }}" class="form-style">{% trans "Введите имя" %}</label>
                          {{ form.full_name }}
                     </div>
                     <div>
-                         {{ form.town.errors }}
-                         <label for="{{ form.town.id_for_label }}" class="form-style">{% trans "Ведите ваше Айыл" %}</label>
-                         {{ form.town }}
-                    </div>
-                    <div>
                          {{ form.phone_number.errors }}
-                         <label for="{{ form.phone_number.id_for_label }}" class="form-style">{% trans "Ваш номер телефона" %}</label>
+                         <label for="{{ form.phone_number.id_for_label }}" class="form-style">{% trans "Ваш телефона" %}</label>
                          {{ form.phone_number }}
                     </div>
               <div class="form-texr-area">
                     <div class="form-message">
                          {{ form.message.errors }}
-                         <label for="{{ form.message.id_for_label }}" class="form-style">{% trans "Ваше сообщения" %}</label>
+                         <label for="{{ form.message.id_for_label }}" class="form-style">{% trans "Ваше сообщение" %}</label>
                          {{ form.message }}
                     </div>
                </div>

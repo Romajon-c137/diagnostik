@@ -1,9 +1,17 @@
+@font-face {
+  font-family: 'GothamProBlackItalic';
+  src: url('../font/GothaProMed.otf') format('truetype');
+}
+@font-face {
+  font-family: 'GothamProLightItalic';
+  src: url('../font/GothaProLig.otf') format('truetype');
+}
 * {
   padding: 0;
   margin: 0;
   list-style: none;
   text-decoration: none;
-  font-family: "Proxima Nova";
+  font-family: "GothamProBlackItalic";
 }
 
 .container {
@@ -17,7 +25,7 @@
 }
 
 .background-color {
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 
 .background-color-lightRed {
@@ -60,7 +68,7 @@
   height: calc(100% - 120px);
   background-color: #fff;
 
-  border: 1px solid #e6215f;
+  border: 1px solid #E42261;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.447);
   border-radius: 16px;
 
@@ -83,7 +91,7 @@
 
 .search_input {
   margin-bottom: 30px;
-  border: 1px solid #e6215f;
+  border: 1px solid #E42261;
   box-sizing: border-box;
   border-radius: 16px;
   height: 46px;
@@ -91,7 +99,7 @@
   max-width: 300px;
   padding-left: 12px;
 
-  font-family: 'Proxima Nova';
+  font-family: 'GothamProBlackItalic';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -122,11 +130,11 @@
   margin-top: 30px;
   width: 100%;
   max-width: 300px;
-  background: #e6215f;
+  background: #E42261;
   border: 1px solid rgba(255, 255, 255, 0.6);
   box-sizing: border-box;
   border-radius: 16px;
-  font-family: 'Proxima Nova';
+  font-family: 'GothamProBlackItalic';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -149,7 +157,7 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.6);
   box-sizing: border-box;
   border-radius: 16px;
-  font-family: 'Proxima Nova';
+  font-family: 'GothamProBlackItalic';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

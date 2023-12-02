@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'GothamProBlackItalic';
+  src: url('../font/GothaProMed.otf') format('truetype');
+}
+@font-face {
+  font-family: 'GothamProLightItalic';
+  src: url('../font/GothaProLig.otf') format('truetype');
+}
 .wrapper {
   background-color: #ccc;
 }
@@ -20,14 +28,14 @@
 
 .info-box {
   width: 398px;
-  height: 440px;
+  height: 300px;
   background-color: #ffff;
   border-radius: 32px;
-  border: 1px solid #e6215f;
-  padding: 0 30px;
+  border: 1px solid #e42261;
+  padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
 }
 
@@ -41,7 +49,6 @@
   margin-top: 10px;
   font-size: 24px;
   text-align: center;
-  margin-bottom: auto;
 }
 
 .info-box p {
@@ -50,15 +57,13 @@
 
 .info-box p {
   text-align: center;
-  color: #806d6d;
+  color: #353535;
 }
-
+.info-box p li {
+  text-align: left;
+}
 .banner-cover {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
   width: 100%;
   display: flex;
   align-items: center;
@@ -118,16 +123,16 @@
   width: 210px;
   height: 46px;
   border-radius: 16px;
-  border: 1px solid #e6215f;
-  background-color: #e6215f;
+  border: 1px solid #e42261;
+  background-color: #e42261;
   color: #ffffff;
   cursor: pointer;
 }
 .appointment-btn:hover {
   cursor: pointer;
   background: transparent;
-  border: 2px solid #e6215f;
-  color: #e6215f;
+  border: 2px solid #e42261;
+  color: #e42261;
 }
 .about-cards {
   display: flex;
@@ -136,11 +141,20 @@
   margin-bottom: 3%;
   padding-bottom: 40px;
 }
+.about-cards_img {
+  width: 120px;
+  height: 120px;
+}
+
+.about-cards_img img {
+  width: 100%;
+}
 
 .card {
-  width: 362px;
-  height: 145px;
-  border: 1px solid #e6215f;
+  width: 24%;
+  /* height: 145px; */
+  padding: 20px 0;
+  border: 1px solid #e42261;
   border-radius: 32px;
   display: flex;
   align-items: center;
@@ -152,36 +166,33 @@
   color: #aba6a6;
   padding: 0;
   font-size: 48px;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'GothamProBlackItalic'; */
 }
 
 .count {
   color: #aba6a6;
   padding: 0;
   font-size: 48px;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'GothamProBlackItalic'; */
 }
 
 .description {
   color: black;
   font-size: 18px;
   font-weight: bold;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'GothamProBlackItalic'; */
 }
 
 .banner-img-2 {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.2) 100%,
-      rgba(177, 177, 177, 0.5) 100%
-    ),
-    url("../images/Home-page/Rectangle-8.jpg") center center no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.2) 100%, rgba(177, 177, 177, 0.5) 100%),
+    url('../images/Home-page/Rectangle-8.jpg') center center no-repeat;
   border-radius: 32px;
   background-size: cover;
-  height: 600px;
+  /* height: 600px; */
 }
 
 .banner-title-2 {
-  font-family: Poppins;
+  /* font-family: Poppins; */
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
@@ -209,7 +220,7 @@
   text-align: left;
   display: flex;
   align-items: center;
-  color: #806d6d;
+  color: #353535;
 }
 
 .doctors-slider {
@@ -226,27 +237,27 @@
 .swiper-button-next {
   position: absolute !important;
   top: 40% !important;
-  color: #e6215f !important;
+  color: #e42261 !important;
   /* right: 2% !important; */
 }
 
 .swiper-button-prev {
   position: absolute !important;
   top: 40% !important;
-  color: #e6215f !important;
+  color: #e42261 !important;
   /* left: 2% !important; */
 }
 .swiper-button-next2 {
   position: absolute !important;
   top: 40% !important;
-  color: #e6215f !important;
+  color: #e42261 !important;
   /* right: 2% !important; */
 }
 
 .swiper-button-prev2 {
   position: absolute !important;
   top: 40% !important;
-  color: #e6215f !important;
+  color: #e42261 !important;
   /* left: 2% !important; */
 }
 .swiper-pagination1 {
@@ -268,12 +279,12 @@
   width: 370px;
   height: 350px;
   border-radius: 16px;
-  border: 1px solid #e6215f;
+  border: 1px solid #e42261;
   padding: 30px;
 }
 
 .before-header {
-  font-family: Poppins;
+  /* font-family: Poppins; */
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -293,7 +304,7 @@
 }
 
 .after-header {
-  font-family: Poppins;
+  /* font-family: Poppins; */
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -307,7 +318,7 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 140%;
-  color: #806d6d;
+  color: #353535;
   text-align: left;
   padding-bottom: 25px;
 }
@@ -326,14 +337,14 @@
   height: 46px;
   border-radius: 16px;
   background-color: transparent;
-  border: 1px solid #e6215f;
-  color: #e6215f;
+  border: 1px solid #e42261;
+  color: #e42261;
   margin: 20% auto;
   font-weight: 500;
 }
 
 .read-more:hover {
-  background-color: #e6215f;
+  background-color: #e42261;
   cursor: pointer;
   color: white;
   font-weight: 600;
@@ -356,15 +367,15 @@
   width: 272px;
   height: 46px;
   border-radius: 16px;
-  border: 1px solid #e6215f;
-  color: #e6215f;
+  border: 1px solid #e42261;
+  color: #e42261;
   font-weight: bold;
   text-align: center;
   background-color: transparent;
 }
 
 #btn-load-more:hover {
-  background-color: #e6215f;
+  background-color: #e42261;
   cursor: pointer;
   color: white;
 }
@@ -380,15 +391,15 @@
   width: 272px;
   height: 46px;
   border-radius: 16px;
-  border: 1px solid #e6215f;
-  color: #e6215f;
+  border: 1px solid #e42261;
+  color: #e42261;
   font-weight: bold;
   text-align: center;
   background-color: transparent;
 }
 
 #btn-close:hover {
-  background-color: #e6215f;
+  background-color: #e42261;
   cursor: pointer;
   color: white;
 }
@@ -404,7 +415,7 @@
 .batken-loc {
   width: 120px;
   height: 30px;
-  background-color: #e6215f;
+  background-color: #e42261;
   color: #fff;
   border-radius: 16px;
   display: flex;
@@ -415,33 +426,29 @@
 }
 .batken-loc:hover {
   background-color: #ffff;
-  color: #e6215f;
-  border: 1px solid #e6215f;
+  color: #e42261;
+  border: 1px solid #e42261;
   cursor: pointer;
 }
 
 .loc-wrapper {
-  padding: 4% 10%;
-  width: 170px;
+  /* padding: 4% 10%;
+  width: 170px; */
 }
 
 .location {
-  width: 431px;
-  height: 180px;
-  border: 1px solid #e6215f;
+  border: 1px solid #e42261;
   border-radius: 16px;
-  font-family: "Times New Roman", Times, serif;
-  margin: 1%;
+  /* font-family: 'Times New Roman', Times, serif; */
+  padding: 30px;
 }
 .clinic-header {
   padding: 20px 0;
 }
 .working-hours,
 .phone-contact {
-  width: 160px;
-  height: 60px;
+  width: 200px;
   padding: 5% 1%;
-  margin-left: 7.5%;
   line-height: 140%;
 }
 
@@ -496,8 +503,8 @@
 .all-doctors {
   width: 210px;
   height: 46px;
-  background-color: #e6215f;
-  border: 1px solid #e6215f;
+  background-color: #e42261;
+  border: 1px solid #e42261;
   border-radius: 16px;
   color: white;
   cursor: pointer;
@@ -508,7 +515,7 @@
 }
 .all-doctors:hover {
   background-color: transparent;
-  color: #e6215f;
+  color: #e42261;
 }
 
 .phone-call {
@@ -518,7 +525,7 @@
   flex-direction: column;
   right: 30px;
   bottom: 30px;
-  background: #e6215f;
+  background: #e42261;
   position: fixed;
   text-align: center;
   color: #ffffff;
@@ -555,11 +562,11 @@
 
 .phone-call:before {
   position: absolute;
-  content: " ";
+  content: ' ';
   z-index: -1;
   top: -15px;
   left: -15px;
-  background-color: #e6215f;
+  background-color: #e42261;
   width: 80px;
   height: 80px;
   border-radius: 100%;
@@ -620,4 +627,33 @@
 
 .about-banner {
   padding-bottom: 50px;
+}
+
+.romajon-continer_title {
+  padding: 30px 0 0 0;
+  text-align: center;
+}
+
+.romajon_adress {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#clinic-location,
+.loc-map {
+  width: 48%;
+}
+.located {
+  margin: 0;
+}
+
+.romajon_table {
+  width: 100%;
+  column-gap: 30px;
+}
+
+.romajon_text_transform{
+  text-align: justify;
+
 }

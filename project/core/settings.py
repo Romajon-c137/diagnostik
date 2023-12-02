@@ -10,8 +10,20 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import environ
+import os
+from dotenv import load_dotenv
+
+
 
 from pathlib import Path
+
+# os.add_dll_directory(r"C:\Program Files\GTK3-Runtime Win64\bin")
+
+# from weasyprint import HTML
+
+# HTML('https://weasyprint.org/').write_pdf('weasyprint-website.pdf')
+
+load_dotenv() 
 
 root = environ.Path(__file__) - 2
 
@@ -34,7 +46,7 @@ ALLOWED_HOSTS = ["127.0.0.1", 'localhost', '0.0.0.0', 'www.diagnostik.kg', '159.
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 
@@ -98,7 +110,10 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': env.db(),
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'diagnostik',
+    },
 }
 
 
@@ -151,4 +166,4 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 STATICFILES_DIRS = [BASE_DIR / 'assets']
 
-DOMAIN = env('DOMAIN')
+DOMAIN = os.environ.get('DOMAIN')

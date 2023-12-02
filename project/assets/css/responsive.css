@@ -8,12 +8,12 @@
   .menu-list {
     gap: 15px;
   }
-  .phone-menu {
+  /* .phone-menu {
     justify-content: center;
     flex-direction: column;
     gap: 0px;
     height: 46px;
-  }
+  } */
   .card {
     width: 260px;
   }
@@ -23,7 +23,7 @@
   .media-loc{
     width: 78%;
     height: 180px;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
   
@@ -74,12 +74,12 @@
   .container {
     max-width: 960px;
   }
-  .phone-menu {
+  /* .phone-menu {
     justify-content: center;
     flex-direction: column;
     gap: 0px;
     height: 46px;
-  }
+  } */
   .menu-list {
     margin-left: 20px;
     gap: 15px;
@@ -91,8 +91,8 @@
     width: 155px;
   }
   .info-box {
-    width: 404px;
-    height: 404px;
+    width: 95%;margin: 0 auto;
+    /* height: 404px; */
   }
   .card {
     width: 180px;
@@ -100,7 +100,7 @@
   .media-loc{
     width: 886px;
     height: 180px;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
   
@@ -151,6 +151,27 @@
 }
 
 @media (max-width: 991px) {
+  .romajon_adress{
+    flex-direction: column;
+  }
+  .loc-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .loc-map,
+  #clinic-location{
+    width: 100%;
+  }
+  .media-loc{
+    width: 100%;
+  }
+  .romajon_table{
+    width: 100%;
+    justify-content: center;
+  }
   .swiper-container {
     max-width: calc(720px + 130px);
   }
@@ -302,7 +323,7 @@
     width: 320px;
   }
   .banner-text-2{
-    width: 320px;
+    /* width: 320px; */
   }
   .banner-info-2{
     padding: 40px !important;
@@ -394,7 +415,7 @@
     width: 320px;
   }
   .banner-text-2{
-    width: 242px;
+    /* width: 242px; */
   }
   .banner-info-2{
     padding: 40px !important;
@@ -424,3 +445,5 @@
   }
   
 }
+
+
